@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvohgodeft6yg"
 path.s3tc="res://.godot/imported/candle_circle_stone1.texture.png-b6cc72534c3a96e6efa8f426eba96113.s3tc.ctex"
+path.etc2="res://.godot/imported/candle_circle_stone1.texture.png-b6cc72534c3a96e6efa8f426eba96113.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/candle/candle_circle_stone1.texture.png"
-dest_files=["res://.godot/imported/candle_circle_stone1.texture.png-b6cc72534c3a96e6efa8f426eba96113.s3tc.ctex"]
+dest_files=["res://.godot/imported/candle_circle_stone1.texture.png-b6cc72534c3a96e6efa8f426eba96113.s3tc.ctex", "res://.godot/imported/candle_circle_stone1.texture.png-b6cc72534c3a96e6efa8f426eba96113.etc2.ctex"]
 
 [params]
 
