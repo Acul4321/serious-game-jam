@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://pb8cvdj1fuu5"]
+
+[ext_resource type="Script" uid="uid://c72rraat0p50o" path="res://scene/cultNPC/cult_npc.gd" id="1_01isg"]
+[ext_resource type="PackedScene" uid="uid://dvhqybmrwosfr" path="res://assets/cult/cult.glb" id="2_c02vq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1ssea"]
+height = 1.7570801
+
+[node name="Cult Member" type="Node3D" unique_id=1611122041]
+script = ExtResource("1_01isg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=113041534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83776855, 0)
+shape = SubResource("CapsuleShape3D_1ssea")
+
+[node name="cultModel" parent="." unique_id=1450779633 instance=ExtResource("2_c02vq")]
+unique_name_in_owner = true
+
+[editable path="cultModel"]

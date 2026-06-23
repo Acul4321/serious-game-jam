@@ -1,8 +1,9 @@
 extends CharacterBody3D
 
-#from Kenny assets: https://github.com/KenneyNL/Starter-Kit-3D-Platformer/blob/main/scripts/player.gd
+enum STATE {HELD, EMPTY}
+var currentState : STATE = STATE.EMPTY
 
-signal coin_collected
+#from Kenny assets: https://github.com/KenneyNL/Starter-Kit-3D-Platformer/blob/main/scripts/player.gd
 
 @export_subgroup("Components")
 @export var view: Node3D
@@ -19,8 +20,6 @@ var previously_floored = false
 
 var jump_single = true
 var jump_double = true
-
-var coins = 0
 
 #@onready var particles_trail = $ParticlesTrail
 #@onready var sound_footsteps = $SoundFootsteps
@@ -78,13 +77,18 @@ func handle_effects(delta):
 
 	#particles_trail.emitting = false
 	#sound_footsteps.stream_paused = true
-
+	
+	if currentState == STATE.HELD:
+		%candle.visible = true
+	else:
+		%candle.visible = false
+		
 	if is_on_floor():
 		var horizontal_velocity = Vector2(velocity.x, velocity.z)
 		var speed_factor = horizontal_velocity.length() / movement_speed / delta
-		#if speed_factor > 0.05:
-			#if animation.current_animation != "walk":
-				#animation.play("walk", 0.1)
+		if speed_factor > 0.05:
+			if animation.current_animation != "walking_animation":
+				animation.play("walking_animation", 0.1)
 
 			#if speed_factor > 0.3:
 				##sound_footsteps.stream_paused = false
@@ -93,16 +97,19 @@ func handle_effects(delta):
 			#if speed_factor > 0.75:
 				#particles_trail.emitting = true
 
-		#elif animation.current_animation != "idle":
-			#animation.play("idle", 0.1)
+		#idle
+		elif animation.current_animation != "praise_up_animation" && animation.is_playing():
+			animation.play("praise_up_animation", 0.1, 0.8)
 			
-		if animation.current_animation == "walk":
+			
+		if animation.current_animation == "walking_animation":
 			animation.speed_scale = speed_factor
 		else:
 			animation.speed_scale = 1.0
 			
-	#elif animation.current_animation != "jump":
-		#animation.play("jump", 0.1)
+	# jump
+	elif animation.current_animation != "praise_up_animation":
+		animation.play("praise_up_animation", 0.1)
 
 # Handle movement input
 
@@ -163,3 +170,7 @@ func jump():
 	#coins += 1
 #
 	#coin_collected.emit(coins)
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	animation.pause()
