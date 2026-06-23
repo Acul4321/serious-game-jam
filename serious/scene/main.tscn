@@ -1,18 +1,34 @@
 [gd_scene format=3 uid="uid://b4gqjwp37bheq"]
 
-[ext_resource type="Script" uid="uid://c3ls5h0vvtbkm" path="res://scene/main.gd" id="1_wp4xf"]
-[ext_resource type="Script" uid="uid://ertddv4o41s7" path="res://scene/player.gd" id="2_brvut"]
-[ext_resource type="Script" uid="uid://yu24chvpfe78" path="res://scene/node_3d.gd" id="3_0ha60"]
+[ext_resource type="PackedScene" uid="uid://byasux5hwifrk" path="res://scene/player/player.tscn" id="1_itxqv"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1ssea"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1ssea"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1ssea"]
 
 [node name="main" type="Node3D" unique_id=279069133]
-script = ExtResource("1_wp4xf")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1502091679]
+[node name="world" type="Node3D" parent="." unique_id=249962753]
 
-[node name="Player" type="CharacterBody3D" parent="." unique_id=360143540]
-script = ExtResource("2_brvut")
+[node name="floor" type="MeshInstance3D" parent="world" unique_id=932406117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022981167, 0.008774877, -0.004206896)
+mesh = SubResource("PlaneMesh_1ssea")
 
-[node name="Node3D" type="Node3D" parent="." unique_id=1784483002]
-script = ExtResource("3_0ha60")
+[node name="StaticBody3D" type="StaticBody3D" parent="world/floor" unique_id=1083354850]
+physics_material_override = SubResource("PhysicsMaterial_1ssea")
 
-[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=2135992912]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="world/floor/StaticBody3D" unique_id=638248936]
+shape = SubResource("WorldBoundaryShape3D_1ssea")
+
+[node name="UI" type="Control" parent="." unique_id=1399842959]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Player" parent="." unique_id=509668328 node_paths=PackedStringArray("view") instance=ExtResource("1_itxqv")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.43945903, 0)
+view = NodePath("playerCamera")
+
+[node name="playerCamera" type="Camera3D" parent="Player" unique_id=237246228]
+transform = Transform3D(-10, -2.589647e-07, 8.3499197e-07, 0, 9.551194, 2.9622107, -8.742278e-07, 2.9622107, -9.551194, 0, 3.5569735, -8.45381)
