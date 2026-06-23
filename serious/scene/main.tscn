@@ -1,9 +1,27 @@
 [gd_scene format=3 uid="uid://b4gqjwp37bheq"]
 
 [ext_resource type="PackedScene" uid="uid://byasux5hwifrk" path="res://scene/player/player.tscn" id="1_itxqv"]
+[ext_resource type="Texture2D" uid="uid://b22wtcryc3jb5" path="res://assets/skybox/panorama_normal.png" id="1_wp4xf"]
 [ext_resource type="Script" uid="uid://dfd0mg1mivxwo" path="res://script/camera.gd" id="2_v0l8b"]
 
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_v2gmf"]
+panorama = ExtResource("1_wp4xf")
+
+[sub_resource type="Sky" id="Sky_hybxs"]
+sky_material = SubResource("PanoramaSkyMaterial_v2gmf")
+
+[sub_resource type="Environment" id="Environment_v0l8b"]
+background_mode = 2
+background_color = Color(0.9711848, 0.8507074, 0.88259196, 1)
+sky = SubResource("Sky_hybxs")
+ambient_light_source = 3
+ambient_light_color = Color(0.98914725, 0.961281, 0.8788185, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpcnl"]
+albedo_color = Color(0.5073644, 0.29474998, 0.33764723, 1)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_1ssea"]
+material = SubResource("StandardMaterial3D_xpcnl")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1ssea"]
 
@@ -12,6 +30,7 @@
 [node name="main" type="Node3D" unique_id=279069133]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=979405858]
+environment = SubResource("Environment_v0l8b")
 
 [node name="Player" parent="." unique_id=509668328 node_paths=PackedStringArray("view") instance=ExtResource("1_itxqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43945903, 0)
@@ -38,3 +57,6 @@ shape = SubResource("WorldBoundaryShape3D_1ssea")
 [node name="UI" type="Control" parent="." unique_id=1399842959]
 layout_mode = 3
 anchors_preset = 0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1293199850]
+transform = Transform3D(-0.61588466, -0.7878363, 0, 0.15387778, -0.12029271, 0.9807402, -0.77266276, 0.60402286, 0.19531694, 0, 0, 0)
