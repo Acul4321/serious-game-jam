@@ -307,7 +307,7 @@ mesh = SubResource("ArrayMesh_tv8i1")
 [node name="PortalPlatform" parent="world/Platform" unique_id=1208757462 instance=ExtResource("11_hybxs")]
 
 [node name="portal plataform" parent="world/Platform/PortalPlatform" index="0" unique_id=1731956213]
-transform = Transform3D(5.129934, 0, 0.09988124, 0, 5.130906, 0, -0.09988124, 0, 5.129934, -26.989697, 2.2620993, -12.390548)
+transform = Transform3D(5.1299334, 0, 0.09988123, 0, 5.1309056, 0, -0.09988123, 0, 5.1299334, -26.989697, 2.2620993, -12.390548)
 mesh = SubResource("ArrayMesh_gjnwh")
 
 [node name="Portal" parent="world/Platform/PortalPlatform" unique_id=2027806640 instance=ExtResource("4_0ha60")]
