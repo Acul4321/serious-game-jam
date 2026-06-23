@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b4gqjwp37bheq"]
+
+[ext_resource type="PackedScene" uid="uid://byasux5hwifrk" path="res://scene/player/player.tscn" id="1_itxqv"]
+[ext_resource type="Script" uid="uid://dfd0mg1mivxwo" path="res://script/camera.gd" id="2_v0l8b"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1ssea"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1ssea"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1ssea"]
+
+[node name="main" type="Node3D" unique_id=279069133]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=979405858]
+
+[node name="Player" parent="." unique_id=509668328 node_paths=PackedStringArray("view") instance=ExtResource("1_itxqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43945903, 0)
+view = NodePath("../view")
+
+[node name="view" type="Node3D" parent="." unique_id=1261992853 node_paths=PackedStringArray("target")]
+script = ExtResource("2_v0l8b")
+target = NodePath("../Player")
+
+[node name="Camera" type="Camera3D" parent="view" unique_id=237246228]
+
+[node name="world" type="Node3D" parent="." unique_id=249962753]
+
+[node name="floor" type="MeshInstance3D" parent="world" unique_id=932406117]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -0.0022981167, 0.008774877, -0.004206896)
+mesh = SubResource("PlaneMesh_1ssea")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="world/floor" unique_id=1083354850]
+physics_material_override = SubResource("PhysicsMaterial_1ssea")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="world/floor/StaticBody3D" unique_id=638248936]
+shape = SubResource("WorldBoundaryShape3D_1ssea")
+
+[node name="UI" type="Control" parent="." unique_id=1399842959]
+layout_mode = 3
+anchors_preset = 0
