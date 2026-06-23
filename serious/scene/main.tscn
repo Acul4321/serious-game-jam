@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://b4gqjwp37bheq"]
 
+[ext_resource type="Script" uid="uid://c3ls5h0vvtbkm" path="res://scene/main.gd" id="1_wp4xf"]
+[ext_resource type="Script" uid="uid://ertddv4o41s7" path="res://scene/player.gd" id="2_brvut"]
+[ext_resource type="Script" uid="uid://yu24chvpfe78" path="res://scene/node_3d.gd" id="3_0ha60"]
+
 [node name="main" type="Node3D" unique_id=279069133]
+script = ExtResource("1_wp4xf")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1502091679]
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=360143540]
+script = ExtResource("2_brvut")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1784483002]
+script = ExtResource("3_0ha60")
+
+[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=2135992912]
