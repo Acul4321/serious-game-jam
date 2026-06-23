@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byf6wfoxkjabf" path="res://scene/player/player.gd" id="1_hjaqi"]
 [ext_resource type="PackedScene" uid="uid://dvhqybmrwosfr" path="res://assets/cult/cult.glb" id="1_xo3ru"]
+[ext_resource type="PackedScene" uid="uid://c5x5hs82pxe16" path="res://assets/candle/candle.glb" id="3_6smn3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1ssea"]
 height = 1.7700195
@@ -16,12 +17,20 @@ shape = SubResource("CapsuleShape3D_1ssea")
 [node name="model" parent="." unique_id=26906941 instance=ExtResource("1_xo3ru")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="Skeleton3D" parent="model/Armature" parent_id_path=PackedInt32Array(26906941, 825021713) index="0" unique_id=432646315]
-bones/1/rotation = Quaternion(-0.06439646, 0.04318472, -0.002789369, 0.9969857)
-bones/2/rotation = Quaternion(0.060959138, -0.019469816, -0.0011892865, 0.9979497)
-bones/4/rotation = Quaternion(-0.02446, -0.14132264, 0.5286375, 0.8366433)
-bones/5/rotation = Quaternion(-0.42754441, -0.20301388, 0.17706741, 0.86292434)
-bones/7/rotation = Quaternion(0.1527249, -0.3581444, -0.4452456, 0.80632746)
-bones/8/rotation = Quaternion(-0.3894777, 0.31542647, -0.07033593, 0.86247677)
+[node name="Skeleton3D" parent="model/Armature" parent_id_path=PackedInt32Array(26906941, 1882389502) index="0" unique_id=1622232233]
+bones/1/rotation = Quaternion(0.043845836, -0.034544848, -0.014093397, 0.9983415)
+bones/2/rotation = Quaternion(0.06791708, 0.020649316, 0.008563307, 0.9974405)
+bones/4/rotation = Quaternion(-0.23300362, -0.27592206, -0.10851965, 0.9261748)
+bones/5/rotation = Quaternion(-0.41399783, -0.3095279, -0.06368936, 0.8536639)
+bones/6/rotation = Quaternion(9.7090876e-08, -8.299223e-08, -0.7670822, 0.6415489)
+bones/7/rotation = Quaternion(-0.30863482, 0.14862512, 0.40092465, 0.8496555)
+bones/8/rotation = Quaternion(-0.19627777, 0.025801878, -0.14890328, 0.9688329)
+
+[node name="candle" parent="." unique_id=264866318 instance=ExtResource("3_6smn3")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017901719, 1.9268334, -0.071828604)
+visible = false
+
+[connection signal="animation_finished" from="model/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
 [editable path="model"]

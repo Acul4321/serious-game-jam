@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cdroww0t04pt4"]
+
+[ext_resource type="Script" uid="uid://duf32ep1eyx86" path="res://scene/candle/candle.gd" id="1_6dp6h"]
+[ext_resource type="PackedScene" uid="uid://c5x5hs82pxe16" path="res://assets/candle/candle.glb" id="1_gvvv7"]
+
+[node name="Candle" type="Node3D" unique_id=509363352]
+script = ExtResource("1_6dp6h")
+
+[node name="candle" parent="." unique_id=264866318 instance=ExtResource("1_gvvv7")]
+unique_name_in_owner = true
+
+[node name="pickupLabel" type="Label3D" parent="." unique_id=1468864334]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4131613, 0)
+visible = false
+pixel_size = 0.025
+billboard = 2
+text = "E to Pickup"
+
+[editable path="candle"]

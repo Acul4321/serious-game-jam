@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://byasux5hwifrk" path="res://scene/player/player.tscn" id="1_itxqv"]
 [ext_resource type="Texture2D" uid="uid://b22wtcryc3jb5" path="res://assets/skybox/panorama_normal.png" id="1_wp4xf"]
 [ext_resource type="Script" uid="uid://dfd0mg1mivxwo" path="res://script/camera.gd" id="2_v0l8b"]
+[ext_resource type="PackedScene" uid="uid://d2lagbgjqx0nb" path="res://scene/portal.tscn" id="4_0ha60"]
+[ext_resource type="PackedScene" uid="uid://cdroww0t04pt4" path="res://scene/candle/candle.tscn" id="5_4j5ol"]
+[ext_resource type="PackedScene" uid="uid://htje6gr0y1de" path="res://scene/candle/candle_circle.tscn" id="6_4j5ol"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_v2gmf"]
 panorama = ExtResource("1_wp4xf")
@@ -45,7 +48,7 @@ target = NodePath("../Player")
 [node name="world" type="Node3D" parent="." unique_id=249962753]
 
 [node name="floor" type="MeshInstance3D" parent="world" unique_id=932406117]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -0.0022981167, 0.008774877, -0.004206896)
+transform = Transform3D(99.99546, 0.68606925, 0.6611308, -0.68875736, 99.99679, 0.40503588, -0.65832984, -0.40957284, 99.996994, -0.0022981167, 0.008774877, -0.004206896)
 mesh = SubResource("PlaneMesh_1ssea")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="world/floor" unique_id=1083354850]
@@ -53,6 +56,27 @@ physics_material_override = SubResource("PhysicsMaterial_1ssea")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="world/floor/StaticBody3D" unique_id=638248936]
 shape = SubResource("WorldBoundaryShape3D_1ssea")
+
+[node name="Portal" parent="world" unique_id=2027806640 instance=ExtResource("4_0ha60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.067032)
+
+[node name="Candles" type="Node3D" parent="world" unique_id=642475198]
+
+[node name="Candle" parent="world/Candles" unique_id=509363352 node_paths=PackedStringArray("player") instance=ExtResource("5_4j5ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.024631)
+player = NodePath("../../../Player")
+
+[node name="Candle2" parent="world/Candles" unique_id=1218482326 node_paths=PackedStringArray("player") instance=ExtResource("5_4j5ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.755, 0, 2.044)
+player = NodePath("../../../Player")
+
+[node name="CandleCircle" parent="world/Candles" unique_id=1984032318 node_paths=PackedStringArray("player") instance=ExtResource("6_4j5ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.8141003)
+player = NodePath("../../../Player")
+
+[node name="CandleCircle2" parent="world/Candles" unique_id=1050242790 node_paths=PackedStringArray("player") instance=ExtResource("6_4j5ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.777995, 0, 0.0569973)
+player = NodePath("../../../Player")
 
 [node name="UI" type="Control" parent="." unique_id=1399842959]
 layout_mode = 3
