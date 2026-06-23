@@ -215,25 +215,3 @@ libraries/ = SubResource("AnimationLibrary_l2w8d")
 
 [node name="PortalFloor" type="MeshInstance3D" parent="." unique_id=782889844]
 mesh = SubResource("PlaneMesh_ypt24")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1977115361]
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=875804556]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -169.0
-offset_top = -40.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="LinkButton" type="LinkButton" parent="CanvasLayer/MarginContainer" unique_id=936890595]
-layout_mode = 2
-text = "Rate this asset! (https://nojoule.itch.io/pixel-portals/rate)"
-uri = "https://nojoule.itch.io/pixel-portals/rate"
