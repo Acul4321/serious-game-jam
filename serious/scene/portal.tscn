@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://d2lagbgjqx0nb"]
 
 [ext_resource type="PackedScene" uid="uid://ckf67p7ijat8e" path="res://assets/platform/portal.glb" id="1_cfsmh"]
-[ext_resource type="Texture2D" uid="uid://blgsp0mhpjsqe" path="res://assets/platform/portal_portal.png" id="2_vtg32"]
-[ext_resource type="Texture2D" uid="uid://b8i2pfyl7xohf" path="res://assets/textures/portal.png" id="3_q5eg8"]
+[ext_resource type="Texture2D" uid="uid://c8c4imruodr8j" path="res://assets/platform/portal_portal.png" id="2_vtg32"]
+[ext_resource type="Texture2D" uid="uid://cyx5gvwccax5d" path="res://assets/textures/portal.png" id="3_q5eg8"]
 [ext_resource type="PackedScene" uid="uid://cmrdiuncmpo16" path="res://examples/base/pixel_portals_single.tscn" id="4_vtg32"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjnwh"]
@@ -57,7 +57,7 @@ region_rect = Rect2(0, 150, 122, 128)
 transform = Transform3D(2.3486817, 0, 5.2539244, 0, 5.755, 0, -5.2539244, 0, 2.3486817, -29.72766, 4.604129, -12.324788)
 
 [node name="PortalViewport" parent="PixelPortalSingle" index="0" unique_id=1334032624]
-transform = Transform3D(1, 0, 0, 0, 0.05233597, -0.99862945, 0, 0.99862957, 0.052335978, 0.032844663, 0.99999994, 0.12587738)
+transform = Transform3D(0.9997623, 0.02086386, 0.0063588787, 0.006522855, -0.0078002377, -0.99994826, -0.020813197, 0.99975216, -0.007934444, 0.029201388, 0.99999994, 0.07171583)
 
 [editable path="portal"]
 [editable path="PixelPortalSingle"]

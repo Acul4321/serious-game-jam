@@ -21,16 +21,24 @@ var previously_floored = false
 var jump_single = true
 var jump_double = true
 
+@onready var spin_timer: Timer = $SpinTimer
+var accumulated_rotation := 0.0
+var previous_yaw := 0.0
+
 #@onready var particles_trail = $ParticlesTrail
 #@onready var sound_footsteps = $SoundFootsteps
 @onready var model = $model
 @onready var animation = $model/AnimationPlayer
 
 # Functions
+func _ready() -> void:
+	previous_yaw = rotation.y
 
 func _physics_process(delta):
 
 	# Handle functions
+	
+	handle_spinning(delta)
 
 	handle_controls(delta)
 	handle_gravity(delta)
@@ -56,8 +64,8 @@ func _physics_process(delta):
 
 	# Falling/respawning
 
-	if position.y < -10:
-		get_tree().reload_current_scene()
+	if position.y < -17:
+		global_position = Vector3i(0,1,0)
 
 	# Animation for scale (jumping and landing)
 
@@ -163,14 +171,24 @@ func jump():
 	else:
 		jump_double = false;
 
-# Collecting coins
+func handle_spinning(delta):
+	var current_yaw = rotation.y
+	
+	var delta_yaw = wrapf(
+		current_yaw - previous_yaw,
+		-PI,
+		PI
+	)
+	accumulated_rotation += delta_yaw
+	previous_yaw = current_yaw
+	if abs(accumulated_rotation) >= TAU:
+		on_full_spin()
+		accumulated_rotation = 0.0
 
-#func collect_coin():
-#
-	#coins += 1
-#
-	#coin_collected.emit(coins)
-
+func on_full_spin():
+	print("spin complete")
+	spin_timer.stop()
+	spin_timer.start()
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	animation.pause()

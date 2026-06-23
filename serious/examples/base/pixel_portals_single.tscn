@@ -11,15 +11,15 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3kgwp"]
 render_priority = 2
 shader = ExtResource("1_l2w8d")
-shader_parameter/last_layer_transparent = true
+shader_parameter/last_layer_transparent = false
 shader_parameter/first_layer_transparent = true
 shader_parameter/transparency_transition = 0
 shader_parameter/transparency_falloff = 1.0
-shader_parameter/rim = true
+shader_parameter/rim = false
 shader_parameter/rim_extra_radius = 0.10000000475
 shader_parameter/color_repeat_layer = 0
 shader_parameter/color_offset_layer = 0
-shader_parameter/color_one = Color(1, 1, 1, 1)
+shader_parameter/color_one = Color(0.8509804, 0.09803922, 0.28627452, 1)
 shader_parameter/color_two = Color(0, 0, 0, 1)
 shader_parameter/color_falloff = 1.0
 shader_parameter/color_transition = 0
@@ -27,7 +27,7 @@ shader_parameter/glow_repeat_layer = 0
 shader_parameter/glow_offset_layer = 0
 shader_parameter/glow = 0.0
 shader_parameter/glow_falloff = 1.0
-shader_parameter/depth_amount = 1.0
+shader_parameter/depth_amount = 0.1
 shader_parameter/layers = 10
 shader_parameter/radius = 0.38
 shader_parameter/radius_reduction = 0.05
@@ -52,11 +52,11 @@ shader_parameter/falloff = 2.5
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_3kgwp")
 shader = ExtResource("2_cawxa")
-shader_parameter/last_layer_transparent = true
+shader_parameter/last_layer_transparent = false
 shader_parameter/first_layer_transparent = true
-shader_parameter/transparency_transition = 0
+shader_parameter/transparency_transition = 3
 shader_parameter/transparency_falloff = 1.0
-shader_parameter/depth_amount = 1.0
+shader_parameter/depth_amount = 0.045
 shader_parameter/layers = 10
 shader_parameter/radius = 0.38
 shader_parameter/radius_reduction = 0.05
@@ -76,15 +76,6 @@ shader_parameter/dither_offset = Vector2i(2, 0)
 shader_parameter/bayer_size = 2
 shader_parameter/interpolate = true
 shader_parameter/falloff = 2.5
-
-[sub_resource type="BoxMesh" id="BoxMesh_e2vdk"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6mcw"]
-render_priority = 2
-transparency = 1
-stencil_mode = 3
-stencil_flags = 1
-stencil_compare = 2
 
 [sub_resource type="Animation" id="Animation_bmbjk"]
 length = 0.001
@@ -168,15 +159,15 @@ mesh = SubResource("PlaneMesh_v6mcw")
 surface_material_override/0 = SubResource("ShaderMaterial_y1sgv")
 script = ExtResource("3_yi5k6")
 animation_player = NodePath("AnimationPlayer")
-Uniforms/last_layer_transparent = true
+Uniforms/last_layer_transparent = false
 Uniforms/first_layer_transparent = true
 Uniforms/transparency_transition = 0
 Uniforms/transparency_falloff = 1.0
-Uniforms/rim = true
+Uniforms/rim = false
 Uniforms/rim_extra_radius = 0.10000000475
 Uniforms/color_repeat_layer = 0
 Uniforms/color_offset_layer = 0
-Uniforms/color_one = Color(1, 1, 1, 1)
+Uniforms/color_one = Color(0.8509804, 0.09803922, 0.28627452, 1)
 Uniforms/color_two = Color(0, 0, 0, 1)
 Uniforms/color_falloff = 1.0
 Uniforms/color_transition = 0
@@ -184,7 +175,7 @@ Uniforms/glow_repeat_layer = 0
 Uniforms/glow_offset_layer = 0
 Uniforms/glow = 0.0
 Uniforms/glow_falloff = 1.0
-Uniforms/depth_amount = 1.0
+Uniforms/depth_amount = 0.1
 Uniforms/layers = 10
 Uniforms/radius = 0.38
 Uniforms/radius_reduction = 0.05
@@ -204,11 +195,6 @@ Uniforms/dither_offset = Vector2i(2, 0)
 Uniforms/bayer_size = 2
 Uniforms/interpolate = true
 Uniforms/falloff = 2.5
-
-[node name="PortalCube" type="MeshInstance3D" parent="PortalViewport" unique_id=316795626]
-transform = Transform3D(0.48213536, 0.13891882, 0.32900918, 0.22410907, 0.31268373, -0.46043873, -0.27806562, 0.49287966, 0.19937147, 0, -3.4302747, 0.08562642)
-mesh = SubResource("BoxMesh_e2vdk")
-surface_material_override/0 = SubResource("StandardMaterial3D_v6mcw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PortalViewport" unique_id=658612030]
 libraries/ = SubResource("AnimationLibrary_l2w8d")

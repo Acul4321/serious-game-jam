@@ -14,8 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://l5cjalc2i3w3" path="res://assets/platform/floatingPlatform_floating.plataform.png" id="10_mswub"]
 [ext_resource type="PackedScene" uid="uid://vihbb1x28fmq" path="res://assets/platform/PortalPlatform.glb" id="11_hybxs"]
 [ext_resource type="Texture2D" uid="uid://bdm1vbqcg7kp1" path="res://assets/platform/PortalPlatform_portal.png" id="12_v2gmf"]
+[ext_resource type="PackedScene" uid="uid://b5t77p0dtb1pu" path="res://scene/moving_platform.tscn" id="17_smf0o"]
 [ext_resource type="PackedScene" uid="uid://sgikqq2nmr5a" path="res://assets/platform/candlePlatform.glb" id="17_tv8i1"]
 [ext_resource type="Texture2D" uid="uid://bg8rmcdattw2j" path="res://assets/platform/candlePlatform_PixelTextureGrid_96.png" id="18_0vlqb"]
+[ext_resource type="Texture2D" uid="uid://dww8gxm3uufax" path="res://assets/textures/lava.png" id="18_tv8i1"]
+[ext_resource type="Script" uid="uid://cx6nqukjqoye" path="res://scene/player/spinBar.gd" id="19_0vlqb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_of57s"]
 sky_top_color = Color(0.41735244, 0.32682577, 0.9089177, 1)
@@ -227,6 +230,13 @@ shadow_mesh = SubResource("ArrayMesh_4gjnt")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mvp1f"]
 data = PackedVector3Array(0, -0.5, -6, 3.8567257, 0.5, -4.5962667, 0, 0.5, -6, 0, -0.5, -6, 3.8567257, -0.5, -4.5962667, 3.8567257, 0.5, -4.5962667, 3.8567257, -0.5, -4.5962667, 5.9088464, 0.5, -1.0418892, 3.8567257, 0.5, -4.5962667, 3.8567257, -0.5, -4.5962667, 5.9088464, -0.5, -1.0418892, 5.9088464, 0.5, -1.0418892, 5.9088464, -0.5, -1.0418892, 5.196152, 0.5, 3, 5.9088464, 0.5, -1.0418892, 5.9088464, -0.5, -1.0418892, 5.196152, -0.5, 3, 5.196152, 0.5, 3, 5.196152, -0.5, 3, 2.052121, 0.5, 5.638156, 5.196152, 0.5, 3, 5.196152, -0.5, 3, 2.052121, -0.5, 5.638156, 2.052121, 0.5, 5.638156, 2.052121, -0.5, 5.638156, -2.052121, 0.5, 5.638156, 2.052121, 0.5, 5.638156, 2.052121, -0.5, 5.638156, -2.052121, -0.5, 5.638156, -2.052121, 0.5, 5.638156, -2.052121, -0.5, 5.638156, -5.196152, 0.5, 3, -2.052121, 0.5, 5.638156, -2.052121, -0.5, 5.638156, -5.196152, -0.5, 3, -5.196152, 0.5, 3, -5.196152, -0.5, 3, -5.9088464, 0.5, -1.0418892, -5.196152, 0.5, 3, -5.196152, -0.5, 3, -5.9088464, -0.5, -1.0418892, -5.9088464, 0.5, -1.0418892, 5.9088464, 0.5, -1.0418892, 0, 0.5, -6, 3.8567257, 0.5, -4.5962667, 0, 0.5, -6, -5.9088464, 0.5, -1.0418892, -3.8567257, 0.5, -4.5962667, -5.9088464, 0.5, -1.0418892, -2.052121, 0.5, 5.638156, -5.196152, 0.5, 3, -2.052121, 0.5, 5.638156, 5.196152, 0.5, 3, 2.052121, 0.5, 5.638156, 5.196152, 0.5, 3, 0, 0.5, -6, 5.9088464, 0.5, -1.0418892, 0, 0.5, -6, -2.052121, 0.5, 5.638156, -5.9088464, 0.5, -1.0418892, 0, 0.5, -6, 5.196152, 0.5, 3, -2.052121, 0.5, 5.638156, -5.9088464, -0.5, -1.0418892, -3.8567257, 0.5, -4.5962667, -5.9088464, 0.5, -1.0418892, -5.9088464, -0.5, -1.0418892, -3.8567257, -0.5, -4.5962667, -3.8567257, 0.5, -4.5962667, -3.8567257, -0.5, -4.5962667, 0, 0.5, -6, -3.8567257, 0.5, -4.5962667, -3.8567257, -0.5, -4.5962667, 0, -0.5, -6, 0, 0.5, -6, -2.052121, -0.5, 5.638156, -5.196152, -37.2972, 3, -5.196152, -0.5, 3, -2.052121, -0.5, 5.638156, -2.052121, -37.2972, 5.638156, -5.196152, -37.2972, 3, -3.8567257, -37.2972, -4.5962667, 3.8567257, -37.2972, -4.5962667, 0, -37.2972, -6, 3.8567257, -37.2972, -4.5962667, 5.196152, -37.2972, 3, 5.9088464, -37.2972, -1.0418892, 5.196152, -37.2972, 3, -2.052121, -37.2972, 5.638156, 2.052121, -37.2972, 5.638156, -2.052121, -37.2972, 5.638156, -5.9088464, -37.2972, -1.0418892, -5.196152, -37.2972, 3, -5.9088464, -37.2972, -1.0418892, 3.8567257, -37.2972, -4.5962667, -3.8567257, -37.2972, -4.5962667, 3.8567257, -37.2972, -4.5962667, -2.052121, -37.2972, 5.638156, 5.196152, -37.2972, 3, 3.8567257, -37.2972, -4.5962667, -5.9088464, -37.2972, -1.0418892, -2.052121, -37.2972, 5.638156, 2.052121, -0.5, 5.638156, -2.052121, -37.2972, 5.638156, -2.052121, -0.5, 5.638156, 2.052121, -0.5, 5.638156, 2.052121, -37.2972, 5.638156, -2.052121, -37.2972, 5.638156, 5.196152, -0.5, 3, 2.052121, -37.2972, 5.638156, 2.052121, -0.5, 5.638156, 5.196152, -0.5, 3, 5.196152, -37.2972, 3, 2.052121, -37.2972, 5.638156, 0, -0.5, -6, 3.8567257, -37.2972, -4.5962667, 3.8567257, -0.5, -4.5962667, 0, -0.5, -6, 0, -37.2972, -6, 3.8567257, -37.2972, -4.5962667, 5.9088464, -0.5, -1.0418892, 5.196152, -37.2972, 3, 5.196152, -0.5, 3, 5.9088464, -0.5, -1.0418892, 5.9088464, -37.2972, -1.0418892, 5.196152, -37.2972, 3, 3.8567257, -0.5, -4.5962667, 5.9088464, -37.2972, -1.0418892, 5.9088464, -0.5, -1.0418892, 3.8567257, -0.5, -4.5962667, 3.8567257, -37.2972, -4.5962667, 5.9088464, -37.2972, -1.0418892, -3.8567257, -0.5, -4.5962667, 0, -37.2972, -6, 0, -0.5, -6, -3.8567257, -0.5, -4.5962667, -3.8567257, -37.2972, -4.5962667, 0, -37.2972, -6, -5.9088464, -0.5, -1.0418892, -3.8567257, -37.2972, -4.5962667, -3.8567257, -0.5, -4.5962667, -5.9088464, -0.5, -1.0418892, -5.9088464, -37.2972, -1.0418892, -3.8567257, -37.2972, -4.5962667, -5.196152, -0.5, 3, -5.9088464, -37.2972, -1.0418892, -5.9088464, -0.5, -1.0418892, -5.196152, -0.5, 3, -5.196152, -37.2972, 3, -5.9088464, -37.2972, -1.0418892)
 
+[sub_resource type="Curve3D" id="Curve3D_smf0o"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7.13, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tv8i1"]
 load_path = "res://.godot/imported/portal.png-03929c3e651451e69650c32dc9a9901a.s3tc.ctex"
 
@@ -234,12 +244,22 @@ load_path = "res://.godot/imported/portal.png-03929c3e651451e69650c32dc9a9901a.s
 atlas = SubResource("CompressedTexture2D_tv8i1")
 region = Rect2(166, 166, 117, 116)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjnwh"]
+albedo_texture = ExtResource("18_tv8i1")
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1ssea"]
+material = SubResource("StandardMaterial3D_gjnwh")
+size = Vector2(10000, 10000)
+
 [node name="main" type="Node3D" unique_id=279069133]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=979405858]
 environment = SubResource("Environment_v0l8b")
 
 [node name="Player" parent="." unique_id=509668328 node_paths=PackedStringArray("view") instance=ExtResource("1_itxqv")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43945903, 0)
 view = NodePath("../view")
 
@@ -275,6 +295,10 @@ player = NodePath("../../../Player")
 
 [node name="CandleCircle5" parent="world/Candles" unique_id=261177279 node_paths=PackedStringArray("player") instance=ExtResource("6_4j5ol")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, -1.043599)
+player = NodePath("../../../Player")
+
+[node name="Candle2" parent="world/Candles" unique_id=1614802542 node_paths=PackedStringArray("player") instance=ExtResource("5_4j5ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2500696, 7.054321, -22.604353)
 player = NodePath("../../../Player")
 
 [node name="NPC" type="Node3D" parent="world" unique_id=406264539]
@@ -315,6 +339,12 @@ mesh = SubResource("ArrayMesh_gjnwh")
 
 [node name="Portal" parent="world/Platform/PortalPlatform" unique_id=2027806640 instance=ExtResource("4_0ha60")]
 
+[node name="PortalViewport" parent="world/Platform/PortalPlatform/Portal/PixelPortalSingle" parent_id_path=PackedInt32Array(2027806640, 589736465) index="0" unique_id=1334032624]
+transform = Transform3D(0.9997623, 0.02086386, 0.006357662, 0.006521595, -0.0077987295, -0.99994826, -0.020813286, 0.99975216, -0.0079329405, -0.018388748, 0.99999994, 0.092989445)
+
+[node name="PortalFloor" parent="world/Platform/PortalPlatform/Portal/PixelPortalSingle" parent_id_path=PackedInt32Array(2027806640, 589736465) index="1" unique_id=782889844]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 0, 0)
+
 [node name="stone" parent="world/Platform/PortalPlatform" unique_id=387448524 instance=ExtResource("6_tv8i1")]
 
 [node name="stone 1_004" parent="world/Platform/PortalPlatform/stone" index="0" unique_id=389069272]
@@ -326,6 +356,7 @@ transform = Transform3D(1.31, 0, 0, 0, 1.31, 0, 0, 0, 1.31, 0.71481323, 0.126621
 mesh = SubResource("ArrayMesh_gn2wi")
 
 [node name="candlePlatform" parent="world/Platform" unique_id=1313127511 instance=ExtResource("17_tv8i1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5)
 
 [node name="pillar" parent="world/Platform/candlePlatform" index="0" unique_id=1971009791]
 mesh = SubResource("ArrayMesh_0d4pv")
@@ -339,6 +370,14 @@ mesh = SubResource("ArrayMesh_0d4pv")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="world/Platform/candlePlatform/pillar2/StaticBody3D" unique_id=431951512]
 shape = SubResource("ConcavePolygonShape3D_mvp1f")
 
+[node name="MovingPlatform" parent="world/Platform" unique_id=363223926 node_paths=PackedStringArray("path") instance=ExtResource("17_smf0o")]
+path = NodePath("Path3D")
+loop = false
+
+[node name="Path3D" type="Path3D" parent="world/Platform/MovingPlatform" unique_id=1912193918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -12)
+curve = SubResource("Curve3D_smf0o")
+
 [node name="SummoningCircle" type="Node3D" parent="world" unique_id=580847610]
 
 [node name="Sprite3D" type="Sprite3D" parent="world/SummoningCircle" unique_id=977599526]
@@ -347,15 +386,30 @@ pixel_size = 0.06
 texture_filter = 0
 texture = SubResource("AtlasTexture_1ssea")
 
+[node name="Lava" type="MeshInstance3D" parent="world" unique_id=1854640089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.5, 0)
+mesh = SubResource("PlaneMesh_1ssea")
+
 [node name="UI" type="Control" parent="." unique_id=1399842959]
 layout_mode = 3
 anchors_preset = 0
 
+[node name="SpinBar" type="ProgressBar" parent="UI" unique_id=944893210]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 27.0
+script = ExtResource("19_0vlqb")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1293199850]
 transform = Transform3D(-0.61588466, -0.7878363, 0, 0.15387778, -0.12029271, 0.9807402, -0.77266276, 0.60402286, 0.19531694, 0, 0, 0)
 
+[editable path="Player"]
+[editable path="Player/model"]
 [editable path="world/Platform/mainPlatform"]
 [editable path="world/Platform/floatingPlatform"]
 [editable path="world/Platform/PortalPlatform"]
+[editable path="world/Platform/PortalPlatform/Portal"]
+[editable path="world/Platform/PortalPlatform/Portal/portal"]
+[editable path="world/Platform/PortalPlatform/Portal/PixelPortalSingle"]
 [editable path="world/Platform/PortalPlatform/stone"]
 [editable path="world/Platform/candlePlatform"]
