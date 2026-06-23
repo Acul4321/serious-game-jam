@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d2lagbgjqx0nb" path="res://scene/portal.tscn" id="4_0ha60"]
 [ext_resource type="PackedScene" uid="uid://cdroww0t04pt4" path="res://scene/candle/candle.tscn" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://htje6gr0y1de" path="res://scene/candle/candle_circle.tscn" id="6_4j5ol"]
+[ext_resource type="PackedScene" uid="uid://pb8cvdj1fuu5" path="res://scene/cultNPC/cult_npc.tscn" id="7_p1hux"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_v2gmf"]
 panorama = ExtResource("1_wp4xf")
@@ -77,6 +78,11 @@ player = NodePath("../../../Player")
 [node name="CandleCircle2" parent="world/Candles" unique_id=1050242790 node_paths=PackedStringArray("player") instance=ExtResource("6_4j5ol")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.777995, 0, 0.0569973)
 player = NodePath("../../../Player")
+
+[node name="NPC" type="Node3D" parent="world" unique_id=406264539]
+
+[node name="Cult Member" parent="world/NPC" unique_id=1611122041 instance=ExtResource("7_p1hux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9199076, 0, 0)
 
 [node name="UI" type="Control" parent="." unique_id=1399842959]
 layout_mode = 3
