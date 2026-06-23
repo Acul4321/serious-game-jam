@@ -1,1 +1,0 @@
-credits: https://danilw.github.io/GLSL-howto/cubemap_to_panorama_js/cubemap_to_panorama.html
