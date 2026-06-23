@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://htje6gr0y1de"]
+
+[ext_resource type="PackedScene" uid="uid://btbvy8h65mamc" path="res://assets/candle/candle_circle.glb" id="1_13jhq"]
+[ext_resource type="Script" uid="uid://dop60q558p00" path="res://scene/candle/candle_circle.gd" id="1_offfw"]
+[ext_resource type="PackedScene" uid="uid://c5x5hs82pxe16" path="res://assets/candle/candle.glb" id="2_mo2xr"]
+
+[node name="CandleCircle" type="Node3D" unique_id=1984032318]
+script = ExtResource("1_offfw")
+
+[node name="candle_circle" parent="." unique_id=40210307 instance=ExtResource("1_13jhq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4535162, 0, -3.1396823)
+
+[node name="candle" parent="." unique_id=264866318 instance=ExtResource("2_mo2xr")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.044237733, 0.0038086176)
+visible = false
+
+[node name="placeLabel" type="Label3D" parent="." unique_id=1840320578]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0183299, 0)
+visible = false
+pixel_size = 0.025
+billboard = 2
+text = "E to Place"
