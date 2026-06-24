@@ -4,6 +4,11 @@ enum STATE {HELD, EMPTY}
 var currentState : STATE = STATE.EMPTY
 var currentCandle
 
+@export var needs_to_spin : bool = true
+var total_spin = 0
+
+@onready var main: Node3D = $".."
+
 #from Kenny assets: https://github.com/KenneyNL/Starter-Kit-3D-Platformer/blob/main/scripts/player.gd
 
 @export_subgroup("Components")
@@ -16,6 +21,8 @@ var currentCandle
 var movement_velocity: Vector3
 var rotation_direction: float
 var gravity = 0
+
+var spawnVec := Vector3i(0,1,0)
 
 var previously_floored = false
 
@@ -37,6 +44,8 @@ func _ready() -> void:
 	%deathParticle.emitting = false
 
 func _physics_process(delta):
+	
+	$SpinTimer.paused = !needs_to_spin
 
 	# Handle functions
 	
@@ -189,8 +198,10 @@ func handle_spinning(delta):
 
 func on_full_spin():
 	print("spin complete")
-	spin_timer.stop()
-	spin_timer.start()
+	total_spin+=1
+	if(needs_to_spin):
+		spin_timer.stop()
+		spin_timer.start()
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	animation.pause()
@@ -198,7 +209,6 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 
 func death() -> void:
 	print("die")
-	spin_timer.start()
 	$model.visible = false
 	%deathParticle.emitting = true
 	
@@ -208,6 +218,8 @@ func death() -> void:
 		currentState = STATE.EMPTY
 		
 	await get_tree().create_timer(2.0).timeout
+	if(needs_to_spin):
+		spin_timer.start()
 	%deathParticle.emitting = false
 	$model.visible = true
-	global_position = Vector3i(0,1,0)
+	global_position = spawnVec

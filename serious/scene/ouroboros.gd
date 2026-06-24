@@ -11,6 +11,8 @@ var spawnPos: Array[Vector3] = [
 ]
 
 func _process(delta: float) -> void:
+	if (main.state == main.GAMESTATE.TALKING):
+		pass
 	if state == STATE.SPAWNING:
 		var target_position := spawnPos[0].lerp(
 			spawnPos[1],

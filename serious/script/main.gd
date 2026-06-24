@@ -16,6 +16,11 @@ var colour_speed := 2.0
 var current_top: Color
 var current_horizon: Color
 
+const BATTLE = preload("res://scene/battle.tscn")
+
+@onready var ouroboros_camera: Camera3D = $Cutscene/ouroborosCameraArea/ouroborosCamera
+@onready var battle_camera: Camera3D = $Cutscene/battleCamera/Camera3D2
+
 @onready var news_camera: Camera3D = $Cutscene/ShakeableCamera2/Camera3D2
 @onready var shakeable_camera: Camera3D = $Cutscene/ShakeableCamera/Camera3D
 @onready var shake: Area3D = $Cutscene/ShakeableCamera
@@ -27,6 +32,8 @@ var state : GAMESTATE = GAMESTATE.NEWS
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#hookup dialogic signal for choices
+	Dialogic.signal_event.connect(DialogicSignal)
 	# set sky colour
 	current_top = START_TOP
 	current_horizon = START_HORIZON
@@ -42,6 +49,11 @@ func _process(delta: float) -> void:
 		news_camera.make_current()
 	elif(state == GAMESTATE.SPAWNING):
 		shakeable_camera.make_current()
+		
+	elif(state == GAMESTATE.TALKING):
+		ouroboros_camera.make_current()
+	elif(state == GAMESTATE.BATTLEING):
+		battle_camera.make_current()
 		
 	elif(state == GAMESTATE.GAMEPLAY):
 		playerCamera.make_current()
@@ -63,8 +75,10 @@ func _process(delta: float) -> void:
 func _on_candle_circle_candle_placed() -> void:
 	print("candle placed")
 	candleTotal += 1
-	if candleTotal >= 5:
+	if candleTotal >= 1:
 		print("game end")
+		change_state(GAMESTATE.TALKING)
+		Dialogic.start("res://assets/dialogic/Timeline/ouroboros.dtl")
 	else:
 		change_state(GAMESTATE.SPAWNING)
 		cutscene_player.play("spawning")
@@ -83,3 +97,17 @@ func news_ended():
 		Dialogic.timeline_ended.disconnect(news_ended)
 		cutscene_player.seek(25.0)
 		print("ended")
+
+func DialogicSignal(arg: String):
+	if(arg == "serve_signal"):
+		print("serve")
+		#goto end screen and global servebadge unlock
+	elif(arg == "fight_signal"):
+		print("fight")
+		change_state(GAMESTATE.BATTLEING)
+		cutscene_player.play("battleing")
+	else:
+		print("does not match dialogic signal")
+	
+func change_to_battle_scene():
+	get_tree().change_scene_to_packed(BATTLE)

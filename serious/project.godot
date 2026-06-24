@@ -34,7 +34,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "cultMembers": "res://assets/dialogic/Timeline/cultMembers.dtl",
-"news": "res://assets/dialogic/Timeline/news.dtl"
+"news": "res://assets/dialogic/Timeline/news.dtl",
+"ouroboros": "res://assets/dialogic/Timeline/ouroboros.dtl"
 }
 layout/style_directory={
 "": "res://assets/dialogic/Styles/pixel.tres",

@@ -1,0 +1,14 @@
+ouroboros (angry): Who dares summon me
+"cult member": please help us from spinning, the world is in dire need of your promise
+ouroboros (angry): silly human, It was I who plagued this world with this curse, I am GOD
+ouroboros (angry): my promise to this world was to destroy it!
+# turn to cult members and they all blow up with camera shake as above line is playing
+"cult member": oh well didnt like them anyways
+ouroboros (normal): YOU, HUMAN [br] Do you dare go against me or will you serve under me
+- Serve
+	ouroboros (normal): Very well, you are a smart one
+	[signal arg="serve_signal"]
+- Fight
+	ouroboros (angry): Your action will have consequences, human
+	[signal arg="fight_signal"]
+	# change to battle arena
