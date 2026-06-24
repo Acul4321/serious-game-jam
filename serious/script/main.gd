@@ -33,6 +33,7 @@ func _ready() -> void:
 	shake.add_trauma(1)
 	Dialogic.timeline_ended.connect(news_ended)
 	Dialogic.start("news")
+	cutscene_player.play("news")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
