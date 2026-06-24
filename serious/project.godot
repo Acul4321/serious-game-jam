@@ -32,7 +32,8 @@ directories/dch_directory={
 "unit_test_character": "res://dialogic-2.0-alpha-19/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"cultMembers": "res://assets/dialogic/Timeline/cultMembers.dtl"
+"cultMembers": "res://assets/dialogic/Timeline/cultMembers.dtl",
+"news": "res://assets/dialogic/Timeline/news.dtl"
 }
 layout/style_directory={}
 layout/style_list=[]

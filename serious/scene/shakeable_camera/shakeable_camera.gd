@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var trauma_reduction_rate: float = 1.0
+@export var trauma_reduction_rate: float = 15.0
 
 @export var max_x: float = 10.0
 @export var max_y: float = 10.0
@@ -40,3 +40,6 @@ func get_noise_value(offset: float) -> float:
 		return 0.0
 
 	return noise.get_noise_1d(time * noise_speed + offset)
+	
+func clear_trauma() -> void:
+	trauma = 0.0
