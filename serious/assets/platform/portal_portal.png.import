@@ -4,18 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://blgsp0mhpjsqe"
 path.s3tc="res://.godot/imported/portal_portal.png-da3599c9ece3eb3420e251da0fff3563.s3tc.ctex"
+path.etc2="res://.godot/imported/portal_portal.png-da3599c9ece3eb3420e251da0fff3563.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "b9706ab47e3149e36cf2e4925ac5b29c"
 }
 
 [deps]
 
 source_file="res://assets/platform/portal_portal.png"
-dest_files=["res://.godot/imported/portal_portal.png-da3599c9ece3eb3420e251da0fff3563.s3tc.ctex"]
+dest_files=["res://.godot/imported/portal_portal.png-da3599c9ece3eb3420e251da0fff3563.s3tc.ctex", "res://.godot/imported/portal_portal.png-da3599c9ece3eb3420e251da0fff3563.etc2.ctex"]
 
 [params]
 

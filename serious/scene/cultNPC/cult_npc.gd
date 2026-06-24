@@ -2,6 +2,10 @@ extends Node3D
 
 const ROTATION_SPEED : float = 5.0
 
+@export var player: CharacterBody3D
+
+const distance : int = 2
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,3 +16,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	rotation.y += ROTATION_SPEED * delta
+	if player.global_position.distance_to(self.global_position) < distance:
+		%talkLabel.visible = true
+		if Input.is_action_just_pressed("interact"):
+			Dialogic.start("res://assets/dialogic/Timeline/cultMembers.dtl")
+	else:
+		%talkLabel.visible = false

@@ -2,20 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch3n64gjeudm6"
+uid="uid://cvd6yh8nqq6nh"
 path.s3tc="res://.godot/imported/candle_circle_stone2.texture.png-401610685c3f1e11e63e42fca4e0f70e.s3tc.ctex"
+path.etc2="res://.godot/imported/candle_circle_stone2.texture.png-401610685c3f1e11e63e42fca4e0f70e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "b2940886fcc0ce10d065a794beb79895"
 }
 
 [deps]
 
 source_file="res://assets/candle/candle_circle_stone2.texture.png"
-dest_files=["res://.godot/imported/candle_circle_stone2.texture.png-401610685c3f1e11e63e42fca4e0f70e.s3tc.ctex"]
+dest_files=["res://.godot/imported/candle_circle_stone2.texture.png-401610685c3f1e11e63e42fca4e0f70e.s3tc.ctex", "res://.godot/imported/candle_circle_stone2.texture.png-401610685c3f1e11e63e42fca4e0f70e.etc2.ctex"]
 
 [params]
 

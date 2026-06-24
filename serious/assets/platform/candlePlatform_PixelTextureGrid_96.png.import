@@ -2,23 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cedyo36pxxrvu"
-path="res://.godot/imported/candlePlatform_PixelTextureGrid_96.png-1835261b484e232365b06b799c4cac2c.ctex"
+uid="uid://bg8rmcdattw2j"
+path.s3tc="res://.godot/imported/candlePlatform_PixelTextureGrid_96.png-1835261b484e232365b06b799c4cac2c.s3tc.ctex"
+path.etc2="res://.godot/imported/candlePlatform_PixelTextureGrid_96.png-1835261b484e232365b06b799c4cac2c.etc2.ctex"
 metadata={
-"vram_texture": false
-}
-generator_parameters={
-"md5": "cc41ab7b956e9a80defbf95333620adb"
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/platform/candlePlatform_PixelTextureGrid_96.png"
-dest_files=["res://.godot/imported/candlePlatform_PixelTextureGrid_96.png-1835261b484e232365b06b799c4cac2c.ctex"]
+dest_files=["res://.godot/imported/candlePlatform_PixelTextureGrid_96.png-1835261b484e232365b06b799c4cac2c.s3tc.ctex", "res://.godot/imported/candlePlatform_PixelTextureGrid_96.png-1835261b484e232365b06b799c4cac2c.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

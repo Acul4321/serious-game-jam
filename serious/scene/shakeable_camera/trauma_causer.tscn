@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://khb4gsudubqc"]
+
+[sub_resource type="GDScript" id="GDScript_7js14"]
+script/source = "extends Area3D
+
+@export var trauma_amount: float = 0.1
+
+## Call this to add trauma to any overlapping camera shake areas.
+func cause_trauma() -> void:
+	for area: Area3D in get_overlapping_areas():
+		if area.has_method(\"add_trauma\"):
+			area.call(\"add_trauma\", trauma_amount)
+"
+
+[node name="TraumaCauser" type="Area3D" unique_id=895962243]
+script = SubResource("GDScript_7js14")

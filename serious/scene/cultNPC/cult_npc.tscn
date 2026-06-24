@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c72rraat0p50o" path="res://scene/cultNPC/cult_npc.gd" id="1_01isg"]
 [ext_resource type="PackedScene" uid="uid://dvhqybmrwosfr" path="res://assets/cult/cult.glb" id="2_c02vq"]
 [ext_resource type="Texture2D" uid="uid://cg0wkm1he1bpf" path="res://assets/cult/cult_cult.png" id="3_c02vq"]
+[ext_resource type="FontFile" uid="uid://8yts78yo4wtt" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="4_cbukt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1ssea"]
 height = 1.7570801
@@ -48,7 +49,26 @@ shape = SubResource("CapsuleShape3D_1ssea")
 [node name="cultModel" parent="." unique_id=1450779633 instance=ExtResource("2_c02vq")]
 unique_name_in_owner = true
 
-[node name="cult" parent="cultModel/Armature/Skeleton3D" parent_id_path=PackedInt32Array(1450779633, 1622232233) index="0" unique_id=982284134]
+[node name="Skeleton3D" parent="cultModel/Armature" parent_id_path=PackedInt32Array(1450779633, 1882389502) index="0" unique_id=1622232233]
+bones/1/rotation = Quaternion(0.043845836, -0.034544848, -0.014093397, 0.9983415)
+bones/2/rotation = Quaternion(0.06791708, 0.020649316, 0.008563307, 0.9974405)
+bones/4/rotation = Quaternion(-0.23300362, -0.27592206, -0.10851965, 0.9261748)
+bones/5/rotation = Quaternion(-0.41399783, -0.3095279, -0.06368936, 0.8536639)
+bones/6/rotation = Quaternion(9.7090876e-08, -8.299223e-08, -0.7670822, 0.6415489)
+bones/7/rotation = Quaternion(-0.30863482, 0.14862512, 0.40092465, 0.8496555)
+bones/8/rotation = Quaternion(-0.19627777, 0.025801878, -0.14890328, 0.9688329)
+
+[node name="cult" parent="cultModel/Armature/Skeleton3D" index="0" unique_id=982284134]
 mesh = SubResource("ArrayMesh_etjhc")
+
+[node name="talkLabel" type="Label3D" parent="." unique_id=2140091785]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3745098, 0)
+visible = false
+pixel_size = 0.025
+billboard = 2
+text = "E to Talk"
+font = ExtResource("4_cbukt")
+font_size = 34
 
 [editable path="cultModel"]

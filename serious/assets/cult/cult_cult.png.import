@@ -2,20 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg0wkm1he1bpf"
+uid="uid://b2se8fmgw3tc2"
 path.s3tc="res://.godot/imported/cult_cult.png-adfc108b9e92b8c4e7ea5a4c959635f9.s3tc.ctex"
+path.etc2="res://.godot/imported/cult_cult.png-adfc108b9e92b8c4e7ea5a4c959635f9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "a02d7f5b519952b60827feef9fdf1912"
 }
 
 [deps]
 
 source_file="res://assets/cult/cult_cult.png"
-dest_files=["res://.godot/imported/cult_cult.png-adfc108b9e92b8c4e7ea5a4c959635f9.s3tc.ctex"]
+dest_files=["res://.godot/imported/cult_cult.png-adfc108b9e92b8c4e7ea5a4c959635f9.s3tc.ctex", "res://.godot/imported/cult_cult.png-adfc108b9e92b8c4e7ea5a4c959635f9.etc2.ctex"]
 
 [params]
 
