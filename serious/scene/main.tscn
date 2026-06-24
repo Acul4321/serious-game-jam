@@ -1344,13 +1344,50 @@ tracks/70/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/71/type = "value"
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/path = NodePath("../world/Platform/Path1/ouroboros:visible")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/keys = {
+"times": PackedFloat32Array(0.0009999999),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/72/type = "value"
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle/PortalViewport:animation_player")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Object(AnimationPlayer,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","active":true,"deterministic":false,"reset_on_save":true,"root_node":NodePath(".."),"root_motion_track":NodePath(""),"root_motion_local":false,"audio_max_polyphony":32,"callback_mode_process":1,"callback_mode_method":0,"callback_mode_discrete":1,"libraries/":null,"autoplay":&"","playback_auto_capture":true,"playback_auto_capture_duration":-1.0,"playback_auto_capture_transition_type":0,"playback_auto_capture_ease_type":0,"playback_default_blend_time":0.0,"speed_scale":1.0,"movie_quit_on_finish":false,"blend_times":[],"script":null)
+]
+}
+tracks/73/type = "value"
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle:visible")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_p8adh"]
 resource_name = "battleing"
 
 [sub_resource type="Animation" id="Animation_gtqqq"]
 resource_name = "news"
-length = 20.0
+length = 25.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1358,7 +1395,7 @@ tracks/0/path = NodePath("..")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(20),
+"times": PackedFloat32Array(25),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [1],
@@ -2164,7 +2201,7 @@ tracks/67/path = NodePath("../UI/SpinBar:visible")
 tracks/67/interp = 1
 tracks/67/loop_wrap = true
 tracks/67/keys = {
-"times": PackedFloat32Array(0, 20),
+"times": PackedFloat32Array(0, 25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -2176,7 +2213,7 @@ tracks/68/path = NodePath("%Player:visible")
 tracks/68/interp = 1
 tracks/68/loop_wrap = true
 tracks/68/keys = {
-"times": PackedFloat32Array(0, 20),
+"times": PackedFloat32Array(0, 25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -2212,10 +2249,58 @@ tracks/71/path = NodePath(".:rotation")
 tracks/71/interp = 1
 tracks/71/loop_wrap = true
 tracks/71/keys = {
-"times": PackedFloat32Array(0, 20),
+"times": PackedFloat32Array(0, 25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 4.7891836, 0)]
+}
+tracks/72/type = "value"
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/path = NodePath("../world/Platform/Path1/ouroboros:visible")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/keys = {
+"times": PackedFloat32Array(0, 25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/73/type = "value"
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle/PortalViewport:animation_player")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/keys = {
+"times": PackedFloat32Array(0, 6.54),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Object(AnimationPlayer,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","active":true,"deterministic":false,"reset_on_save":true,"root_node":NodePath(".."),"root_motion_track":NodePath(""),"root_motion_local":false,"audio_max_polyphony":32,"callback_mode_process":1,"callback_mode_method":0,"callback_mode_discrete":1,"libraries/":null,"autoplay":&"","playback_auto_capture":true,"playback_auto_capture_duration":-1.0,"playback_auto_capture_transition_type":0,"playback_auto_capture_ease_type":0,"playback_default_blend_time":0.0,"speed_scale":1.0,"movie_quit_on_finish":false,"blend_times":[],"script":null)
+, Object(AnimationPlayer,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","active":true,"deterministic":false,"reset_on_save":true,"root_node":NodePath(".."),"root_motion_track":NodePath(""),"root_motion_local":false,"audio_max_polyphony":32,"callback_mode_process":1,"callback_mode_method":0,"callback_mode_discrete":1,"libraries/":null,"autoplay":&"","playback_auto_capture":true,"playback_auto_capture_duration":-1.0,"playback_auto_capture_transition_type":0,"playback_auto_capture_ease_type":0,"playback_default_blend_time":0.0,"speed_scale":1.0,"movie_quit_on_finish":false,"blend_times":[],"script":null)
+]
+}
+tracks/74/type = "animation"
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle/PortalViewport/AnimationPlayer")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/keys = {
+"clips": PackedStringArray("[stop]", "open"),
+"times": PackedFloat32Array(0, 6.366667)
+}
+tracks/75/type = "value"
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle:visible")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/keys = {
+"times": PackedFloat32Array(0, 6.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_gn2wi"]
@@ -2354,12 +2439,17 @@ mesh = SubResource("ArrayMesh_gjnwh")
 
 [node name="Portal" parent="world/Platform/Path1/PortalPlatform" unique_id=2027806640 instance=ExtResource("4_0ha60")]
 
-[node name="PortalViewport" parent="world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle" parent_id_path=PackedInt32Array(2027806640, 589736465) index="0" unique_id=1334032624]
+[node name="PixelPortalSingle" parent="world/Platform/Path1/PortalPlatform/Portal" index="2" unique_id=589736465]
+visible = false
+
+[node name="PortalViewport" parent="world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle" index="0" unique_id=1334032624]
 transform = Transform3D(0.9997623, 0.02086386, 0.006357662, 0.006521595, -0.0077987295, -0.99994826, -0.020813286, 0.99975216, -0.0079329405, -0.018388748, 0.99999994, 0.092989445)
 Uniforms/rim = false
 Uniforms/rim_extra_radius = 0.10000000475
+Uniforms/depth_amount = 0.0
+Uniforms/radius = 0.0
 
-[node name="PortalFloor" parent="world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle" parent_id_path=PackedInt32Array(2027806640, 589736465) index="1" unique_id=782889844]
+[node name="PortalFloor" parent="world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle" index="1" unique_id=782889844]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.00604403, 0.01632011, 0.0020251274)
 
 [node name="stone" parent="world/Platform/Path1/PortalPlatform" unique_id=387448524 instance=ExtResource("6_tv8i1")]
@@ -2374,6 +2464,7 @@ mesh = SubResource("ArrayMesh_gn2wi")
 
 [node name="ouroboros" parent="world/Platform/Path1" unique_id=857692666 instance=ExtResource("16_fdqew")]
 transform = Transform3D(0.31227404, 0.949753, 0.021321397, 0.03648376, 0.010437578, -0.99927974, -0.94929117, 0.31282696, -0.03139118, -28.73492, 9.438217, -11.8933735)
+visible = false
 
 [node name="Path2" type="Node3D" parent="world/Platform" unique_id=1396657523]
 
@@ -2549,6 +2640,7 @@ script = ExtResource("19_0vlqb")
 
 [node name="ShakeableCamera" parent="Cutscene" unique_id=1504691083 instance=ExtResource("23_gn2wi")]
 transform = Transform3D(1, 0, 0, 0, 0.8972691, 0.4414838, 0, -0.4414838, 0.8972691, 0, 30.892271, 52.87712)
+trauma_reduction_rate = 1.0
 max_x = 5.0
 max_y = 5.0
 max_z = 2.5

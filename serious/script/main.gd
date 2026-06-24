@@ -1,6 +1,7 @@
 extends Node3D
 
 var candleTotal : int = 0
+@onready var cutscene_player: AnimationPlayer = $Cutscene/cutscenePlayer
 
 @onready var world_environment: WorldEnvironment = %WorldEnvironment
 
@@ -28,13 +29,16 @@ func _ready() -> void:
 	# set sky colour
 	current_top = START_TOP
 	current_horizon = START_HORIZON
+	#on news start
+	shake.add_trauma(1)
+	Dialogic.timeline_ended.connect(news_ended)
+	Dialogic.start("news")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if(state == GAMESTATE.NEWS):
 		shakeable_camera.make_current()
-		shake.add_trauma(1)
-		Dialogic.start("news")
+		
 	elif(state == GAMESTATE.GAMEPLAY):
 		playerCamera.make_current()
 	#sky colour changing
@@ -65,3 +69,10 @@ func change_state(newState:GAMESTATE):
 func _on_platform_rise_end() -> void:
 	print("platform end")
 	shake.clear_trauma()
+	
+func news_ended():
+	#magic number - rough estimate of time if the player mashes to skip
+	if(cutscene_player.current_animation_position < 10):
+		Dialogic.timeline_ended.disconnect(news_ended)
+		cutscene_player.seek(25.0)
+		print("ended")

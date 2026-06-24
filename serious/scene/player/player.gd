@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 enum STATE {HELD, EMPTY}
 var currentState : STATE = STATE.EMPTY
+var currentCandle
 
 #from Kenny assets: https://github.com/KenneyNL/Starter-Kit-3D-Platformer/blob/main/scripts/player.gd
 
@@ -198,3 +199,7 @@ func death() -> void:
 	print("die")
 	spin_timer.start()
 	global_position = Vector3i(0,1,0)
+	if(currentState == STATE.HELD):
+		currentCandle.visible = true
+		currentCandle = null
+		currentState = STATE.EMPTY

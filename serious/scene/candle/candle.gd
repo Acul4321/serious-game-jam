@@ -17,6 +17,7 @@ func _physics_process(delta: float) -> void:
 				player.currentState = PLAYERSTATE.EMPTY
 			else:
 				player.currentState = PLAYERSTATE.HELD
+				player.currentCandle = %candle
 				
 			print(player.currentState)
 			
