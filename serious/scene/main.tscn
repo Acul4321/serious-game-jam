@@ -230,12 +230,243 @@ shadow_mesh = SubResource("ArrayMesh_4gjnt")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mvp1f"]
 data = PackedVector3Array(0, -0.5, -6, 3.8567257, 0.5, -4.5962667, 0, 0.5, -6, 0, -0.5, -6, 3.8567257, -0.5, -4.5962667, 3.8567257, 0.5, -4.5962667, 3.8567257, -0.5, -4.5962667, 5.9088464, 0.5, -1.0418892, 3.8567257, 0.5, -4.5962667, 3.8567257, -0.5, -4.5962667, 5.9088464, -0.5, -1.0418892, 5.9088464, 0.5, -1.0418892, 5.9088464, -0.5, -1.0418892, 5.196152, 0.5, 3, 5.9088464, 0.5, -1.0418892, 5.9088464, -0.5, -1.0418892, 5.196152, -0.5, 3, 5.196152, 0.5, 3, 5.196152, -0.5, 3, 2.052121, 0.5, 5.638156, 5.196152, 0.5, 3, 5.196152, -0.5, 3, 2.052121, -0.5, 5.638156, 2.052121, 0.5, 5.638156, 2.052121, -0.5, 5.638156, -2.052121, 0.5, 5.638156, 2.052121, 0.5, 5.638156, 2.052121, -0.5, 5.638156, -2.052121, -0.5, 5.638156, -2.052121, 0.5, 5.638156, -2.052121, -0.5, 5.638156, -5.196152, 0.5, 3, -2.052121, 0.5, 5.638156, -2.052121, -0.5, 5.638156, -5.196152, -0.5, 3, -5.196152, 0.5, 3, -5.196152, -0.5, 3, -5.9088464, 0.5, -1.0418892, -5.196152, 0.5, 3, -5.196152, -0.5, 3, -5.9088464, -0.5, -1.0418892, -5.9088464, 0.5, -1.0418892, 5.9088464, 0.5, -1.0418892, 0, 0.5, -6, 3.8567257, 0.5, -4.5962667, 0, 0.5, -6, -5.9088464, 0.5, -1.0418892, -3.8567257, 0.5, -4.5962667, -5.9088464, 0.5, -1.0418892, -2.052121, 0.5, 5.638156, -5.196152, 0.5, 3, -2.052121, 0.5, 5.638156, 5.196152, 0.5, 3, 2.052121, 0.5, 5.638156, 5.196152, 0.5, 3, 0, 0.5, -6, 5.9088464, 0.5, -1.0418892, 0, 0.5, -6, -2.052121, 0.5, 5.638156, -5.9088464, 0.5, -1.0418892, 0, 0.5, -6, 5.196152, 0.5, 3, -2.052121, 0.5, 5.638156, -5.9088464, -0.5, -1.0418892, -3.8567257, 0.5, -4.5962667, -5.9088464, 0.5, -1.0418892, -5.9088464, -0.5, -1.0418892, -3.8567257, -0.5, -4.5962667, -3.8567257, 0.5, -4.5962667, -3.8567257, -0.5, -4.5962667, 0, 0.5, -6, -3.8567257, 0.5, -4.5962667, -3.8567257, -0.5, -4.5962667, 0, -0.5, -6, 0, 0.5, -6, -2.052121, -0.5, 5.638156, -5.196152, -37.2972, 3, -5.196152, -0.5, 3, -2.052121, -0.5, 5.638156, -2.052121, -37.2972, 5.638156, -5.196152, -37.2972, 3, -3.8567257, -37.2972, -4.5962667, 3.8567257, -37.2972, -4.5962667, 0, -37.2972, -6, 3.8567257, -37.2972, -4.5962667, 5.196152, -37.2972, 3, 5.9088464, -37.2972, -1.0418892, 5.196152, -37.2972, 3, -2.052121, -37.2972, 5.638156, 2.052121, -37.2972, 5.638156, -2.052121, -37.2972, 5.638156, -5.9088464, -37.2972, -1.0418892, -5.196152, -37.2972, 3, -5.9088464, -37.2972, -1.0418892, 3.8567257, -37.2972, -4.5962667, -3.8567257, -37.2972, -4.5962667, 3.8567257, -37.2972, -4.5962667, -2.052121, -37.2972, 5.638156, 5.196152, -37.2972, 3, 3.8567257, -37.2972, -4.5962667, -5.9088464, -37.2972, -1.0418892, -2.052121, -37.2972, 5.638156, 2.052121, -0.5, 5.638156, -2.052121, -37.2972, 5.638156, -2.052121, -0.5, 5.638156, 2.052121, -0.5, 5.638156, 2.052121, -37.2972, 5.638156, -2.052121, -37.2972, 5.638156, 5.196152, -0.5, 3, 2.052121, -37.2972, 5.638156, 2.052121, -0.5, 5.638156, 5.196152, -0.5, 3, 5.196152, -37.2972, 3, 2.052121, -37.2972, 5.638156, 0, -0.5, -6, 3.8567257, -37.2972, -4.5962667, 3.8567257, -0.5, -4.5962667, 0, -0.5, -6, 0, -37.2972, -6, 3.8567257, -37.2972, -4.5962667, 5.9088464, -0.5, -1.0418892, 5.196152, -37.2972, 3, 5.196152, -0.5, 3, 5.9088464, -0.5, -1.0418892, 5.9088464, -37.2972, -1.0418892, 5.196152, -37.2972, 3, 3.8567257, -0.5, -4.5962667, 5.9088464, -37.2972, -1.0418892, 5.9088464, -0.5, -1.0418892, 3.8567257, -0.5, -4.5962667, 3.8567257, -37.2972, -4.5962667, 5.9088464, -37.2972, -1.0418892, -3.8567257, -0.5, -4.5962667, 0, -37.2972, -6, 0, -0.5, -6, -3.8567257, -0.5, -4.5962667, -3.8567257, -37.2972, -4.5962667, 0, -37.2972, -6, -5.9088464, -0.5, -1.0418892, -3.8567257, -37.2972, -4.5962667, -3.8567257, -0.5, -4.5962667, -5.9088464, -0.5, -1.0418892, -5.9088464, -37.2972, -1.0418892, -3.8567257, -37.2972, -4.5962667, -5.196152, -0.5, 3, -5.9088464, -37.2972, -1.0418892, -5.9088464, -0.5, -1.0418892, -5.196152, -0.5, 3, -5.196152, -37.2972, 3, -5.9088464, -37.2972, -1.0418892)
 
-[sub_resource type="Curve3D" id="Curve3D_smf0o"]
+[sub_resource type="Curve3D" id="Curve3D_gjnwh"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7.13, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7.211845, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_smf0o"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_0vlqb"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, -0.02, 0, -0.53, -0.2, 0.035, 0, 0, 0, 10.655, 0.365, 0.21),
+"tilts": PackedFloat32Array(0, 95.915)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_fdqew"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11.82, -1.22, -12.195),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_0d4pv"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_gtqqq"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_gn2wi"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_p8adh"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_0vlqb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../Path3/Path3D/PathFollow3D:progress_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../Path4/Path3D2/PathFollow3D:progress_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../Path5/Path3D/PathFollow3D:progress_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../../Path5/Path3D2/PathFollow3D:progress_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../../Path5/Path3D3/PathFollow3D:progress_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../../Path5/Path3D4/PathFollow3D:progress_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_gjnwh"]
+resource_name = "moving platforms"
+length = 4.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../Path3/Path3D/PathFollow3D:progress_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../Path4/Path3D2/PathFollow3D:progress_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.96, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../Path5/Path3D/PathFollow3D:progress_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../../Path5/Path3D2/PathFollow3D:progress_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../../Path5/Path3D3/PathFollow3D:progress_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../../Path5/Path3D4/PathFollow3D:progress_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fdqew"]
+_data = {
+&"RESET": SubResource("Animation_0vlqb"),
+&"moving platforms": SubResource("Animation_gjnwh")
+}
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tv8i1"]
 load_path = "res://.godot/imported/portal.png-03929c3e651451e69650c32dc9a9901a.s3tc.ctex"
@@ -262,6 +493,9 @@ environment = SubResource("Environment_v0l8b")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43945903, 0)
 view = NodePath("../view")
+
+[node name="SpinTimer" parent="Player" index="3" unique_id=1308275734]
+wait_time = 15.0
 
 [node name="view" type="Node3D" parent="." unique_id=1261992853 node_paths=PackedStringArray("target")]
 script = ExtResource("2_v0l8b")
@@ -301,6 +535,18 @@ player = NodePath("../../../Player")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2500696, 7.054321, -22.604353)
 player = NodePath("../../../Player")
 
+[node name="Candle3" parent="world/Candles" unique_id=636226485 node_paths=PackedStringArray("player") instance=ExtResource("5_4j5ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.044056, 8.472564, -12.359383)
+player = NodePath("../../../Player")
+
+[node name="Candle4" parent="world/Candles" unique_id=2075167298 node_paths=PackedStringArray("player") instance=ExtResource("5_4j5ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.342121, -1.0266978, 22.209152)
+player = NodePath("../../../Player")
+
+[node name="Candle5" parent="world/Candles" unique_id=1313550887 node_paths=PackedStringArray("player") instance=ExtResource("5_4j5ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.018246, -1.0266978, 33.53969)
+player = NodePath("../../../Player")
+
 [node name="NPC" type="Node3D" parent="world" unique_id=406264539]
 
 [node name="Cult Member" parent="world/NPC" unique_id=1611122041 instance=ExtResource("7_p1hux")]
@@ -325,58 +571,185 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1185198, 0, -3.3000026)
 [node name="main pillar" parent="world/Platform/mainPlatform" index="0" unique_id=1971602739]
 mesh = SubResource("ArrayMesh_k65ib")
 
-[node name="floatingPlatform" parent="world/Platform" unique_id=542104450 instance=ExtResource("9_wscrc")]
+[node name="Path1" type="Node3D" parent="world/Platform" unique_id=822828151]
 
-[node name="plataform" parent="world/Platform/floatingPlatform" index="0" unique_id=780817299]
+[node name="floatingPlatform" parent="world/Platform/Path1" unique_id=542104450 instance=ExtResource("9_wscrc")]
+
+[node name="plataform" parent="world/Platform/Path1/floatingPlatform" index="0" unique_id=780817299]
 transform = Transform3D(2.2035153, 0, 0, 0, 2.2035153, 0, 0, 0, 2.2035153, -11.190097, -1.8664122, -2.564351)
 mesh = SubResource("ArrayMesh_tv8i1")
 
-[node name="PortalPlatform" parent="world/Platform" unique_id=1208757462 instance=ExtResource("11_hybxs")]
+[node name="PortalPlatform" parent="world/Platform/Path1" unique_id=1208757462 instance=ExtResource("11_hybxs")]
 
-[node name="portal plataform" parent="world/Platform/PortalPlatform" index="0" unique_id=1731956213]
+[node name="portal plataform" parent="world/Platform/Path1/PortalPlatform" index="0" unique_id=1731956213]
 transform = Transform3D(5.1299334, 0, 0.09988123, 0, 5.1309056, 0, -0.09988123, 0, 5.1299334, -26.989697, 2.2620993, -12.390548)
 mesh = SubResource("ArrayMesh_gjnwh")
 
-[node name="Portal" parent="world/Platform/PortalPlatform" unique_id=2027806640 instance=ExtResource("4_0ha60")]
+[node name="Portal" parent="world/Platform/Path1/PortalPlatform" unique_id=2027806640 instance=ExtResource("4_0ha60")]
 
-[node name="PortalViewport" parent="world/Platform/PortalPlatform/Portal/PixelPortalSingle" parent_id_path=PackedInt32Array(2027806640, 589736465) index="0" unique_id=1334032624]
+[node name="PortalViewport" parent="world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle" parent_id_path=PackedInt32Array(2027806640, 589736465) index="0" unique_id=1334032624]
 transform = Transform3D(0.9997623, 0.02086386, 0.006357662, 0.006521595, -0.0077987295, -0.99994826, -0.020813286, 0.99975216, -0.0079329405, -0.018388748, 0.99999994, 0.092989445)
 
-[node name="PortalFloor" parent="world/Platform/PortalPlatform/Portal/PixelPortalSingle" parent_id_path=PackedInt32Array(2027806640, 589736465) index="1" unique_id=782889844]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 0, 0)
+[node name="PortalFloor" parent="world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle" parent_id_path=PackedInt32Array(2027806640, 589736465) index="1" unique_id=782889844]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.00604403, 0.01632011, 0.0020251274)
 
-[node name="stone" parent="world/Platform/PortalPlatform" unique_id=387448524 instance=ExtResource("6_tv8i1")]
+[node name="stone" parent="world/Platform/Path1/PortalPlatform" unique_id=387448524 instance=ExtResource("6_tv8i1")]
 
-[node name="stone 1_004" parent="world/Platform/PortalPlatform/stone" index="0" unique_id=389069272]
+[node name="stone 1_004" parent="world/Platform/Path1/PortalPlatform/stone" index="0" unique_id=389069272]
 transform = Transform3D(0.8554574, 0, 0, 0, 0.8554574, 0, 0, 0, 0.8554574, -29.042816, 4.6473074, -8.348562)
 mesh = SubResource("ArrayMesh_gn2wi")
 
-[node name="stone 1_004" type="MeshInstance3D" parent="world/Platform/PortalPlatform/stone/stone 1_004" index="1" unique_id=1459386033]
+[node name="stone 1_004" type="MeshInstance3D" parent="world/Platform/Path1/PortalPlatform/stone/stone 1_004" index="1" unique_id=1459386033]
 transform = Transform3D(1.31, 0, 0, 0, 1.31, 0, 0, 0, 1.31, 0.71481323, 0.12662125, -1.3347712)
 mesh = SubResource("ArrayMesh_gn2wi")
 
-[node name="candlePlatform" parent="world/Platform" unique_id=1313127511 instance=ExtResource("17_tv8i1")]
+[node name="Path2" type="Node3D" parent="world/Platform" unique_id=1396657523]
+
+[node name="candlePlatform" parent="world/Platform/Path2" unique_id=1313127511 instance=ExtResource("17_tv8i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5)
 
-[node name="pillar" parent="world/Platform/candlePlatform" index="0" unique_id=1971009791]
+[node name="pillar" parent="world/Platform/Path2/candlePlatform" index="0" unique_id=1971009791]
 mesh = SubResource("ArrayMesh_0d4pv")
 
-[node name="pillar2" type="MeshInstance3D" parent="world/Platform/candlePlatform" unique_id=1704124979]
+[node name="pillar2" type="MeshInstance3D" parent="world/Platform/Path2/candlePlatform" unique_id=1704124979]
 transform = Transform3D(0.94234955, 0, 0, 0, 0.94234955, 0, 0, 0, 0.94234955, 1.752131, 5.634001, -16.92395)
 mesh = SubResource("ArrayMesh_0d4pv")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="world/Platform/candlePlatform/pillar2" unique_id=1382467047]
+[node name="StaticBody3D" type="StaticBody3D" parent="world/Platform/Path2/candlePlatform/pillar2" unique_id=1382467047]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="world/Platform/candlePlatform/pillar2/StaticBody3D" unique_id=431951512]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="world/Platform/Path2/candlePlatform/pillar2/StaticBody3D" unique_id=431951512]
 shape = SubResource("ConcavePolygonShape3D_mvp1f")
 
-[node name="MovingPlatform" parent="world/Platform" unique_id=363223926 node_paths=PackedStringArray("path") instance=ExtResource("17_smf0o")]
-path = NodePath("Path3D")
-loop = false
+[node name="candlePlatform" parent="world/Platform/Path2/candlePlatform" unique_id=1233921114 instance=ExtResource("17_tv8i1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.424286, 1, 9.044226)
 
-[node name="Path3D" type="Path3D" parent="world/Platform/MovingPlatform" unique_id=1912193918]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -12)
+[node name="pillar" parent="world/Platform/Path2/candlePlatform/candlePlatform" index="0" unique_id=1971009791]
+transform = Transform3D(0.9123335, 0, 0.2359455, 0, 0.94234955, 0, -0.2359455, 0, 0.9123335, 1.752131, 5.634001, -16.92395)
+mesh = SubResource("ArrayMesh_0d4pv")
+
+[node name="Path3D" type="Path3D" parent="world/Platform/Path2" unique_id=1912193918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.62645483, -13.503679)
+curve = SubResource("Curve3D_gjnwh")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="world/Platform/Path2/Path3D" unique_id=1982802000]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="MovingPlatform" parent="world/Platform/Path2/Path3D/PathFollow3D" unique_id=363223926 instance=ExtResource("17_smf0o")]
+unique_name_in_owner = true
+transform = Transform3D(-4.371139e-08, 0, -1, 1, -4.371139e-08, -4.371139e-08, -4.371139e-08, -1, 1.9106855e-15, -0.34272385, -1.10983365e-08, 0.08882332)
+
+[node name="Path3" type="Node3D" parent="world/Platform" unique_id=509858915]
+
+[node name="Path3D" type="Path3D" parent="world/Platform/Path3" unique_id=317784791]
+transform = Transform3D(-0.90923613, 0, -0.41628075, 0, 1, 0, 0.41628075, 0, -0.90923613, 24.71511, -1.341733, -9.774748)
 curve = SubResource("Curve3D_smf0o")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="world/Platform/Path3/Path3D" unique_id=2069292928]
+transform = Transform3D(-4.371121e-08, 0.9999971, -4.371118e-08, 0, -4.371126e-08, -0.9999952, -0.99999595, -4.371126e-08, 1.9106761e-15, 0, 0, 0)
+
+[node name="MovingPlatform" parent="world/Platform/Path3/Path3D/PathFollow3D" unique_id=31181496 instance=ExtResource("17_smf0o")]
+transform = Transform3D(0.9989705, -0.04518335, -0.0040325085, 0, -0.08889434, 0.99604106, -0.045362934, -0.9950157, -0.08880283, 0.2720127, -0.12867641, 0.18655014)
+
+[node name="floatingPlatform" parent="world/Platform/Path3" unique_id=523986935 instance=ExtResource("9_wscrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.613474, 0, -0.9566512)
+
+[node name="plataform" parent="world/Platform/Path3/floatingPlatform" index="0" unique_id=780817299]
+transform = Transform3D(2.2035153, 0, 0, 0, 2.2035153, 0, 0, 0, 2.2035153, -11.190097, -1.8664122, -2.564351)
+mesh = SubResource("ArrayMesh_tv8i1")
+
+[node name="floatingPlatform2" parent="world/Platform/Path3" unique_id=694514753 instance=ExtResource("9_wscrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.172636, 0.8089504, -5.9970474)
+
+[node name="plataform" parent="world/Platform/Path3/floatingPlatform2" index="0" unique_id=780817299]
+transform = Transform3D(1.3867171, 0, 1.712453, 0, 2.2035153, 0, -1.712453, 0, 1.3867171, -11.190097, -1.8664122, -2.564351)
+mesh = SubResource("ArrayMesh_tv8i1")
+
+[node name="Path4" type="Node3D" parent="world/Platform" unique_id=1153752105]
+
+[node name="MovingPlatform" parent="world/Platform/Path4" unique_id=482494913 instance=ExtResource("17_smf0o")]
+transform = Transform3D(-0.14780945, 0, 0.9890159, 0, 1, 0, -0.9890159, 0, -0.14780945, 7.9274755, -1.225905, 9.243238)
+
+[node name="Path3D" type="Path3D" parent="world/Platform/Path4/MovingPlatform" unique_id=593837026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08882332, -0.34272385)
+curve = SubResource("Curve3D_smf0o")
+
+[node name="candlePlatform" parent="world/Platform/Path4" unique_id=1399016716 instance=ExtResource("17_tv8i1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.669117, -7.1636276, 38.68316)
+
+[node name="pillar" parent="world/Platform/Path4/candlePlatform" index="0" unique_id=1971009791]
+transform = Transform3D(-0.94183147, 0, 0.031243762, 0, 0.94234955, 0, -0.031243762, 0, -0.94183147, 1.752131, 5.634001, -16.92395)
+mesh = SubResource("ArrayMesh_0d4pv")
+
+[node name="Path3D" type="Path3D" parent="world/Platform/Path4" unique_id=1621231562]
+transform = Transform3D(0.70090926, 0, -0.71325046, 0, 1, 0, 0.71325046, 0, 0.70090926, 14.192247, -1.341733, 15.479018)
+curve = SubResource("Curve3D_0vlqb")
+
+[node name="MovingPlatform2" parent="world/Platform/Path4/Path3D" unique_id=1817036445 instance=ExtResource("17_smf0o")]
+transform = Transform3D(-0.9993692, 0.025358591, 0.02418992, 0.025365494, 0.9996534, -1.3300527e-10, -0.02418226, 0.000613614, -0.999686, -0.08049011, -0.021620274, -0.34476376)
+
+[node name="Path3D2" type="Path3D" parent="world/Platform/Path4" unique_id=1222422974]
+transform = Transform3D(-0.9348257, 0, 0.35510692, 0, 1, 0, -0.35510692, 0, -0.9348257, 18.017548, 4.387952, 11.792274)
+curve = SubResource("Curve3D_fdqew")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="world/Platform/Path4/Path3D2" unique_id=522416781]
+transform = Transform3D(0.7180587, 0.049867075, -0.6941885, 3.7252792e-09, 0.99741894, 0.07165058, 0.6959783, -0.05144915, 0.71621203, 0, 0, 0)
+
+[node name="MovingPlatform3" parent="world/Platform/Path4/Path3D2/PathFollow3D" unique_id=476863477 instance=ExtResource("17_smf0o")]
+transform = Transform3D(-2.980232e-08, 4.371139e-08, -1, 1, -4.371139e-08, -2.9802322e-08, -4.371139e-08, -1, -4.371139e-08, -0.34272432, 0, 0.08882332)
+
+[node name="Path5" type="Node3D" parent="world/Platform" unique_id=67011253]
+
+[node name="candlePlatform" parent="world/Platform/Path5" unique_id=1993503151 instance=ExtResource("17_tv8i1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.229183, -7.1636276, 49.782818)
+
+[node name="pillar" parent="world/Platform/Path5/candlePlatform" index="0" unique_id=1971009791]
+transform = Transform3D(-0.5904799, 0, 0.7344087, 0, 0.94234955, 0, -0.7344087, 0, -0.5904799, 1.752131, 5.634001, -16.92395)
+mesh = SubResource("ArrayMesh_0d4pv")
+
+[node name="Path3D" type="Path3D" parent="world/Platform/Path5" unique_id=647540511]
+transform = Transform3D(0.7890841, 0, -0.6142852, 0, 1, 0, 0.6142852, 0, 0.7890841, -7.325833, -1.6120481, 9.8295965)
+curve = SubResource("Curve3D_0d4pv")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="world/Platform/Path5/Path3D" unique_id=1480613765]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="MovingPlatform3" parent="world/Platform/Path5/Path3D/PathFollow3D" unique_id=47683819 instance=ExtResource("17_smf0o")]
+transform = Transform3D(-8.940697e-08, 0, -1, 1, -4.3711385e-08, -8.940697e-08, -4.371139e-08, -1, 1.7763568e-15, -0.34272385, -4.7683716e-07, 0.08882332)
+
+[node name="Path3D2" type="Path3D" parent="world/Platform/Path5" unique_id=1032635804]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -12.452645, -1.6120481, 14.627761)
+curve = SubResource("Curve3D_gtqqq")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="world/Platform/Path5/Path3D2" unique_id=2058914920]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="MovingPlatform4" parent="world/Platform/Path5/Path3D2/PathFollow3D" unique_id=746826247 instance=ExtResource("17_smf0o")]
+transform = Transform3D(-2.9802322e-08, 0, -1.0000001, 1.0000001, -4.3711392e-08, -2.9802322e-08, -4.3711392e-08, -1, 8.881784e-16, -0.3427248, 0, 0.08882332)
+
+[node name="Path3D3" type="Path3D" parent="world/Platform/Path5" unique_id=146189763]
+transform = Transform3D(0.97437006, 0, -0.22495104, 0, 1, 0, 0.22495104, 0, 0.97437006, -16.972855, -1.6120481, 19.061335)
+curve = SubResource("Curve3D_gn2wi")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="world/Platform/Path5/Path3D3" unique_id=844702023]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="MovingPlatform5" parent="world/Platform/Path5/Path3D3/PathFollow3D" unique_id=794205287 instance=ExtResource("17_smf0o")]
+transform = Transform3D(-4.4703484e-08, 0, -1, 1, -4.371139e-08, -4.4703484e-08, -4.371139e-08, -1, 1.7763568e-15, -0.34272575, -9.536743e-07, 0.08882332)
+
+[node name="Path3D4" type="Path3D" parent="world/Platform/Path5" unique_id=594610227]
+transform = Transform3D(0.49090376, 0, 0.8712138, 0, 1, 0, -0.8712138, 0, 0.49090376, -22.775955, -1.6120481, 24.061804)
+curve = SubResource("Curve3D_p8adh")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="world/Platform/Path5/Path3D4" unique_id=1989521430]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="MovingPlatform6" parent="world/Platform/Path5/Path3D4/PathFollow3D" unique_id=531691759 instance=ExtResource("17_smf0o")]
+transform = Transform3D(-2.9802322e-08, 0, -1.0000001, 1.0000001, -4.371139e-08, -2.9802322e-08, -4.371139e-08, -1, 1.7763568e-15, -0.34272385, 0, 0.08882332)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="world/Platform" unique_id=2082901867]
+root_node = NodePath("../Path2/Path3D/PathFollow3D")
+libraries/ = SubResource("AnimationLibrary_fdqew")
+autoplay = &"moving platforms"
 
 [node name="SummoningCircle" type="Node3D" parent="world" unique_id=580847610]
 
@@ -406,10 +779,15 @@ transform = Transform3D(-0.61588466, -0.7878363, 0, 0.15387778, -0.12029271, 0.9
 [editable path="Player"]
 [editable path="Player/model"]
 [editable path="world/Platform/mainPlatform"]
-[editable path="world/Platform/floatingPlatform"]
-[editable path="world/Platform/PortalPlatform"]
-[editable path="world/Platform/PortalPlatform/Portal"]
-[editable path="world/Platform/PortalPlatform/Portal/portal"]
-[editable path="world/Platform/PortalPlatform/Portal/PixelPortalSingle"]
-[editable path="world/Platform/PortalPlatform/stone"]
-[editable path="world/Platform/candlePlatform"]
+[editable path="world/Platform/Path1/floatingPlatform"]
+[editable path="world/Platform/Path1/PortalPlatform"]
+[editable path="world/Platform/Path1/PortalPlatform/Portal"]
+[editable path="world/Platform/Path1/PortalPlatform/Portal/portal"]
+[editable path="world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle"]
+[editable path="world/Platform/Path1/PortalPlatform/stone"]
+[editable path="world/Platform/Path2/candlePlatform"]
+[editable path="world/Platform/Path2/candlePlatform/candlePlatform"]
+[editable path="world/Platform/Path3/floatingPlatform"]
+[editable path="world/Platform/Path3/floatingPlatform2"]
+[editable path="world/Platform/Path4/candlePlatform"]
+[editable path="world/Platform/Path5/candlePlatform"]

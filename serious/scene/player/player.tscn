@@ -71,5 +71,6 @@ wait_time = 6.0
 autostart = true
 
 [connection signal="animation_finished" from="model/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="SpinTimer" to="." method="death"]
 
 [editable path="model"]

@@ -65,7 +65,7 @@ func _physics_process(delta):
 	# Falling/respawning
 
 	if position.y < -17:
-		global_position = Vector3i(0,1,0)
+		death()
 
 	# Animation for scale (jumping and landing)
 
@@ -192,3 +192,9 @@ func on_full_spin():
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	animation.pause()
+
+
+func death() -> void:
+	print("die")
+	spin_timer.start()
+	global_position = Vector3i(0,1,0)
