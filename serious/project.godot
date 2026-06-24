@@ -19,12 +19,17 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout="uid://cw62vrhu3huv"
 
+[autoload]
+
+Dialogic="*uid://ds2q0uclmolvu"
+
 [dialogic]
 
 directories/dch_directory={
 "cult member": "res://assets/dialogic/Characters/cult member.dch",
 "newsguy": "res://assets/dialogic/Characters/newsguy.dch",
-"ouroboros": "res://assets/dialogic/Characters/ouroboros.dch"
+"ouroboros": "res://assets/dialogic/Characters/ouroboros.dch",
+"unit_test_character": "res://dialogic-2.0-alpha-19/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "cultMembers": "res://assets/dialogic/Timeline/cultMembers.dtl"
@@ -72,6 +77,10 @@ variables={}
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [input]
 
