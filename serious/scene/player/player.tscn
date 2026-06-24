@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byf6wfoxkjabf" path="res://scene/player/player.gd" id="1_hjaqi"]
 [ext_resource type="PackedScene" uid="uid://dvhqybmrwosfr" path="res://assets/cult/cult.glb" id="1_xo3ru"]
-[ext_resource type="Texture2D" uid="uid://cg0wkm1he1bpf" path="res://assets/cult/cult_cult.png" id="3_5lop3"]
+[ext_resource type="Texture2D" uid="uid://b2se8fmgw3tc2" path="res://assets/cult/cult_cult.png" id="3_5lop3"]
 [ext_resource type="PackedScene" uid="uid://c5x5hs82pxe16" path="res://assets/candle/candle.glb" id="3_6smn3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1ssea"]

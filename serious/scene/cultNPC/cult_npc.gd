@@ -19,6 +19,6 @@ func _process(delta: float) -> void:
 	if player.global_position.distance_to(self.global_position) < distance:
 		%talkLabel.visible = true
 		if Input.is_action_just_pressed("interact"):
-			Dialogic.start("cultMembers")
+			Dialogic.start("res://assets/dialogic/Timeline/cultMembers.dtl")
 	else:
 		%talkLabel.visible = false
