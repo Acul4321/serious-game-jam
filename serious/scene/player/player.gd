@@ -34,6 +34,7 @@ var previous_yaw := 0.0
 # Functions
 func _ready() -> void:
 	previous_yaw = rotation.y
+	%deathParticle.emitting = false
 
 func _physics_process(delta):
 
@@ -198,8 +199,15 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 func death() -> void:
 	print("die")
 	spin_timer.start()
-	global_position = Vector3i(0,1,0)
+	$model.visible = false
+	%deathParticle.emitting = true
+	
 	if(currentState == STATE.HELD):
 		currentCandle.visible = true
 		currentCandle = null
 		currentState = STATE.EMPTY
+		
+	await get_tree().create_timer(2.0).timeout
+	%deathParticle.emitting = false
+	$model.visible = true
+	global_position = Vector3i(0,1,0)
