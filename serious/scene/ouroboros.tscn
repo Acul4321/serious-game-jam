@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bqvd4ghh747in" path="res://scene/ouroboros.gd" id="1_5nlu6"]
 [ext_resource type="PackedScene" uid="uid://c401uc1q4fk34" path="res://assets/ouroboros/ouroboros.glb" id="1_vb143"]
-[ext_resource type="Texture2D" uid="uid://bso73ee3pr8fs" path="res://assets/ouroboros/ouroboros_normal.png" id="3_b1utt"]
+[ext_resource type="Texture2D" uid="uid://dijg3wgg3du5f" path="res://assets/ouroboros/ouroboros_normal.png" id="3_b1utt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5nlu6"]
 resource_name = "Material.001"

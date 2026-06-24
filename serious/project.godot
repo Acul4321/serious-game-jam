@@ -83,6 +83,7 @@ text/autoadvance_enabled=false
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/main_scene="uid://b4gqjwp37bheq"
 
 [editor_plugins]
 

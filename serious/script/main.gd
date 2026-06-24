@@ -16,6 +16,7 @@ var colour_speed := 2.0
 var current_top: Color
 var current_horizon: Color
 
+@onready var news_camera: Camera3D = $Cutscene/ShakeableCamera2/Camera3D2
 @onready var shakeable_camera: Camera3D = $Cutscene/ShakeableCamera/Camera3D
 @onready var shake: Area3D = $Cutscene/ShakeableCamera
 
@@ -38,6 +39,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if(state == GAMESTATE.NEWS):
+		news_camera.make_current()
+	elif(state == GAMESTATE.SPAWNING):
 		shakeable_camera.make_current()
 		
 	elif(state == GAMESTATE.GAMEPLAY):
@@ -62,6 +65,9 @@ func _on_candle_circle_candle_placed() -> void:
 	candleTotal += 1
 	if candleTotal >= 5:
 		print("game end")
+	else:
+		change_state(GAMESTATE.SPAWNING)
+		cutscene_player.play("spawning")
 		
 func change_state(newState:GAMESTATE):
 	state = newState

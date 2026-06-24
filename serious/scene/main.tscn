@@ -488,8 +488,6 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_gjnwh")
 size = Vector2(10000, 10000)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_gtqqq"]
-
 [sub_resource type="Animation" id="Animation_0d4pv"]
 length = 0.001
 tracks/0/type = "value"
@@ -2220,80 +2218,56 @@ tracks/68/keys = {
 tracks/69/type = "value"
 tracks/69/imported = false
 tracks/69/enabled = true
-tracks/69/path = NodePath("ShakeableCamera:position")
+tracks/69/path = NodePath(".:rotation")
 tracks/69/interp = 1
 tracks/69/loop_wrap = true
 tracks/69/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 30.892271, 52.87712)]
-}
-tracks/70/type = "value"
-tracks/70/imported = false
-tracks/70/enabled = true
-tracks/70/path = NodePath("ShakeableCamera:rotation")
-tracks/70/interp = 1
-tracks/70/loop_wrap = true
-tracks/70/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.45725173, 0, 0)]
-}
-tracks/71/type = "value"
-tracks/71/imported = false
-tracks/71/enabled = true
-tracks/71/path = NodePath(".:rotation")
-tracks/71/interp = 1
-tracks/71/loop_wrap = true
-tracks/71/keys = {
 "times": PackedFloat32Array(0, 25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 4.7891836, 0)]
 }
-tracks/72/type = "value"
-tracks/72/imported = false
-tracks/72/enabled = true
-tracks/72/path = NodePath("../world/Platform/Path1/ouroboros:visible")
-tracks/72/interp = 1
-tracks/72/loop_wrap = true
-tracks/72/keys = {
+tracks/70/type = "value"
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/path = NodePath("../world/Platform/Path1/ouroboros:visible")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/keys = {
 "times": PackedFloat32Array(0, 25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
-tracks/73/type = "value"
-tracks/73/imported = false
-tracks/73/enabled = true
-tracks/73/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle/PortalViewport:animation_player")
-tracks/73/interp = 1
-tracks/73/loop_wrap = true
-tracks/73/keys = {
+tracks/71/type = "value"
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle/PortalViewport:animation_player")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/keys = {
 "times": PackedFloat32Array(0, 6.54),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [null, null]
 }
-tracks/74/type = "animation"
-tracks/74/imported = false
-tracks/74/enabled = true
-tracks/74/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle/PortalViewport/AnimationPlayer")
-tracks/74/interp = 1
-tracks/74/loop_wrap = true
-tracks/74/keys = {
+tracks/72/type = "animation"
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle/PortalViewport/AnimationPlayer")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/keys = {
 "clips": PackedStringArray("[stop]", "open"),
 "times": PackedFloat32Array(0, 6.366667)
 }
-tracks/75/type = "value"
-tracks/75/imported = false
-tracks/75/enabled = true
-tracks/75/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle:visible")
-tracks/75/interp = 1
-tracks/75/loop_wrap = true
-tracks/75/keys = {
+tracks/73/type = "value"
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle:visible")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/keys = {
 "times": PackedFloat32Array(0, 6.366667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -2302,6 +2276,59 @@ tracks/75/keys = {
 
 [sub_resource type="Animation" id="Animation_gn2wi"]
 resource_name = "spawning"
+length = 3.0000000000000004
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShakeableCamera")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1.0],
+"method": &"add_trauma"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1],
+"method": &"change_state"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShakeableCamera:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-40.24, 17.802, 9.027)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ShakeableCamera:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.37175512, 0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p8adh"]
 _data = {
@@ -2310,6 +2337,8 @@ _data = {
 &"news": SubResource("Animation_gtqqq"),
 &"spawning": SubResource("Animation_gn2wi")
 }
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gtqqq"]
 
 [node name="main" type="Node3D" unique_id=279069133]
 script = ExtResource("1_gjnwh")
@@ -2443,8 +2472,7 @@ visible = false
 transform = Transform3D(0.9997623, 0.02086386, 0.006357662, 0.006521595, -0.0077987295, -0.99994826, -0.020813286, 0.99975216, -0.0079329405, -0.018388748, 0.99999994, 0.092989445)
 Uniforms/rim = false
 Uniforms/rim_extra_radius = 0.10000000475
-Uniforms/depth_amount = 0.0
-Uniforms/radius = 0.0
+Uniforms/depth_amount = 1.0
 
 [node name="PortalFloor" parent="world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle" index="1" unique_id=782889844]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.00604403, 0.01632011, 0.0020251274)
@@ -2635,23 +2663,28 @@ script = ExtResource("19_0vlqb")
 
 [node name="Cutscene" type="Node3D" parent="." unique_id=1527082270]
 
-[node name="ShakeableCamera" parent="Cutscene" unique_id=1504691083 instance=ExtResource("23_gn2wi")]
-transform = Transform3D(1, 0, 0, 0, 0.8972691, 0.4414838, 0, -0.4414838, 0.8972691, 0, 30.892271, 52.87712)
-trauma_reduction_rate = 1.0
-max_x = 5.0
-max_y = 5.0
-max_z = 2.5
-noise = SubResource("FastNoiseLite_gtqqq")
-
-[node name="Camera3D" parent="Cutscene/ShakeableCamera" index="1" unique_id=89689566]
-transform = Transform3D(0.9205046, -0.20823961, 0.33061704, 0.17250174, 0.97580624, 0.13433321, -0.35059163, -0.06662232, 0.93415576, 18.083801, 1.388546, -10.53027)
-
 [node name="cutscenePlayer" type="AnimationPlayer" parent="Cutscene" unique_id=1896604073]
 libraries/ = SubResource("AnimationLibrary_p8adh")
 
 [node name="Timer" type="Timer" parent="Cutscene" unique_id=324961415]
 wait_time = 10.0
 autostart = true
+
+[node name="ShakeableCamera2" parent="Cutscene" unique_id=1504691083 instance=ExtResource("23_gn2wi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.73, 0)
+
+[node name="Camera3D2" type="Camera3D" parent="Cutscene/ShakeableCamera2" unique_id=1164631294]
+transform = Transform3D(-0.0043639243, 0.6191017, -0.78529865, 0, 0.78530616, 0.6191076, 0.99999046, 0.0027017386, -0.0034270165, -40.668945, 27.519909, 1.0667815)
+
+[node name="ShakeableCamera" parent="Cutscene" unique_id=287446284 instance=ExtResource("23_gn2wi")]
+transform = Transform3D(1, 0, 0, 0, 0.8972691, 0.4414838, 0, -0.4414838, 0.8972691, 0, 30.892271, 52.87712)
+max_x = 5.0
+max_y = 5.0
+max_z = 2.5
+noise = SubResource("FastNoiseLite_gtqqq")
+
+[node name="Camera3D" parent="Cutscene/ShakeableCamera" index="1" unique_id=89689566]
+transform = Transform3D(-0.9567048, 0.12665841, -0.26205647, -0.10572791, 0.6876206, 0.7183312, 0.2711781, 0.71493757, -0.6444586, 19.325146, 4.676549, -13.39739)
 
 [connection signal="candle_placed" from="world/Candles/CandleCircle" to="." method="_on_candle_circle_candle_placed"]
 [connection signal="candle_placed" from="world/Candles/CandleCircle2" to="." method="_on_candle_circle_candle_placed"]
