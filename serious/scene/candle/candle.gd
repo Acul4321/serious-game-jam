@@ -32,4 +32,3 @@ func _physics_process(delta: float) -> void:
 		%pickupLabel.visible = labelVisibility
 	else:
 		%pickupLabel.visible = false
-	

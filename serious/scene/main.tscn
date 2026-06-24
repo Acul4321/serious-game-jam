@@ -1,29 +1,32 @@
 [gd_scene format=4 uid="uid://b4gqjwp37bheq"]
 
+[ext_resource type="Script" uid="uid://iksnuwdwqkj5" path="res://script/main.gd" id="1_gjnwh"]
 [ext_resource type="PackedScene" uid="uid://byasux5hwifrk" path="res://scene/player/player.tscn" id="1_itxqv"]
 [ext_resource type="Script" uid="uid://dfd0mg1mivxwo" path="res://script/camera.gd" id="2_v0l8b"]
 [ext_resource type="PackedScene" uid="uid://d2lagbgjqx0nb" path="res://scene/portal.tscn" id="4_0ha60"]
 [ext_resource type="PackedScene" uid="uid://cdroww0t04pt4" path="res://scene/candle/candle.tscn" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://htje6gr0y1de" path="res://scene/candle/candle_circle.tscn" id="6_4j5ol"]
-[ext_resource type="PackedScene" uid="uid://sw8hqv3vbfc7" path="res://assets/platform/stone.glb" id="6_tv8i1"]
-[ext_resource type="Texture2D" uid="uid://k0j8ytpghkb1" path="res://assets/platform/stone_stone1.texture.png" id="7_0vlqb"]
+[ext_resource type="PackedScene" uid="uid://dscpqbdu1gmtw" path="res://assets/platform/stone.glb" id="6_tv8i1"]
+[ext_resource type="Texture2D" uid="uid://pio2j6dofwps" path="res://assets/platform/stone_stone1.texture.png" id="7_0vlqb"]
 [ext_resource type="PackedScene" uid="uid://clncx4bv7c7mx" path="res://assets/platform/mainPlatform.glb" id="7_of57s"]
 [ext_resource type="PackedScene" uid="uid://pb8cvdj1fuu5" path="res://scene/cultNPC/cult_npc.tscn" id="7_p1hux"]
-[ext_resource type="Texture2D" uid="uid://cdldr6i7csx7d" path="res://assets/platform/mainPlatform_main.png" id="8_b5f6u"]
+[ext_resource type="Texture2D" uid="uid://bpmclynfwe8a1" path="res://assets/platform/mainPlatform_main.png" id="8_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://dh71yvl8egggi" path="res://assets/platform/floatingPlatform.glb" id="9_wscrc"]
-[ext_resource type="Texture2D" uid="uid://l5cjalc2i3w3" path="res://assets/platform/floatingPlatform_floating.plataform.png" id="10_mswub"]
+[ext_resource type="Texture2D" uid="uid://ngqohjeely4v" path="res://assets/platform/floatingPlatform_floating.plataform.png" id="10_mswub"]
 [ext_resource type="PackedScene" uid="uid://vihbb1x28fmq" path="res://assets/platform/PortalPlatform.glb" id="11_hybxs"]
-[ext_resource type="Texture2D" uid="uid://bdm1vbqcg7kp1" path="res://assets/platform/PortalPlatform_portal.png" id="12_v2gmf"]
+[ext_resource type="Texture2D" uid="uid://csmnpimd7xwce" path="res://assets/platform/PortalPlatform_portal.png" id="12_v2gmf"]
+[ext_resource type="PackedScene" uid="uid://c44qa5bdaxy26" path="res://scene/ouroboros.tscn" id="16_fdqew"]
 [ext_resource type="PackedScene" uid="uid://b5t77p0dtb1pu" path="res://scene/moving_platform.tscn" id="17_smf0o"]
 [ext_resource type="PackedScene" uid="uid://sgikqq2nmr5a" path="res://assets/platform/candlePlatform.glb" id="17_tv8i1"]
-[ext_resource type="Texture2D" uid="uid://bg8rmcdattw2j" path="res://assets/platform/candlePlatform_PixelTextureGrid_96.png" id="18_0vlqb"]
-[ext_resource type="Texture2D" uid="uid://dww8gxm3uufax" path="res://assets/textures/lava.png" id="18_tv8i1"]
+[ext_resource type="Texture2D" uid="uid://cedyo36pxxrvu" path="res://assets/platform/candlePlatform_PixelTextureGrid_96.png" id="18_0vlqb"]
+[ext_resource type="Texture2D" uid="uid://cwlxrldpv1lum" path="res://assets/textures/lava.png" id="18_tv8i1"]
 [ext_resource type="Script" uid="uid://cx6nqukjqoye" path="res://scene/player/spinBar.gd" id="19_0vlqb"]
+[ext_resource type="PackedScene" uid="uid://e3oeugwpqtix" path="res://scene/shakeable_camera/shakeable_camera.tscn" id="23_gn2wi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_of57s"]
-sky_top_color = Color(0.41735244, 0.32682577, 0.9089177, 1)
-sky_horizon_color = Color(0.5878116, 0.62476283, 0.9401011, 1)
-sky_curve = 0.19118458
+sky_top_color = Color(0.44313726, 0.34509805, 0.84313726, 1)
+sky_horizon_color = Color(0.5882353, 0.62352943, 0.9411765, 1)
+sky_curve = 0.04019162
 ground_bottom_color = Color(0.73333335, 0.16862746, 0.13333334, 1)
 ground_horizon_color = Color(0.8198408, 0.3137213, 0.120255895, 1)
 ground_curve = 0.028284265
@@ -477,6 +480,7 @@ region = Rect2(166, 166, 117, 116)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjnwh"]
 albedo_texture = ExtResource("18_tv8i1")
+uv1_scale = Vector3(-0.075, -0.075, -0.075)
 uv1_triplanar = true
 texture_filter = 0
 
@@ -484,15 +488,47 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_gjnwh")
 size = Vector2(10000, 10000)
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gtqqq"]
+
+[sub_resource type="Animation" id="Animation_p8adh"]
+resource_name = "battleing"
+
+[sub_resource type="Animation" id="Animation_gtqqq"]
+resource_name = "news"
+
+[sub_resource type="Animation" id="Animation_gn2wi"]
+resource_name = "spawning"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p8adh"]
+_data = {
+&"battleing": SubResource("Animation_p8adh"),
+&"news": SubResource("Animation_gtqqq"),
+&"spawning": SubResource("Animation_gn2wi")
+}
+
 [node name="main" type="Node3D" unique_id=279069133]
+script = ExtResource("1_gjnwh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1293199850]
+transform = Transform3D(-0.61588466, -0.7878364, -9.177397e-09, 0.15387778, -0.1202927, 0.9807402, -0.77266276, 0.6040228, 0.19531693, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=979405858]
+unique_name_in_owner = true
 environment = SubResource("Environment_v0l8b")
 
 [node name="Player" parent="." unique_id=509668328 node_paths=PackedStringArray("view") instance=ExtResource("1_itxqv")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43945903, 0)
+transform = Transform3D(-0.35917258, 0, 0.93327105, 0, 1, 0, -0.93327105, 0, -0.35917258, 0, 0.43945903, 0)
 view = NodePath("../view")
+
+[node name="Skeleton3D" parent="Player/model/Armature" parent_id_path=PackedInt32Array(509668328, 26906941, 1882389502) index="0" unique_id=1622232233]
+bones/1/rotation = Quaternion(-3.552712e-15, 1.7763568e-14, -2.019484e-28, 1)
+bones/2/rotation = Quaternion(-3.552712e-15, 0, -2.019484e-28, 1)
+bones/4/rotation = Quaternion(6.4021433e-09, -1.2474155e-07, 0.0246561, 0.999696)
+bones/5/rotation = Quaternion(6.871603e-09, 1.1938899e-07, 0.025930049, 0.9996638)
+bones/6/rotation = Quaternion(1.000751e-07, -8.474576e-08, -0.7670822, 0.6415489)
+bones/7/rotation = Quaternion(6.4021712e-09, 1.2474158e-07, -0.0246561, 0.999696)
+bones/8/rotation = Quaternion(6.8716046e-09, -1.1938899e-07, -0.025930049, 0.9996638)
 
 [node name="SpinTimer" parent="Player" index="3" unique_id=1308275734]
 wait_time = 15.0
@@ -549,20 +585,25 @@ player = NodePath("../../../Player")
 
 [node name="NPC" type="Node3D" parent="world" unique_id=406264539]
 
-[node name="Cult Member" parent="world/NPC" unique_id=1611122041 instance=ExtResource("7_p1hux")]
+[node name="Cult Member" parent="world/NPC" unique_id=1611122041 node_paths=PackedStringArray("player") instance=ExtResource("7_p1hux")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5199075, 0, 1.6)
+player = NodePath("../../../Player")
 
-[node name="Cult Member2" parent="world/NPC" unique_id=1083638515 instance=ExtResource("7_p1hux")]
+[node name="Cult Member2" parent="world/NPC" unique_id=1083638515 node_paths=PackedStringArray("player") instance=ExtResource("7_p1hux")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03981495, 0, 4.2)
+player = NodePath("../../../Player")
 
-[node name="Cult Member3" parent="world/NPC" unique_id=1279100444 instance=ExtResource("7_p1hux")]
+[node name="Cult Member3" parent="world/NPC" unique_id=1279100444 node_paths=PackedStringArray("player") instance=ExtResource("7_p1hux")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32037, 0, 1.6999993)
+player = NodePath("../../../Player")
 
-[node name="Cult Member4" parent="world/NPC" unique_id=2015516633 instance=ExtResource("7_p1hux")]
+[node name="Cult Member4" parent="world/NPC" unique_id=2015516633 node_paths=PackedStringArray("player") instance=ExtResource("7_p1hux")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7407403, 0, -3.7000012)
+player = NodePath("../../../Player")
 
-[node name="Cult Member5" parent="world/NPC" unique_id=892747604 instance=ExtResource("7_p1hux")]
+[node name="Cult Member5" parent="world/NPC" unique_id=892747604 node_paths=PackedStringArray("player") instance=ExtResource("7_p1hux")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1185198, 0, -3.3000026)
+player = NodePath("../../../Player")
 
 [node name="Platform" type="Node3D" parent="world" unique_id=1055956760]
 
@@ -589,19 +630,24 @@ mesh = SubResource("ArrayMesh_gjnwh")
 
 [node name="PortalViewport" parent="world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle" parent_id_path=PackedInt32Array(2027806640, 589736465) index="0" unique_id=1334032624]
 transform = Transform3D(0.9997623, 0.02086386, 0.006357662, 0.006521595, -0.0077987295, -0.99994826, -0.020813286, 0.99975216, -0.0079329405, -0.018388748, 0.99999994, 0.092989445)
+Uniforms/rim = false
+Uniforms/rim_extra_radius = 0.10000000475
 
 [node name="PortalFloor" parent="world/Platform/Path1/PortalPlatform/Portal/PixelPortalSingle" parent_id_path=PackedInt32Array(2027806640, 589736465) index="1" unique_id=782889844]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.00604403, 0.01632011, 0.0020251274)
 
 [node name="stone" parent="world/Platform/Path1/PortalPlatform" unique_id=387448524 instance=ExtResource("6_tv8i1")]
 
-[node name="stone 1_004" parent="world/Platform/Path1/PortalPlatform/stone" index="0" unique_id=389069272]
+[node name="stone 1_004" parent="world/Platform/Path1/PortalPlatform/stone" index="0" unique_id=444730388]
 transform = Transform3D(0.8554574, 0, 0, 0, 0.8554574, 0, 0, 0, 0.8554574, -29.042816, 4.6473074, -8.348562)
 mesh = SubResource("ArrayMesh_gn2wi")
 
 [node name="stone 1_004" type="MeshInstance3D" parent="world/Platform/Path1/PortalPlatform/stone/stone 1_004" index="1" unique_id=1459386033]
 transform = Transform3D(1.31, 0, 0, 0, 1.31, 0, 0, 0, 1.31, 0.71481323, 0.12662125, -1.3347712)
 mesh = SubResource("ArrayMesh_gn2wi")
+
+[node name="ouroboros" parent="world/Platform/Path1" unique_id=857692666 instance=ExtResource("16_fdqew")]
+transform = Transform3D(0.31227404, 0.949753, 0.021321397, 0.03648376, 0.010437578, -0.99927974, -0.94929117, 0.31282696, -0.03139118, -28.73492, 9.438217, -11.8933735)
 
 [node name="Path2" type="Node3D" parent="world/Platform" unique_id=1396657523]
 
@@ -773,8 +819,24 @@ offset_right = 1150.0
 offset_bottom = 27.0
 script = ExtResource("19_0vlqb")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1293199850]
-transform = Transform3D(-0.61588466, -0.7878363, 0, 0.15387778, -0.12029271, 0.9807402, -0.77266276, 0.60402286, 0.19531694, 0, 0, 0)
+[node name="Cutscene" type="Node3D" parent="." unique_id=1527082270]
+
+[node name="ShakeableCamera" parent="Cutscene" unique_id=1504691083 instance=ExtResource("23_gn2wi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.827597, 3.1700826)
+noise = SubResource("FastNoiseLite_gtqqq")
+
+[node name="Camera3D" parent="Cutscene/ShakeableCamera" index="1" unique_id=89689566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.219154)
+
+[node name="cutscenePlayer" type="AnimationPlayer" parent="Cutscene" unique_id=1896604073]
+libraries/ = SubResource("AnimationLibrary_p8adh")
+autoplay = &"news"
+
+[connection signal="candle_placed" from="world/Candles/CandleCircle" to="." method="_on_candle_circle_candle_placed"]
+[connection signal="candle_placed" from="world/Candles/CandleCircle2" to="." method="_on_candle_circle_candle_placed"]
+[connection signal="candle_placed" from="world/Candles/CandleCircle3" to="." method="_on_candle_circle_candle_placed"]
+[connection signal="candle_placed" from="world/Candles/CandleCircle4" to="." method="_on_candle_circle_candle_placed"]
+[connection signal="candle_placed" from="world/Candles/CandleCircle5" to="." method="_on_candle_circle_candle_placed"]
 
 [editable path="Player"]
 [editable path="Player/model"]
@@ -791,3 +853,4 @@ transform = Transform3D(-0.61588466, -0.7878363, 0, 0.15387778, -0.12029271, 0.9
 [editable path="world/Platform/Path3/floatingPlatform2"]
 [editable path="world/Platform/Path4/candlePlatform"]
 [editable path="world/Platform/Path5/candlePlatform"]
+[editable path="Cutscene/ShakeableCamera"]

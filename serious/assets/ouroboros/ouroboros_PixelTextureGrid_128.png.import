@@ -2,18 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ngqohjeely4v"
-path.s3tc="res://.godot/imported/floatingPlatform_floating.plataform.png-53d634b4c192ac0e6cd98c564b65d9d4.s3tc.ctex"
-path.etc2="res://.godot/imported/floatingPlatform_floating.plataform.png-53d634b4c192ac0e6cd98c564b65d9d4.etc2.ctex"
+uid="uid://dbwppv14vayfx"
+path.s3tc="res://.godot/imported/ouroboros_PixelTextureGrid_128.png-aeb2654bbe47498827e69ba4b91de97b.s3tc.ctex"
+path.etc2="res://.godot/imported/ouroboros_PixelTextureGrid_128.png-aeb2654bbe47498827e69ba4b91de97b.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "d850e1edcbfd35b527afe9655c1621a3"
+}
 
 [deps]
 
-source_file="res://assets/platform/floatingPlatform_floating.plataform.png"
-dest_files=["res://.godot/imported/floatingPlatform_floating.plataform.png-53d634b4c192ac0e6cd98c564b65d9d4.s3tc.ctex", "res://.godot/imported/floatingPlatform_floating.plataform.png-53d634b4c192ac0e6cd98c564b65d9d4.etc2.ctex"]
+source_file="res://assets/ouroboros/ouroboros_PixelTextureGrid_128.png"
+dest_files=["res://.godot/imported/ouroboros_PixelTextureGrid_128.png-aeb2654bbe47498827e69ba4b91de97b.s3tc.ctex", "res://.godot/imported/ouroboros_PixelTextureGrid_128.png-aeb2654bbe47498827e69ba4b91de97b.etc2.ctex"]
 
 [params]
 

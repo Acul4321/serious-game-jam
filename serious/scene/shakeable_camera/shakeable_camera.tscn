@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://e3oeugwpqtix"]
+
+[ext_resource type="Script" uid="uid://cm23iwdk4u3ov" path="res://scene/shakeable_camera/shakeable_camera.gd" id="1_jwjbw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1ssea"]
+radius = 1.5
+
+[node name="ShakeableCamera" type="Area3D" unique_id=1504691083]
+script = ExtResource("1_jwjbw")
+
+[node name="MeshInstance3D" type="CollisionShape3D" parent="." unique_id=1960642937]
+shape = SubResource("SphereShape3D_1ssea")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=89689566]
