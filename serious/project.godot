@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="serious"
-run/main_scene="uid://b4gqjwp37bheq"
+run/main_scene="uid://dcnk140rdk8ke"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -22,6 +22,7 @@ buses/default_bus_layout="uid://cw62vrhu3huv"
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+Game="*uid://cblcab2pkpdu1"
 
 [dialogic]
 
