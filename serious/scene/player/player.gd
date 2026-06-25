@@ -13,6 +13,7 @@ const STEP_5 = "res://assets/sfx/player/step5.ogg"
 var step_array := [STEP_1,STEP_2,STEP_3,STEP_4,STEP_5]
 
 @export var needs_to_spin : bool = true
+@export var can_move : bool = true
 var total_spin = 0
 
 @onready var main: Node3D = $".."
@@ -150,8 +151,9 @@ func handle_controls(delta):
 
 	var input := Vector3.ZERO
 
-	input.x = Input.get_axis("move_left", "move_right")
-	input.z = Input.get_axis("move_forward", "move_back")
+	if(can_move):
+		input.x = Input.get_axis("move_left", "move_right")
+		input.z = Input.get_axis("move_forward", "move_back")
 
 	input = input.rotated(Vector3.UP, view.rotation.y)
 
@@ -171,7 +173,10 @@ func handle_controls(delta):
 
 func handle_gravity(delta):
 
-	gravity += 25 * delta
+	if(can_move):
+		gravity += 25 * delta
+	else:
+		gravity = 0
 
 	if gravity > 0 and is_on_floor():
 
@@ -220,7 +225,10 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 
 
 func death() -> void:
+	if($model.visible == false): 
+		return
 	print("die")
+	can_move = false
 	$model.visible = false
 	%deathParticle.emitting = true
 	Audio.play("res://assets/sfx/death.ogg")
@@ -236,3 +244,4 @@ func death() -> void:
 	%deathParticle.emitting = false
 	$model.visible = true
 	global_position = spawnVec
+	can_move = true

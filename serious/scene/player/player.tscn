@@ -39,10 +39,15 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gn2wi"]
-albedo_color = Color(1, 0.05490196, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_732fb"]
+albedo_color = Color(1, 0.039215688, 0.03137255, 1)
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
 
 [sub_resource type="QuadMesh" id="QuadMesh_gtqqq"]
+material = SubResource("StandardMaterial3D_732fb")
 size = Vector2(0.2, 0.2)
 
 [node name="Player" type="CharacterBody3D" unique_id=509668328]
@@ -78,8 +83,9 @@ autostart = true
 
 [node name="deathParticle" type="CPUParticles3D" parent="." unique_id=702718549]
 unique_name_in_owner = true
-material_override = SubResource("StandardMaterial3D_gn2wi")
-amount = 10
+emitting = false
+amount = 15
+one_shot = true
 explosiveness = 0.39
 mesh = SubResource("QuadMesh_gtqqq")
 direction = Vector3(0.145, 6.47, 0)
