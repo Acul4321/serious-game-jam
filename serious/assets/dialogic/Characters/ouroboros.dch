@@ -14,7 +14,7 @@
 &"description": "",
 &"display_name": "Ouroboros",
 &"mirror": false,
-&"nicknames": [""],
+&"nicknames": ["Ouroboros"],
 &"offset": Vector2(0, 0),
 &"portraits": {
 "angry": {
