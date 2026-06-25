@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cmx338s34p46w"]
 
-[ext_resource type="Texture2D" uid="uid://unrolbjylccc" path="res://scene/endScreen/end.screen.kill.png" id="1_laxix"]
+[ext_resource type="Texture2D" uid="uid://bcyrxovdvbj07" path="res://scene/endScreen/end.screen.kill.png" id="1_laxix"]
 [ext_resource type="Script" uid="uid://kol14ugmmdnc" path="res://scene/endScreen/end_screen.gd" id="1_wy136"]
-[ext_resource type="Texture2D" uid="uid://cgjvqjmv5dwsf" path="res://scene/titleScreen/badge.fight.png" id="2_hhfm4"]
-[ext_resource type="Texture2D" uid="uid://dvpwrhftinijp" path="res://scene/endScreen/end.screen.worship.png" id="2_wy136"]
-[ext_resource type="Theme" uid="uid://r62tg44unh68" path="res://assets/UI/main.tres" id="3_3o6ga"]
+[ext_resource type="Texture2D" uid="uid://cf7vjsl2funmo" path="res://scene/titleScreen/badge.fight.png" id="2_hhfm4"]
+[ext_resource type="Texture2D" uid="uid://begg7xvp2i0og" path="res://scene/endScreen/end.screen.worship.png" id="2_wy136"]
+[ext_resource type="Theme" uid="uid://r62tg44unh68" path="res://assets/ui/main.tres" id="3_3o6ga"]
 [ext_resource type="FontFile" uid="uid://8yts78yo4wtt" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="4_ntyhi"]
-[ext_resource type="Texture2D" uid="uid://goukrw8o5wjv" path="res://scene/titleScreen/badge.praise.png" id="5_ntyhi"]
+[ext_resource type="Texture2D" uid="uid://crvt83cijk3wi" path="res://scene/titleScreen/badge.praise.png" id="5_ntyhi"]
 
 [sub_resource type="Theme" id="Theme_5cs5y"]
 Label/fonts/font = ExtResource("4_ntyhi")
