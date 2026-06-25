@@ -22,6 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://dww8gxm3uufax" path="res://assets/textures/lava.png" id="18_tv8i1"]
 [ext_resource type="Script" uid="uid://cx6nqukjqoye" path="res://scene/player/spinBar.gd" id="19_0vlqb"]
 [ext_resource type="PackedScene" uid="uid://e3oeugwpqtix" path="res://scene/shakeable_camera/shakeable_camera.tscn" id="23_gn2wi"]
+[ext_resource type="AudioStream" uid="uid://dyu2rqn2cjapk" path="res://assets/sfx/portalOpen.ogg" id="23_gtqqq"]
+[ext_resource type="AudioStream" uid="uid://b1yqn2cvr6ibd" path="res://assets/sfx/cultMurmers.ogg" id="24_gn2wi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_of57s"]
 sky_top_color = Color(0.44313726, 0.34509805, 0.84313726, 1)
@@ -1545,6 +1547,18 @@ tracks/86/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/87/type = "value"
+tracks/87/imported = false
+tracks/87/enabled = true
+tracks/87/path = NodePath("cultAudioPlayerCutscene:volume_db")
+tracks/87/interp = 1
+tracks/87/loop_wrap = true
+tracks/87/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-15.0]
 }
 
 [sub_resource type="Animation" id="Animation_p8adh"]
@@ -3347,6 +3361,48 @@ tracks/73/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/74/type = "audio"
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/path = NodePath("portalAudioPlayer")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23_gtqqq")
+}],
+"times": PackedFloat32Array(6.266667)
+}
+tracks/74/use_blend = true
+tracks/75/type = "audio"
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/path = NodePath("cultAudioPlayerCutscene")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("24_gn2wi")
+}],
+"times": PackedFloat32Array(5.366667)
+}
+tracks/75/use_blend = true
+tracks/76/type = "value"
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/path = NodePath("cultAudioPlayerCutscene:volume_db")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/keys = {
+"times": PackedFloat32Array(5.39, 25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -15.0]
+}
 
 [sub_resource type="Animation" id="Animation_gn2wi"]
 resource_name = "spawning"
@@ -3853,6 +3909,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.46, 0)
 
 [node name="Camera3D2" type="Camera3D" parent="Cutscene/battleCamera" unique_id=649891044]
 transform = Transform3D(-0.0043639243, 0.6191017, -0.7852987, 0, 0.78530616, 0.61910766, 0.99999046, 0.0027017388, -0.0034270165, -40.668945, 27.519909, 1.0667815)
+
+[node name="portalAudioPlayer" type="AudioStreamPlayer3D" parent="Cutscene" unique_id=1376700954]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -8.817366, 9.182139, 29.192244)
+
+[node name="cultAudioPlayerCutscene" type="AudioStreamPlayer3D" parent="Cutscene" unique_id=256503395]
+volume_db = -15.0
+autoplay = true
+bus = &"Voice"
+
+[node name="cultAudioPlayer" type="AudioStreamPlayer3D" parent="Cutscene/cultAudioPlayerCutscene" unique_id=316174156]
+stream = ExtResource("24_gn2wi")
+volume_db = -15.0
+autoplay = true
+bus = &"Voice"
 
 [connection signal="candle_placed" from="world/Candles/CandleCircle" to="." method="_on_candle_circle_candle_placed"]
 [connection signal="candle_placed" from="world/Candles/CandleCircle2" to="." method="_on_candle_circle_candle_placed"]
