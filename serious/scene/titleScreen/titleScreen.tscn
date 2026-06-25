@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cgjvqjmv5dwsf" path="res://scene/titleScreen/badge.fight.png" id="2_yurqi"]
 [ext_resource type="Texture2D" uid="uid://goukrw8o5wjv" path="res://scene/titleScreen/badge.praise.png" id="3_rq8hh"]
 [ext_resource type="Theme" uid="uid://r62tg44unh68" path="res://assets/UI/main.tres" id="5_46xev"]
+[ext_resource type="FontFile" uid="uid://8yts78yo4wtt" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="5_uy5d8"]
 
 [node name="TitleScreen" type="Control" unique_id=386406975]
 layout_mode = 3
@@ -62,7 +63,7 @@ layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2" unique_id=671810645]
 layout_mode = 2
-theme = ExtResource("5_46xev")
+theme_override_fonts/normal_font = ExtResource("5_uy5d8")
 bbcode_enabled = true
 text = "[wave][font_size=78][color=#FF0000]S[/color][color=#FF0600]e[/color][color=#FF0C00]r[/color][color=#FF1200]p[/color][color=#FF1900]e[/color][color=#FF1F00]n[/color][color=#FF2500]t[/color][color=#FF2B00]'[/color][color=#FF3200]s[/color]      [color=#FF6700]P[/color][color=#FF7000]r[/color][color=#FF7900]o[/color][color=#FF8200]m[/color][color=#FF8A00]i[/color][color=#FF9300]s[/color][color=#FF9C00]e[/color]"
 fit_content = true

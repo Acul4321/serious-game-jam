@@ -17,6 +17,7 @@ var current_top: Color
 var current_horizon: Color
 
 const BATTLE = preload("res://scene/battle.tscn")
+const END_SCREEN = preload("res://scene/endScreen/endScreen.tscn")
 
 @onready var ouroboros_camera: Camera3D = $Cutscene/ouroborosCameraArea/ouroborosCamera
 @onready var battle_camera: Camera3D = $Cutscene/battleCamera/Camera3D2
@@ -101,7 +102,10 @@ func news_ended():
 func DialogicSignal(arg: String):
 	if(arg == "serve_signal"):
 		print("serve")
-		#goto end screen and global servebadge unlock
+		Game.praiseBadge = true
+		Game.currentRoute = "praise"
+		get_tree().change_scene_to_packed(END_SCREEN)
+		
 	elif(arg == "fight_signal"):
 		print("fight")
 		change_state(GAMESTATE.BATTLEING)

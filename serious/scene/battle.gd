@@ -5,6 +5,7 @@ extends Node3D
 
 @onready var player: CharacterBody3D = %Player
 @onready var progress_bar: ProgressBar = %battleBar
+const END_SCREEN = preload("res://scene/endScreen/endScreen.tscn")
 
 var battle_position := 50.0
 var last_player_total := 0.0
@@ -34,8 +35,13 @@ func _process(delta: float) -> void:
 
 	if battle_position >= 100.0:
 		print("PLAYER WINS")
+		Game.currentRoute = "fight"
+		Game.fightBadge = true
+		get_tree().change_scene_to_packed(END_SCREEN)
 		set_process(false)
 
 	elif battle_position <= 0.0:
 		print("OUROBOROS WINS")
+		Game.currentRoute = "praise"
+		get_tree().change_scene_to_packed(END_SCREEN)
 		set_process(false)

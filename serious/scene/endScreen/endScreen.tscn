@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://cmx338s34p46w"]
+
+[ext_resource type="Texture2D" uid="uid://unrolbjylccc" path="res://scene/endScreen/end.screen.kill.png" id="1_laxix"]
+[ext_resource type="Script" uid="uid://kol14ugmmdnc" path="res://scene/endScreen/end_screen.gd" id="1_wy136"]
+[ext_resource type="Texture2D" uid="uid://cgjvqjmv5dwsf" path="res://scene/titleScreen/badge.fight.png" id="2_hhfm4"]
+[ext_resource type="Texture2D" uid="uid://dvpwrhftinijp" path="res://scene/endScreen/end.screen.worship.png" id="2_wy136"]
+[ext_resource type="Theme" uid="uid://r62tg44unh68" path="res://assets/UI/main.tres" id="3_3o6ga"]
+[ext_resource type="FontFile" uid="uid://8yts78yo4wtt" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="4_ntyhi"]
+[ext_resource type="Texture2D" uid="uid://goukrw8o5wjv" path="res://scene/titleScreen/badge.praise.png" id="5_ntyhi"]
+
+[sub_resource type="Theme" id="Theme_5cs5y"]
+Label/fonts/font = ExtResource("4_ntyhi")
+
+[node name="EndScreen" type="Control" unique_id=1660269627]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wy136")
+
+[node name="fight" type="Control" parent="." unique_id=2021350436]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="fight" unique_id=1771382474]
+layout_mode = 0
+offset_left = -2448.0
+offset_top = -1489.0
+offset_right = 3713.0
+offset_bottom = 2584.0
+color = Color(0.10781706, 0.3766593, 0.61924785, 1)
+
+[node name="fightBG" type="Sprite2D" parent="fight" unique_id=109782271]
+position = Vector2(576.1111, 323.75003)
+scale = Vector2(2.4018517, 2.401852)
+texture = ExtResource("1_laxix")
+
+[node name="Badge_fight" type="Sprite2D" parent="fight" unique_id=875261714]
+unique_name_in_owner = true
+position = Vector2(1331.409, 88.99)
+scale = Vector2(2.403704, 2.4037037)
+texture = ExtResource("2_hhfm4")
+
+[node name="Label" type="RichTextLabel" parent="fight/Badge_fight" unique_id=1672012585]
+offset_left = -204.8543
+offset_top = 59.495686
+offset_right = 223.1457
+offset_bottom = 82.49568
+theme = SubResource("Theme_5cs5y")
+theme_override_fonts/normal_font = ExtResource("4_ntyhi")
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1]Badge Unlocked[/wave]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="fight" unique_id=1998042288]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="fight/VBoxContainer" unique_id=1187674050]
+custom_minimum_size = Vector2(0, 63.905)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="fight/VBoxContainer" unique_id=1050333137]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="fight/VBoxContainer/HBoxContainer2" unique_id=502148134]
+custom_minimum_size = Vector2(125.085, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="fight/VBoxContainer/HBoxContainer2" unique_id=541719315]
+layout_mode = 2
+theme = ExtResource("3_3o6ga")
+theme_override_fonts/normal_font = ExtResource("4_ntyhi")
+bbcode_enabled = true
+text = "Saviour Route
+You have saved the world form the tyranny of the God Ouroboros"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="fight/VBoxContainer" unique_id=1624535354]
+custom_minimum_size = Vector2(0, 346.445)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="fight/VBoxContainer" unique_id=775136152]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="fight/VBoxContainer/HBoxContainer" unique_id=2112313091]
+custom_minimum_size = Vector2(449.76, 56.185)
+layout_mode = 2
+
+[node name="continueButton" type="Button" parent="fight/VBoxContainer/HBoxContainer" unique_id=27467770]
+custom_minimum_size = Vector2(177.65, 90.165)
+layout_mode = 2
+theme = ExtResource("3_3o6ga")
+text = "Continue"
+
+[node name="praise" type="Control" parent="." unique_id=973934998]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="praise" unique_id=654345644]
+layout_mode = 0
+offset_left = -2448.0
+offset_top = -1489.0
+offset_right = 3713.0
+offset_bottom = 2584.0
+color = Color(0.44705883, 0, 0.08627451, 1)
+
+[node name="praiseBG" type="Sprite2D" parent="praise" unique_id=394508181]
+position = Vector2(576.1111, 323.75003)
+scale = Vector2(2.4018517, 2.401852)
+texture = ExtResource("2_wy136")
+
+[node name="Badge_praise" type="Sprite2D" parent="praise/praiseBG" unique_id=602913717]
+unique_name_in_owner = true
+position = Vector2(31.179647, 42.987644)
+scale = Vector2(0.986893, 0.9868928)
+texture = ExtResource("5_ntyhi")
+
+[node name="Label" type="RichTextLabel" parent="praise/praiseBG/Badge_praise" unique_id=273360400]
+offset_left = 92.39059
+offset_top = 56.53124
+offset_right = 520.39056
+offset_bottom = 79.531235
+theme = SubResource("Theme_5cs5y")
+theme_override_fonts/normal_font = ExtResource("4_ntyhi")
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1]Badge Unlocked[/wave]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="praise" unique_id=356178205]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="praise/VBoxContainer" unique_id=1012202547]
+custom_minimum_size = Vector2(0, 63.905)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="praise/VBoxContainer" unique_id=1496011091]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="praise/VBoxContainer/HBoxContainer2" unique_id=288238119]
+custom_minimum_size = Vector2(125.085, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="praise/VBoxContainer/HBoxContainer2" unique_id=695230708]
+layout_mode = 2
+theme = ExtResource("3_3o6ga")
+bbcode_enabled = true
+text = "[wave][font_size=78][color=#FF0000]S[/color][color=#FF0600]e[/color][color=#FF0C00]r[/color][color=#FF1200]p[/color][color=#FF1900]e[/color][color=#FF1F00]n[/color][color=#FF2500]t[/color][color=#FF2B00]'[/color][color=#FF3200]s[/color]      [color=#FF6700]P[/color][color=#FF7000]r[/color][color=#FF7900]o[/color][color=#FF8200]m[/color][color=#FF8A00]i[/color][color=#FF9300]s[/color][color=#FF9C00]e[/color]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="praise/VBoxContainer" unique_id=1221840555]
+custom_minimum_size = Vector2(0, 346.445)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="praise/VBoxContainer" unique_id=807478945]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="praise/VBoxContainer/HBoxContainer" unique_id=500538715]
+custom_minimum_size = Vector2(449.76, 56.185)
+layout_mode = 2
+
+[node name="continueButton" type="Button" parent="praise/VBoxContainer/HBoxContainer" unique_id=630268719]
+custom_minimum_size = Vector2(177.65, 90.165)
+layout_mode = 2
+theme = ExtResource("3_3o6ga")
+text = "Continue"
+
+[connection signal="pressed" from="fight/VBoxContainer/HBoxContainer/continueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="praise/VBoxContainer/HBoxContainer/continueButton" to="." method="_on_continue_button_pressed"]
