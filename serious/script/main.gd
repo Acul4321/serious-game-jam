@@ -33,6 +33,7 @@ var state : GAMESTATE = GAMESTATE.NEWS
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Audio.stop("res://assets/music/menu_song_serpents_promise.ogg")
 	#hookup dialogic signal for choices
 	Dialogic.signal_event.connect(DialogicSignal)
 	# set sky colour
@@ -50,16 +51,21 @@ func _process(delta: float) -> void:
 		%ouroboros.visible = false
 	if(state == GAMESTATE.NEWS):
 		news_camera.make_current()
+		%Player.needs_to_spin = false
 	elif(state == GAMESTATE.SPAWNING):
 		shakeable_camera.make_current()
+		%Player.needs_to_spin = false
 		
 	elif(state == GAMESTATE.TALKING):
 		ouroboros_camera.make_current()
+		%Player.needs_to_spin = false
 	elif(state == GAMESTATE.BATTLEING):
 		battle_camera.make_current()
+		%Player.needs_to_spin = false
 		
 	elif(state == GAMESTATE.GAMEPLAY):
 		playerCamera.make_current()
+		%Player.needs_to_spin = true
 	#sky colour changing
 	var t := clampf(float(candleTotal) / 5.0, 0.0, 1.0)
 
