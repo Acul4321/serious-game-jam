@@ -10,14 +10,14 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "normal",
+&"default_portrait": "newsguy_exploded",
 &"description": "",
 &"display_name": "Newsguy",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"exploded": {
+"newsguy_exploded": {
 "export_overrides": {
 "image": "\"res://assets/dialogic/Characters/news.guy.kaboom.png\""
 },
@@ -26,7 +26,7 @@
 "scale": 1,
 "scene": ""
 },
-"normal": {
+"newsguy_normal": {
 "export_overrides": {
 "image": "\"res://assets/dialogic/Characters/news.guy.png\""
 },

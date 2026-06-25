@@ -3663,7 +3663,7 @@ view = NodePath("../view")
 [node name="CollisionShape3D" parent="Player" index="0" unique_id=338168985]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0.869084, 0)
 
-[node name="Skeleton3D" parent="Player/model/Armature" parent_id_path=PackedInt32Array(509668328, 26906941, 1882389502) index="0" unique_id=1622232233]
+[node name="Skeleton3D" parent="Player/model/Armature" parent_id_path=PackedInt32Array(509668328, 26906941, 1723714515) index="0" unique_id=1736589460]
 bones/1/rotation = Quaternion(-3.552712e-15, 1.7763568e-14, -2.019484e-28, 1)
 bones/2/rotation = Quaternion(-3.552712e-15, 0, -2.019484e-28, 1)
 bones/4/rotation = Quaternion(6.4021433e-09, -1.2474155e-07, 0.0246561, 0.999696)
@@ -3754,20 +3754,20 @@ player = NodePath("../../../Player")
 
 [node name="mainPlatform" parent="world/Platform" unique_id=1175340938 instance=ExtResource("7_of57s")]
 
-[node name="main pillar" parent="world/Platform/mainPlatform" index="0" unique_id=1971602739]
+[node name="main pillar" parent="world/Platform/mainPlatform" index="0" unique_id=325257880]
 mesh = SubResource("ArrayMesh_k65ib")
 
 [node name="Path1" type="Node3D" parent="world/Platform" unique_id=822828151]
 
 [node name="floatingPlatform" parent="world/Platform/Path1" unique_id=542104450 instance=ExtResource("9_wscrc")]
 
-[node name="plataform" parent="world/Platform/Path1/floatingPlatform" index="0" unique_id=780817299]
+[node name="plataform" parent="world/Platform/Path1/floatingPlatform" index="0" unique_id=392119806]
 transform = Transform3D(2.2035153, 0, 0, 0, 2.2035153, 0, 0, 0, 2.2035153, -11.190097, -1.8664122, -2.564351)
 mesh = SubResource("ArrayMesh_tv8i1")
 
 [node name="PortalPlatform" parent="world/Platform/Path1" unique_id=1208757462 instance=ExtResource("11_hybxs")]
 
-[node name="portal plataform" parent="world/Platform/Path1/PortalPlatform" index="0" unique_id=1731956213]
+[node name="portal plataform" parent="world/Platform/Path1/PortalPlatform" index="0" unique_id=1272732624]
 transform = Transform3D(5.1299334, 0, 0.09988123, 0, 5.1309056, 0, -0.09988123, 0, 5.1299334, -26.989697, 2.2620993, -12.390548)
 mesh = SubResource("ArrayMesh_gjnwh")
 
@@ -3790,7 +3790,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.00604403, 0.0163201
 
 [node name="stone" parent="world/Platform/Path1/PortalPlatform" unique_id=387448524 instance=ExtResource("6_tv8i1")]
 
-[node name="stone 1_004" parent="world/Platform/Path1/PortalPlatform/stone" index="0" unique_id=444730388]
+[node name="stone 1_004" parent="world/Platform/Path1/PortalPlatform/stone" index="0" unique_id=526413771]
 transform = Transform3D(0.8554574, 0, 0, 0, 0.8554574, 0, 0, 0, 0.8554574, -29.042816, 4.6473074, -8.348562)
 mesh = SubResource("ArrayMesh_gn2wi")
 
@@ -3800,7 +3800,7 @@ mesh = SubResource("ArrayMesh_gn2wi")
 
 [node name="ouroboros" parent="world/Platform/Path1" unique_id=857692666 instance=ExtResource("16_fdqew")]
 unique_name_in_owner = true
-transform = Transform3D(0.31227377, 0.9497522, 0.021321405, 0.03648373, 0.010437567, -0.99927974, -0.94929034, 0.31282693, -0.031391174, -28.73492, 9.438217, -11.8933735)
+transform = Transform3D(0.31227374, 0.94975215, 0.021321405, 0.03648373, 0.010437566, -0.99927974, -0.9492903, 0.3128269, -0.031391174, -28.73492, 9.438217, -11.8933735)
 visible = false
 
 [node name="Path2" type="Node3D" parent="world/Platform" unique_id=1396657523]
@@ -3808,7 +3808,7 @@ visible = false
 [node name="candlePlatform" parent="world/Platform/Path2" unique_id=1313127511 instance=ExtResource("17_tv8i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5)
 
-[node name="pillar" parent="world/Platform/Path2/candlePlatform" index="0" unique_id=1971009791]
+[node name="pillar" parent="world/Platform/Path2/candlePlatform" index="0" unique_id=466763311]
 mesh = SubResource("ArrayMesh_0d4pv")
 
 [node name="pillar2" type="MeshInstance3D" parent="world/Platform/Path2/candlePlatform" unique_id=1704124979]
@@ -3823,7 +3823,7 @@ shape = SubResource("ConcavePolygonShape3D_mvp1f")
 [node name="candlePlatform" parent="world/Platform/Path2/candlePlatform" unique_id=1233921114 instance=ExtResource("17_tv8i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.424286, 1, 9.044226)
 
-[node name="pillar" parent="world/Platform/Path2/candlePlatform/candlePlatform" index="0" unique_id=1971009791]
+[node name="pillar" parent="world/Platform/Path2/candlePlatform/candlePlatform" index="0" unique_id=466763311]
 transform = Transform3D(0.9123335, 0, 0.2359455, 0, 0.94234955, 0, -0.2359455, 0, 0.9123335, 1.752131, 5.634001, -16.92395)
 mesh = SubResource("ArrayMesh_0d4pv")
 
@@ -3853,14 +3853,14 @@ transform = Transform3D(0.9989705, -0.04518335, -0.0040325085, 0, -0.08889434, 0
 [node name="floatingPlatform" parent="world/Platform/Path3" unique_id=523986935 instance=ExtResource("9_wscrc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.613474, 0, -0.9566512)
 
-[node name="plataform" parent="world/Platform/Path3/floatingPlatform" index="0" unique_id=780817299]
+[node name="plataform" parent="world/Platform/Path3/floatingPlatform" index="0" unique_id=392119806]
 transform = Transform3D(2.2035153, 0, 0, 0, 2.2035153, 0, 0, 0, 2.2035153, -11.190097, -1.8664122, -2.564351)
 mesh = SubResource("ArrayMesh_tv8i1")
 
 [node name="floatingPlatform2" parent="world/Platform/Path3" unique_id=694514753 instance=ExtResource("9_wscrc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.172636, 0.8089504, -5.9970474)
 
-[node name="plataform" parent="world/Platform/Path3/floatingPlatform2" index="0" unique_id=780817299]
+[node name="plataform" parent="world/Platform/Path3/floatingPlatform2" index="0" unique_id=392119806]
 transform = Transform3D(1.3867171, 0, 1.712453, 0, 2.2035153, 0, -1.712453, 0, 1.3867171, -11.190097, -1.8664122, -2.564351)
 mesh = SubResource("ArrayMesh_tv8i1")
 
@@ -3876,7 +3876,7 @@ curve = SubResource("Curve3D_smf0o")
 [node name="candlePlatform" parent="world/Platform/Path4" unique_id=1399016716 instance=ExtResource("17_tv8i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.669117, -7.1636276, 38.68316)
 
-[node name="pillar" parent="world/Platform/Path4/candlePlatform" index="0" unique_id=1971009791]
+[node name="pillar" parent="world/Platform/Path4/candlePlatform" index="0" unique_id=466763311]
 transform = Transform3D(-0.94183147, 0, 0.031243762, 0, 0.94234955, 0, -0.031243762, 0, -0.94183147, 1.752131, 5.634001, -16.92395)
 mesh = SubResource("ArrayMesh_0d4pv")
 
@@ -3902,7 +3902,7 @@ transform = Transform3D(-2.980232e-08, 4.371139e-08, -1, 1, -4.371139e-08, -2.98
 [node name="candlePlatform" parent="world/Platform/Path5" unique_id=1993503151 instance=ExtResource("17_tv8i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.229183, -7.1636276, 49.782818)
 
-[node name="pillar" parent="world/Platform/Path5/candlePlatform" index="0" unique_id=1971009791]
+[node name="pillar" parent="world/Platform/Path5/candlePlatform" index="0" unique_id=466763311]
 transform = Transform3D(-0.5904799, 0, 0.7344087, 0, 0.94234955, 0, -0.7344087, 0, -0.5904799, 1.752131, 5.634001, -16.92395)
 mesh = SubResource("ArrayMesh_0d4pv")
 

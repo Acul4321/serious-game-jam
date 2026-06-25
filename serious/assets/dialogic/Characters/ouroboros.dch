@@ -10,14 +10,14 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "normal",
+&"default_portrait": "ouroboros_normal",
 &"description": "",
 &"display_name": "Ouroboros",
 &"mirror": false,
 &"nicknames": ["Ouroboros"],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"angry": {
+"ouroboros_angry": {
 "export_overrides": {
 "image": "\"res://assets/dialogic/Characters/snake.angry.png\""
 },
@@ -26,7 +26,7 @@
 "scale": 1,
 "scene": ""
 },
-"normal": {
+"ouroboros_normal": {
 "export_overrides": {
 "image": "\"res://assets/dialogic/Characters/snake.png\""
 },

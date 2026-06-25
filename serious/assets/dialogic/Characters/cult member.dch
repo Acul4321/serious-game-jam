@@ -10,14 +10,14 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "normal",
+&"default_portrait": "cultmember_normal",
 &"description": "",
 &"display_name": "Cult Member",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"normal": {
+"cultmember_normal": {
 "export_overrides": {
 "image": "\"res://assets/dialogic/Characters/cult.png\""
 },

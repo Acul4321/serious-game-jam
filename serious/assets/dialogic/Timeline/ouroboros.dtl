@@ -1,21 +1,21 @@
 audio "res://assets/sfx/ouroboros2.ogg"
-ouroboros (angry): Who dares summon me!
+ouroboros (ouroboros_angry): Who dares summon me!
 "cult member": please help this world, the world is in dire need of your salvation.\
 almighty [shake][color=#871400]Snake[/color][/shake]
-ouroboros (angry): silly human, It was I who plagued this world with this curse, I am \
+ouroboros (ouroboros_angry): silly human, It was I who plagued this world with this curse, I am \
 [font_size=30][center][wave]GOD[/wave][/center]/[shake]
-ouroboros (angry): my promise to this world was to destroy it!
-ouroboros (normal): YOU, HUMANS\
+ouroboros (ouroboros_angry): my promise to this world was to destroy it!
+ouroboros (ouroboros_normal): YOU, HUMANS\
 don't know anything do you
 - Serve
 	"cult member": Almighty [font_size=30]God [br]\
 	please guide us to salvation
-	ouroboros (normal): You are a smart one\
+	ouroboros (ouroboros_normal): You are a smart one\
 	I like you
 	[signal arg="serve_signal"]
 - Fight
 	"cult member": I wont let you destroy this world!\
 	I will avenge news guy
-	ouroboros (angry): Your action will have consequences, HUMAN\
+	ouroboros (ouroboros_angry): Your action will have consequences, HUMAN\
 	Feel my Wrath!
 	[signal arg="fight_signal"]
