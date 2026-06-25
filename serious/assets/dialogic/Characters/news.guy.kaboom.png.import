@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crwwjck8c4chp"
-path="res://.godot/imported/news.guy.kaboom.png-d9de859637716e81a6e8039f63f628d0.ctex"
+uid="uid://b07en3t7mwf02"
+path="res://.godot/imported/news.guy.kaboom.png-8b643d920500904ea55ae1cf8f9049f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dialogic/Characters/news.guy.kaboom.png"
-dest_files=["res://.godot/imported/news.guy.kaboom.png-d9de859637716e81a6e8039f63f628d0.ctex"]
+source_file="res://assets/dialogic/characters/news.guy.kaboom.png"
+dest_files=["res://.godot/imported/news.guy.kaboom.png-8b643d920500904ea55ae1cf8f9049f2.ctex"]
 
 [params]
 

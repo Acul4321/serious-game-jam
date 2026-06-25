@@ -3800,7 +3800,7 @@ mesh = SubResource("ArrayMesh_gn2wi")
 
 [node name="ouroboros" parent="world/Platform/Path1" unique_id=857692666 instance=ExtResource("16_fdqew")]
 unique_name_in_owner = true
-transform = Transform3D(0.31227374, 0.94975215, 0.021321405, 0.03648373, 0.010437566, -0.99927974, -0.9492903, 0.3128269, -0.031391174, -28.73492, 9.438217, -11.8933735)
+transform = Transform3D(0.3122737, 0.94975215, 0.021321405, 0.036483727, 0.010437566, -0.99927974, -0.9492902, 0.3128269, -0.031391174, -28.73492, 9.438217, -11.8933735)
 visible = false
 
 [node name="Path2" type="Node3D" parent="world/Platform" unique_id=1396657523]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6lm88w087rvs"
-path="res://.godot/imported/snake.angry.png-194d5aae904fd3fe472893107710a7e9.ctex"
+uid="uid://da6rhatq2er4o"
+path="res://.godot/imported/snake.angry.png-9c5ec149d55b24dbf5fe210553cdebe5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dialogic/Characters/snake.angry.png"
-dest_files=["res://.godot/imported/snake.angry.png-194d5aae904fd3fe472893107710a7e9.ctex"]
+source_file="res://assets/dialogic/characters/snake.angry.png"
+dest_files=["res://.godot/imported/snake.angry.png-9c5ec149d55b24dbf5fe210553cdebe5.ctex"]
 
 [params]
 

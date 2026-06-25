@@ -19,7 +19,7 @@
 &"portraits": {
 "newsguy_exploded": {
 "export_overrides": {
-"image": "\"res://assets/dialogic/Characters/news.guy.kaboom.png\""
+"image": "\"res://assets/dialogic/characters/news.guy.kaboom.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -28,7 +28,7 @@
 },
 "newsguy_normal": {
 "export_overrides": {
-"image": "\"res://assets/dialogic/Characters/news.guy.png\""
+"image": "\"res://assets/dialogic/characters/news.guy.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di5uxd6c3kcxx"
-path="res://.godot/imported/news.guy.png-f8f0b70d476d32e65c97066c986c31f8.ctex"
+uid="uid://6qjyl1yek0ba"
+path="res://.godot/imported/news.guy.png-3f2a40c854a5ab364da21dbfa9ea6ee5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dialogic/Characters/news.guy.png"
-dest_files=["res://.godot/imported/news.guy.png-f8f0b70d476d32e65c97066c986c31f8.ctex"]
+source_file="res://assets/dialogic/characters/news.guy.png"
+dest_files=["res://.godot/imported/news.guy.png-3f2a40c854a5ab364da21dbfa9ea6ee5.ctex"]
 
 [params]
 

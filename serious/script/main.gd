@@ -45,7 +45,7 @@ func _ready() -> void:
 	#on news start
 	shake.add_trauma(1)
 	Dialogic.timeline_ended.connect(news_ended)
-	Dialogic.start("res://assets/dialogic/Timeline/news.dtl")
+	Dialogic.start("res://assets/dialogic/timeline/news.dtl")
 	cutscene_player.play("news")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -100,7 +100,7 @@ func _on_candle_circle_candle_placed() -> void:
 	if candleTotal >= 5:
 		print("game end")
 		change_state(GAMESTATE.TALKING)
-		Dialogic.start("res://assets/dialogic/Timeline/ouroboros.dtl")
+		Dialogic.start("res://assets/dialogic/timeline/ouroboros.dtl")
 	else:
 		change_state(GAMESTATE.SPAWNING)
 		cutscene_player.play("spawning")
@@ -120,7 +120,7 @@ func news_ended():
 	print("ended")
 	Audio.play("res://assets/music/menu_song_serpents_promise.ogg")
 	Dialogic.timeline_ended.disconnect(news_ended)
-	Dialogic.start("res://assets/dialogic/Timeline/cultHelp.dtl")
+	Dialogic.start("res://assets/dialogic/timeline/cultHelp.dtl")
 
 func DialogicSignal(arg: String):
 	if(arg == "serve_signal"):

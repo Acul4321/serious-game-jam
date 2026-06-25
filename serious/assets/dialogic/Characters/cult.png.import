@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctdmn4oir6dkk"
-path="res://.godot/imported/cult.png-9692f1443dad9b4caa74b86f5c5dfada.ctex"
+uid="uid://bmyqxuvbwfv7j"
+path="res://.godot/imported/cult.png-7b504dd92587e42d926670e34ee3a21c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dialogic/Characters/cult.png"
-dest_files=["res://.godot/imported/cult.png-9692f1443dad9b4caa74b86f5c5dfada.ctex"]
+source_file="res://assets/dialogic/characters/cult.png"
+dest_files=["res://.godot/imported/cult.png-7b504dd92587e42d926670e34ee3a21c.ctex"]
 
 [params]
 
