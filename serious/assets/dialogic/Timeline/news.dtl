@@ -1,5 +1,8 @@
-newsguy: [aa = 6][b]Breaking News!!!![/b] [br] We are now on scene of a New [color=#871400]Cult[/color] that appears to be trying to fix this worlds [tornado]Spinning[/tornado][color=#FFE700]e[/color][color=#D6C600]p[/color][color=#ADA600]i[/color][color=#848600]d[/color][color=#5B6600]e[/color][color=#848600]m[/color][color=#ADA600]i[/color][color=#D6C600]c[/color]
-newsguy: [aa = 5]They state they are summoning the god [shake][color=#871400]snake[/color][/shake] to fix us from exploding
-newsguy: [aa = 7]Many raise their concerns for salvation but after many attempts to cure this [tornado]Spinning[/tornado][color=#FFE700]e[/color][color=#D6C600]p[/color][color=#ADA600]i[/color][color=#848600]d[/color][color=#5B6600]e[/color][color=#848600]m[/color][color=#ADA600]i[/color][color=#D6C600]c[/color] this [color=#871400]Cult[/color] is our only hope
-newsguy: [aa = 1.5]...wait[pause=1], does this helicopter count as [tornado]Spinning[/tornado]
-newsguy: [aa = 1]Kaboom!!!!
+audio "res://assets/sfx/platformRising.ogg" [volume="-25.0" bus=""]
+audio "res://assets/sfx/helicopter.ogg" [volume="-25.0" bus=""]
+newsguy (newsguy_normal): [aa = 6][b]Breaking News!!!![/b] [br] We are now on scene of a New [color=#871400]Cult[/color] that appears to be trying to fix this worlds [tornado]Spinning[/tornado][color=#FFE700]e[/color][color=#D6C600]p[/color][color=#ADA600]i[/color][color=#848600]d[/color][color=#5B6600]e[/color][color=#848600]m[/color][color=#ADA600]i[/color][color=#D6C600]c[/color]
+newsguy (newsguy_normal): [aa = 5]They state they are summoning the god [shake][color=#871400]snake[/color][/shake] to fix us from exploding
+newsguy (newsguy_normal): [aa = 7]Many raise their concerns for salvation but after many attempts to cure this [tornado]Spinning[/tornado][color=#FFE700]e[/color][color=#D6C600]p[/color][color=#ADA600]i[/color][color=#848600]d[/color][color=#5B6600]e[/color][color=#848600]m[/color][color=#ADA600]i[/color][color=#D6C600]c[/color] this [color=#871400]Cult[/color] is our last hope
+newsguy (newsguy_normal): [aa = 1.5]...wait[pause=1], does this helicopter count as [tornado]Spinning[/tornado]
+audio "res://assets/sfx/helicopterExploding.ogg"
+newsguy (newsguy_exploded): [aa = 1.5]Kaboom!!!!

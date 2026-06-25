@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="serious"
-run/main_scene="uid://b4gqjwp37bheq"
+run/main_scene="uid://dcnk140rdk8ke"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -22,25 +22,31 @@ buses/default_bus_layout="uid://cw62vrhu3huv"
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+Game="*uid://cblcab2pkpdu1"
+Audio="*uid://dsakufy8cjl2i"
 
 [dialogic]
 
 directories/dch_directory={
-"cult member": "res://assets/dialogic/Characters/cult member.dch",
-"newsguy": "res://assets/dialogic/Characters/newsguy.dch",
-"ouroboros": "res://assets/dialogic/Characters/ouroboros.dch",
+"cult member": "res://assets/dialogic/characters/cult member.dch",
+"newsguy": "res://assets/dialogic/characters/newsguy.dch",
+"ouroboros": "res://assets/dialogic/characters/ouroboros.dch",
 "unit_test_character": "res://dialogic-2.0-alpha-19/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"cultMembers": "res://assets/dialogic/Timeline/cultMembers.dtl",
-"news": "res://assets/dialogic/Timeline/news.dtl"
+"battle": "res://assets/dialogic/timeline/battle.dtl",
+"battle2": "res://assets/dialogic/timeline/battle2.dtl",
+"cultHelp": "res://assets/dialogic/timeline/cultHelp.dtl",
+"cultMembers": "res://assets/dialogic/timeline/cultMembers.dtl",
+"news": "res://assets/dialogic/timeline/news.dtl",
+"ouroboros": "res://assets/dialogic/timeline/ouroboros.dtl"
 }
 layout/style_directory={
-"": "res://assets/dialogic/Styles/pixel.tres",
-"pixel": "res://assets/dialogic/Styles/pixel.tres"
+"": "res://assets/dialogic/styles/pixel.tres",
+"pixel": "res://assets/dialogic/styles/pixel.tres"
 }
-layout/style_list=["res://assets/dialogic/Styles/pixel.tres"]
-layout/default_style="res://assets/dialogic/Styles/pixel.tres"
+layout/style_list=["res://assets/dialogic/styles/pixel.tres"]
+layout/default_style="res://assets/dialogic/styles/pixel.tres"
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -82,6 +88,7 @@ text/autoadvance_enabled=false
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/main_scene="uid://b4gqjwp37bheq"
 
 [editor_plugins]
 

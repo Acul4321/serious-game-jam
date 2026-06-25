@@ -1,0 +1,6 @@
+audio "res://assets/sfx/ouroboros2.ogg"
+[signal arg="battle_stop"]
+ouroboros (ouroboros_angry): How Could This Be
+ouroboros (ouroboros_angry): How can A Human beat [font_size=30][center]GOD[/center]/[shake]
+ouroboros (ouroboros_angry): You will never get the better of me!
+[signal arg="battle_resume"]

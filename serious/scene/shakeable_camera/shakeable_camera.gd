@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var trauma_reduction_rate: float = 15.0
+@export var trauma_reduction_rate: float = 1.0
 
 @export var max_x: float = 10.0
 @export var max_y: float = 10.0

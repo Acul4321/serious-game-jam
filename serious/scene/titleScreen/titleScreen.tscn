@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dcnk140rdk8ke"]
+
+[ext_resource type="Texture2D" uid="uid://bga4bliwyu3h1" path="res://scene/titleScreen/title.png" id="1_inold"]
+[ext_resource type="Script" uid="uid://dcx356gpu3kea" path="res://scene/titleScreen/title_screen.gd" id="1_rq8hh"]
+[ext_resource type="Texture2D" uid="uid://cf7vjsl2funmo" path="res://scene/titleScreen/badge.fight.png" id="2_yurqi"]
+[ext_resource type="Texture2D" uid="uid://crvt83cijk3wi" path="res://scene/titleScreen/badge.praise.png" id="3_rq8hh"]
+[ext_resource type="Theme" uid="uid://r62tg44unh68" path="res://assets/ui/main.tres" id="5_46xev"]
+[ext_resource type="FontFile" uid="uid://8yts78yo4wtt" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="5_uy5d8"]
+
+[node name="TitleScreen" type="Control" unique_id=386406975]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rq8hh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1158814551]
+layout_mode = 0
+offset_left = -2448.0
+offset_top = -1489.0
+offset_right = 3713.0
+offset_bottom = 2584.0
+color = Color(0.44705883, 0, 0.08627451, 1)
+
+[node name="bg" type="Sprite2D" parent="." unique_id=1848730983]
+position = Vector2(576.1111, 323.75003)
+scale = Vector2(2.4018517, 2.401852)
+texture = ExtResource("1_inold")
+
+[node name="Badge_fight" type="Sprite2D" parent="." unique_id=1326771463]
+unique_name_in_owner = true
+visible = false
+position = Vector2(576.8889, 322.5)
+scale = Vector2(2.403704, 2.4037037)
+texture = ExtResource("2_yurqi")
+
+[node name="Badge_praise" type="Sprite2D" parent="." unique_id=1532402571]
+unique_name_in_owner = true
+visible = false
+position = Vector2(581, 324)
+scale = Vector2(2.3703704, 2.3703704)
+texture = ExtResource("3_rq8hh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2073188394]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=358579099]
+custom_minimum_size = Vector2(0, 63.905)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1713242644]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer2" unique_id=1730804658]
+custom_minimum_size = Vector2(125.085, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2" unique_id=671810645]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_uy5d8")
+bbcode_enabled = true
+text = "[wave][font_size=78][color=#FF0000]S[/color][color=#FF0600]e[/color][color=#FF0C00]r[/color][color=#FF1200]p[/color][color=#FF1900]e[/color][color=#FF1F00]n[/color][color=#FF2500]t[/color][color=#FF2B00]'[/color][color=#FF3200]s[/color]      [color=#FF6700]P[/color][color=#FF7000]r[/color][color=#FF7900]o[/color][color=#FF8200]m[/color][color=#FF8A00]i[/color][color=#FF9300]s[/color][color=#FF9C00]e[/color]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=246109278]
+custom_minimum_size = Vector2(0, 346.445)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=890721565]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1847066864]
+custom_minimum_size = Vector2(105.3, 56.185)
+layout_mode = 2
+
+[node name="playButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=733361169]
+custom_minimum_size = Vector2(177.65, 90.165)
+layout_mode = 2
+theme = ExtResource("5_46xev")
+text = "Play"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1861664592]
+custom_minimum_size = Vector2(549.695, 0)
+layout_mode = 2
+
+[node name="quitButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1927973798]
+custom_minimum_size = Vector2(156.125, 0)
+layout_mode = 2
+theme = ExtResource("5_46xev")
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/quitButton" to="." method="_on_quit_button_pressed"]

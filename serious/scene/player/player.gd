@@ -4,6 +4,21 @@ enum STATE {HELD, EMPTY}
 var currentState : STATE = STATE.EMPTY
 var currentCandle
 
+const STEP_1 = "res://assets/sfx/player/step1.ogg"
+const STEP_2 = "res://assets/sfx/player/step2.ogg"
+const STEP_3 = "res://assets/sfx/player/step3.ogg"
+const STEP_4 = "res://assets/sfx/player/step4.ogg"
+const STEP_5 = "res://assets/sfx/player/step5.ogg"
+
+var step_array := [STEP_1,STEP_2,STEP_3,STEP_4,STEP_5]
+
+@export var needs_to_spin : bool = true
+@export var can_move : bool = true
+var dead : bool = false
+var total_spin = 0
+
+@onready var main: Node3D = $".."
+
 #from Kenny assets: https://github.com/KenneyNL/Starter-Kit-3D-Platformer/blob/main/scripts/player.gd
 
 @export_subgroup("Components")
@@ -16,6 +31,10 @@ var currentCandle
 var movement_velocity: Vector3
 var rotation_direction: float
 var gravity = 0
+
+@onready var spawn_point: Marker3D = %spawnPoint
+
+var spawnVec : Vector3 = Vector3(0,1,0)
 
 var previously_floored = false
 
@@ -35,8 +54,13 @@ var previous_yaw := 0.0
 func _ready() -> void:
 	previous_yaw = rotation.y
 	%deathParticle.emitting = false
+	
+	if(spawn_point):
+		spawnVec = spawn_point.global_position
 
 func _physics_process(delta):
+	
+	$SpinTimer.paused = !needs_to_spin
 
 	# Handle functions
 	
@@ -77,7 +101,7 @@ func _physics_process(delta):
 
 	if is_on_floor() and gravity > 2 and !previously_floored:
 		model.scale = Vector3(1.25, 0.75, 1.25)
-		#Audio.play("res://sounds/land.ogg")
+		Audio.play("res://assets/sfx/player/landed.ogg")
 
 	previously_floored = is_on_floor()
 
@@ -92,6 +116,10 @@ func handle_effects(delta):
 		%candle.visible = true
 	else:
 		%candle.visible = false
+		
+	if animation.current_animation == "walking_animation" && %walkTimer.is_stopped():
+		Audio.play(step_array[randi_range(0,len(step_array)-1)])
+		%walkTimer.start()
 		
 	if is_on_floor():
 		var horizontal_velocity = Vector2(velocity.x, velocity.z)
@@ -129,8 +157,9 @@ func handle_controls(delta):
 
 	var input := Vector3.ZERO
 
-	input.x = Input.get_axis("move_left", "move_right")
-	input.z = Input.get_axis("move_forward", "move_back")
+	if(can_move):
+		input.x = Input.get_axis("move_left", "move_right")
+		input.z = Input.get_axis("move_forward", "move_back")
 
 	input = input.rotated(Vector3.UP, view.rotation.y)
 
@@ -150,7 +179,10 @@ func handle_controls(delta):
 
 func handle_gravity(delta):
 
-	gravity += 25 * delta
+	if(can_move):
+		gravity += 25 * delta
+	else:
+		gravity = 0
 
 	if gravity > 0 and is_on_floor():
 
@@ -189,18 +221,24 @@ func handle_spinning(delta):
 
 func on_full_spin():
 	print("spin complete")
-	spin_timer.stop()
-	spin_timer.start()
+	total_spin+=1
+	if(needs_to_spin):
+		spin_timer.stop()
+		spin_timer.start()
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	animation.pause()
 
 
 func death() -> void:
+	if($model.visible == false): 
+		return
+	dead = true
 	print("die")
-	spin_timer.start()
+	can_move = false
 	$model.visible = false
 	%deathParticle.emitting = true
+	Audio.play("res://assets/sfx/death.ogg")
 	
 	if(currentState == STATE.HELD):
 		currentCandle.visible = true
@@ -208,6 +246,10 @@ func death() -> void:
 		currentState = STATE.EMPTY
 		
 	await get_tree().create_timer(2.0).timeout
+	if(needs_to_spin):
+		spin_timer.start()
 	%deathParticle.emitting = false
 	$model.visible = true
-	global_position = Vector3i(0,1,0)
+	global_position = spawnVec
+	can_move = true
+	dead = false
