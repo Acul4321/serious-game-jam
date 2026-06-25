@@ -20,7 +20,6 @@ func _process(delta: float) -> void:
 	# Ouroboros constantly pushes left
 	battle_position -= ouroborus_sps * delta
 
-	# Detect new player spins
 	var current_total = player.total_spin
 	var spin_gain = current_total - last_player_total
 

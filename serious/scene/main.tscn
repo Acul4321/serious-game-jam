@@ -31,13 +31,13 @@ ground_bottom_color = Color(0.73333335, 0.16862746, 0.13333334, 1)
 ground_horizon_color = Color(0.8198408, 0.3137213, 0.120255895, 1)
 ground_curve = 0.028284265
 
-[sub_resource type="Sky" id="Sky_hybxs"]
+[sub_resource type="Sky" id="Sky_0d4pv"]
 sky_material = SubResource("ProceduralSkyMaterial_of57s")
 
 [sub_resource type="Environment" id="Environment_v0l8b"]
 background_mode = 2
 background_color = Color(0.9711848, 0.8507074, 0.88259196, 1)
-sky = SubResource("Sky_hybxs")
+sky = SubResource("Sky_0d4pv")
 ambient_light_source = 3
 ambient_light_color = Color(0.98914725, 0.961281, 0.8788185, 1)
 
@@ -52,7 +52,7 @@ emission_operator = 1
 emission_texture = ExtResource("8_b5f6u")
 texture_filter = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_gqg1x"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_gtqqq"]
 _surfaces = [{
 "aabb": AABB(-0.93444204, -0.8651015, -0.9392123, 1.9021131, 2, 1.809017),
 "format": 34896613377,
@@ -82,7 +82,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/38AAAAA////////yGH///9///8AAP////8AAMhh/////wAAyGH//xrP/////////////8hh//8azwAA/////xrPAAD/////5DD///////8az////////+QwAAD/////Gs//////VNX/f///AABU1f/////IYVTV5DD/////VNUAAP//yGFU1eQwAAD/////AAD//8hh///kMP///////wAAAADIYf//AAAAAMhh////f///AAD//wAA///IYf///38AAAAA//8AAAAAyGG83P//AADIYbzc/38AAAAAvNzkMAAA//+83BrPAAD//7zcmuD/f5rg/3+a4P9/muD/f9y1/3/ctf9/3LX/f9y1/3//f/9//3//f/9//3//f/9/VNWqKlTVqipU1aoqVNWqKlTVqioiSv9/Ikr/fyJK/38iSv9///9jn///Y5///2Of//9jn4xdOVGMXTlRjF05UYxdOVGMXTlR")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_gqg1x")
+shadow_mesh = SubResource("ArrayMesh_gtqqq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcbur"]
 resource_name = "Material.056"
@@ -490,14 +490,14 @@ load_path = "res://.godot/imported/portal.png-03929c3e651451e69650c32dc9a9901a.s
 atlas = SubResource("CompressedTexture2D_tv8i1")
 region = Rect2(166, 166, 117, 116)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjnwh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gn2wi"]
 albedo_texture = ExtResource("18_tv8i1")
 uv1_scale = Vector3(-0.075, -0.075, -0.075)
 uv1_triplanar = true
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1ssea"]
-material = SubResource("StandardMaterial3D_gjnwh")
+material = SubResource("StandardMaterial3D_gn2wi")
 size = Vector2(10000, 10000)
 
 [sub_resource type="Animation" id="Animation_0d4pv"]
