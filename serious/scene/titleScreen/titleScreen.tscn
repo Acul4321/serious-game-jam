@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dcx356gpu3kea" path="res://scene/titleScreen/title_screen.gd" id="1_rq8hh"]
 [ext_resource type="Texture2D" uid="uid://cf7vjsl2funmo" path="res://scene/titleScreen/badge.fight.png" id="2_yurqi"]
 [ext_resource type="Texture2D" uid="uid://crvt83cijk3wi" path="res://scene/titleScreen/badge.praise.png" id="3_rq8hh"]
-[ext_resource type="Theme" uid="uid://r62tg44unh68" path="res://assets/UI/main.tres" id="5_46xev"]
+[ext_resource type="Theme" uid="uid://r62tg44unh68" path="res://assets/ui/main.tres" id="5_46xev"]
 [ext_resource type="FontFile" uid="uid://8yts78yo4wtt" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="5_uy5d8"]
 
 [node name="TitleScreen" type="Control" unique_id=386406975]

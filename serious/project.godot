@@ -28,27 +28,18 @@ Audio="*uid://dsakufy8cjl2i"
 [dialogic]
 
 directories/dch_directory={
-"characters/cult member": "res://assets/dialogic/characters/cult member.dch",
-"characters/newsguy": "res://assets/dialogic/characters/newsguy.dch",
-"characters/ouroboros": "res://assets/dialogic/characters/ouroboros.dch",
-"cult member": "res://assets/dialogic/Characters/cult member.dch",
-"newsguy": "res://assets/dialogic/Characters/newsguy.dch",
-"ouroboros": "res://assets/dialogic/Characters/ouroboros.dch",
+"cult member": "res://assets/dialogic/characters/cult member.dch",
+"newsguy": "res://assets/dialogic/characters/newsguy.dch",
+"ouroboros": "res://assets/dialogic/characters/ouroboros.dch",
 "unit_test_character": "res://dialogic-2.0-alpha-19/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"battle": "res://assets/dialogic/Timeline/battle.dtl",
-"battle2": "res://assets/dialogic/Timeline/battle2.dtl",
-"cultHelp": "res://assets/dialogic/Timeline/cultHelp.dtl",
-"cultMembers": "res://assets/dialogic/Timeline/cultMembers.dtl",
-"news": "res://assets/dialogic/Timeline/news.dtl",
-"ouroboros": "res://assets/dialogic/Timeline/ouroboros.dtl",
-"timeline/battle": "res://assets/dialogic/timeline/battle.dtl",
-"timeline/battle2": "res://assets/dialogic/timeline/battle2.dtl",
-"timeline/cultHelp": "res://assets/dialogic/timeline/cultHelp.dtl",
-"timeline/cultMembers": "res://assets/dialogic/timeline/cultMembers.dtl",
-"timeline/news": "res://assets/dialogic/timeline/news.dtl",
-"timeline/ouroboros": "res://assets/dialogic/timeline/ouroboros.dtl"
+"battle": "res://assets/dialogic/timeline/battle.dtl",
+"battle2": "res://assets/dialogic/timeline/battle2.dtl",
+"cultHelp": "res://assets/dialogic/timeline/cultHelp.dtl",
+"cultMembers": "res://assets/dialogic/timeline/cultMembers.dtl",
+"news": "res://assets/dialogic/timeline/news.dtl",
+"ouroboros": "res://assets/dialogic/timeline/ouroboros.dtl"
 }
 layout/style_directory={
 "": "res://assets/dialogic/styles/pixel.tres",
