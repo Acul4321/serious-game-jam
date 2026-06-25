@@ -16,5 +16,6 @@ func _physics_process(delta: float) -> void:
 			%candle.visible = true
 			player.currentState = PLAYERSTATE.EMPTY
 			emit_signal("candle_placed")
+			Audio.play("res://assets/sfx/player/place.ogg")
 	else:
 		%placeLabel.visible = false

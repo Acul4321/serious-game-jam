@@ -46,6 +46,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if(candleTotal <= 0):
+		%ouroboros.visible = false
 	if(state == GAMESTATE.NEWS):
 		news_camera.make_current()
 	elif(state == GAMESTATE.SPAWNING):
@@ -76,7 +78,7 @@ func _process(delta: float) -> void:
 func _on_candle_circle_candle_placed() -> void:
 	print("candle placed")
 	candleTotal += 1
-	if candleTotal >= 1:
+	if candleTotal >= 2:
 		print("game end")
 		change_state(GAMESTATE.TALKING)
 		Dialogic.start("res://assets/dialogic/Timeline/ouroboros.dtl")
@@ -98,6 +100,7 @@ func news_ended():
 		Dialogic.timeline_ended.disconnect(news_ended)
 		cutscene_player.seek(25.0)
 		print("ended")
+		Audio.play("res://assets/music/menu_song_serpents_promise.ogg")
 
 func DialogicSignal(arg: String):
 	if(arg == "serve_signal"):

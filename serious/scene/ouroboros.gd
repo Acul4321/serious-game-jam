@@ -10,6 +10,9 @@ var spawnPos: Array[Vector3] = [
 	Vector3(-28.735, 9.438, -11.893)
 ]
 
+func _ready() -> void:
+	visible = false
+
 func _process(delta: float) -> void:
 	if (main.state == main.GAMESTATE.TALKING):
 		pass

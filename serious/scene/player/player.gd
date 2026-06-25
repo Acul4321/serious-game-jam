@@ -4,6 +4,14 @@ enum STATE {HELD, EMPTY}
 var currentState : STATE = STATE.EMPTY
 var currentCandle
 
+const STEP_1 = "res://assets/sfx/player/step1.ogg"
+const STEP_2 = "res://assets/sfx/player/step2.ogg"
+const STEP_3 = "res://assets/sfx/player/step3.ogg"
+const STEP_4 = "res://assets/sfx/player/step4.ogg"
+const STEP_5 = "res://assets/sfx/player/step5.ogg"
+
+var step_array := [STEP_1,STEP_2,STEP_3,STEP_4,STEP_5]
+
 @export var needs_to_spin : bool = true
 var total_spin = 0
 
@@ -86,7 +94,7 @@ func _physics_process(delta):
 
 	if is_on_floor() and gravity > 2 and !previously_floored:
 		model.scale = Vector3(1.25, 0.75, 1.25)
-		#Audio.play("res://sounds/land.ogg")
+		Audio.play("res://assets/sfx/player/landed.ogg")
 
 	previously_floored = is_on_floor()
 
@@ -101,6 +109,10 @@ func handle_effects(delta):
 		%candle.visible = true
 	else:
 		%candle.visible = false
+		
+	if animation.current_animation == "walking_animation" && %walkTimer.is_stopped():
+		Audio.play(step_array[randi_range(0,len(step_array)-1)])
+		%walkTimer.start()
 		
 	if is_on_floor():
 		var horizontal_velocity = Vector2(velocity.x, velocity.z)
@@ -211,6 +223,7 @@ func death() -> void:
 	print("die")
 	$model.visible = false
 	%deathParticle.emitting = true
+	Audio.play("res://assets/sfx/death.ogg")
 	
 	if(currentState == STATE.HELD):
 		currentCandle.visible = true

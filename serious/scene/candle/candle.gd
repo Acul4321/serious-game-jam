@@ -18,6 +18,7 @@ func _physics_process(delta: float) -> void:
 			else:
 				player.currentState = PLAYERSTATE.HELD
 				player.currentCandle = %candle
+				Audio.play("res://assets/sfx/player/pickup.ogg")
 				
 			print(player.currentState)
 			

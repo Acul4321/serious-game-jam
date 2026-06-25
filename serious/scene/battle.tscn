@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://clncx4bv7c7mx" path="res://assets/platform/mainPlatform.glb" id="3_6qw66"]
 [ext_resource type="Texture2D" uid="uid://cdldr6i7csx7d" path="res://assets/platform/mainPlatform_main.png" id="4_p56j5"]
 [ext_resource type="Texture2D" uid="uid://dww8gxm3uufax" path="res://assets/textures/lava.png" id="5_ougy3"]
+[ext_resource type="Script" uid="uid://cfdch75wjqanh" path="res://scene/lava.gd" id="5_yyook"]
 [ext_resource type="PackedScene" uid="uid://c401uc1q4fk34" path="res://assets/ouroboros/ouroboros.glb" id="6_p56j5"]
 [ext_resource type="Script" uid="uid://b2obmj83dwx37" path="res://scene/boss.gd" id="7_bdn7b"]
 [ext_resource type="Texture2D" uid="uid://cy8e8yrbni8r5" path="res://assets/ouroboros/ouroboros_angry.png" id="7_ougy3"]
@@ -184,6 +185,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -34.644146, 0)
 [node name="Lava" type="MeshInstance3D" parent="." unique_id=231695880]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.5, 0)
 mesh = SubResource("PlaneMesh_o18kk")
+script = ExtResource("5_yyook")
 
 [node name="mainPlatform" parent="." unique_id=1175340938 instance=ExtResource("3_6qw66")]
 transform = Transform3D(3.105, 0, 0, 0, 3.105, 0, 0, 0, 3.105, 0, 0, 0)
