@@ -1,5 +1,10 @@
 extends MeshInstance3D
 
+@export var scroll_direction: Vector3 = Vector3.FORWARD
+@export var scroll_speed: float = 0.25
+
+func _process(delta: float) -> void:
+	global_position += scroll_direction.normalized() * scroll_speed * delta
 func _ready() -> void:
 	randomize()
 	_schedule_next()

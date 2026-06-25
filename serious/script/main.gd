@@ -116,10 +116,10 @@ func _on_platform_rise_end() -> void:
 func news_ended():
 	#magic number - rough estimate of time if the player mashes to skip
 	if(cutscene_player.current_animation_position < 10):
-		Dialogic.timeline_ended.disconnect(news_ended)
 		cutscene_player.seek(25.0)
-		print("ended")
-		Audio.play("res://assets/music/menu_song_serpents_promise.ogg")
+	print("ended")
+	Audio.play("res://assets/music/menu_song_serpents_promise.ogg")
+	Dialogic.timeline_ended.disconnect(news_ended)
 	Dialogic.start("res://assets/dialogic/Timeline/cultHelp.dtl")
 
 func DialogicSignal(arg: String):

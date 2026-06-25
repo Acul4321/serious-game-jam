@@ -3801,7 +3801,7 @@ mesh = SubResource("ArrayMesh_gn2wi")
 
 [node name="ouroboros" parent="world/Platform/Path1" unique_id=857692666 instance=ExtResource("16_fdqew")]
 unique_name_in_owner = true
-transform = Transform3D(0.3122738, 0.9497523, 0.021321405, 0.036483735, 0.010437567, -0.99927974, -0.94929045, 0.31282696, -0.031391174, -28.73492, 9.438217, -11.8933735)
+transform = Transform3D(0.31227377, 0.9497522, 0.021321405, 0.036483735, 0.010437567, -0.99927974, -0.9492904, 0.31282693, -0.031391174, -28.73492, 9.438217, -11.8933735)
 visible = false
 
 [node name="Path2" type="Node3D" parent="world/Platform" unique_id=1396657523]
@@ -3964,6 +3964,7 @@ texture = SubResource("AtlasTexture_1ssea")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.5, 0)
 mesh = SubResource("PlaneMesh_1ssea")
 script = ExtResource("21_oldxj")
+scroll_direction = Vector3(1, 0, 1)
 
 [node name="UI" type="Control" parent="." unique_id=1399842959]
 layout_mode = 3
