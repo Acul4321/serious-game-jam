@@ -146,8 +146,9 @@ script = ExtResource("1_bdn7b")
 
 [node name="Player" parent="." unique_id=509668328 node_paths=PackedStringArray("view") instance=ExtResource("1_ebedk")]
 unique_name_in_owner = true
-transform = Transform3D(-0.35917258, 0, 0.93327105, 0, 1, 0, -0.93327105, 0, -0.35917258, 0, 0.43945903, 0)
+transform = Transform3D(-0.35917258, 0, 0.93327105, 0, 1, 0, -0.93327105, 0, -0.35917258, 0, -12.097785, 0)
 needs_to_spin = false
+can_move = false
 view = NodePath("../view")
 
 [node name="CollisionShape3D" parent="Player" index="0" unique_id=338168985]
@@ -229,6 +230,10 @@ show_percentage = false
 
 [node name="BossMusicAudioPlayer" type="AudioStreamPlayer3D" parent="." unique_id=717979599]
 attenuation_model = 3
+
+[node name="spawnPoint" type="Marker3D" parent="." unique_id=1777399905]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.932541, 0)
 
 [editable path="Player"]
 [editable path="Player/model"]

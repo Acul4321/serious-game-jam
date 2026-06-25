@@ -1,1 +1,6 @@
-<Empty Text Event>
+audio "res://assets/sfx/ouroboros1.ogg"
+[signal arg="battle_stop"]
+ouroboros (angry): Puny Human, You shall feel my wrath!
+ouroboros (angry): You disobey God and shall pay the ultimate price
+ouroboros (angry): I challenge you to a Spinning Duel, Foolish human
+[signal arg="battle_resume"]

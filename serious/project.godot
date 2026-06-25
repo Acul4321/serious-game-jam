@@ -35,6 +35,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "battle": "res://assets/dialogic/Timeline/battle.dtl",
+"battle2": "res://assets/dialogic/Timeline/battle2.dtl",
 "cultHelp": "res://assets/dialogic/Timeline/cultHelp.dtl",
 "cultMembers": "res://assets/dialogic/Timeline/cultMembers.dtl",
 "news": "res://assets/dialogic/Timeline/news.dtl",
