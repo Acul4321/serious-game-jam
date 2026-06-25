@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwlxrldpv1lum"
-path="res://.godot/imported/lava.png-1a84ffc8ddfe4f2427ce25899957c518.ctex"
+uid="uid://begg7xvp2i0og"
+path="res://.godot/imported/end.screen.worship.png-92a00e00ee7d7cf82f1e8c2426ce497e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/lava.png"
-dest_files=["res://.godot/imported/lava.png-1a84ffc8ddfe4f2427ce25899957c518.ctex"]
+source_file="res://scene/endScreen/end.screen.worship.png"
+dest_files=["res://.godot/imported/end.screen.worship.png-92a00e00ee7d7cf82f1e8c2426ce497e.ctex"]
 
 [params]
 

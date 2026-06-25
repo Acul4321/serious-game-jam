@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwlxrldpv1lum"
-path="res://.godot/imported/lava.png-1a84ffc8ddfe4f2427ce25899957c518.ctex"
+uid="uid://crvt83cijk3wi"
+path="res://.godot/imported/badge.praise.png-e17ababdbe7e58c7a852da804ca810ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/lava.png"
-dest_files=["res://.godot/imported/lava.png-1a84ffc8ddfe4f2427ce25899957c518.ctex"]
+source_file="res://scene/titleScreen/badge.praise.png"
+dest_files=["res://.godot/imported/badge.praise.png-e17ababdbe7e58c7a852da804ca810ca.ctex"]
 
 [params]
 

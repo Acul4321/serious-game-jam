@@ -7,20 +7,22 @@
 [ext_resource type="PackedScene" uid="uid://cdroww0t04pt4" path="res://scene/candle/candle.tscn" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://htje6gr0y1de" path="res://scene/candle/candle_circle.tscn" id="6_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://dscpqbdu1gmtw" path="res://assets/platform/stone.glb" id="6_tv8i1"]
-[ext_resource type="Texture2D" uid="uid://k0j8ytpghkb1" path="res://assets/platform/stone_stone1.texture.png" id="7_0vlqb"]
+[ext_resource type="Texture2D" uid="uid://pio2j6dofwps" path="res://assets/platform/stone_stone1.texture.png" id="7_0vlqb"]
 [ext_resource type="PackedScene" uid="uid://clncx4bv7c7mx" path="res://assets/platform/mainPlatform.glb" id="7_of57s"]
 [ext_resource type="PackedScene" uid="uid://pb8cvdj1fuu5" path="res://scene/cultNPC/cult_npc.tscn" id="7_p1hux"]
-[ext_resource type="Texture2D" uid="uid://cdldr6i7csx7d" path="res://assets/platform/mainPlatform_main.png" id="8_b5f6u"]
+[ext_resource type="Texture2D" uid="uid://bpmclynfwe8a1" path="res://assets/platform/mainPlatform_main.png" id="8_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://dh71yvl8egggi" path="res://assets/platform/floatingPlatform.glb" id="9_wscrc"]
-[ext_resource type="Texture2D" uid="uid://l5cjalc2i3w3" path="res://assets/platform/floatingPlatform_floating.plataform.png" id="10_mswub"]
+[ext_resource type="Texture2D" uid="uid://ngqohjeely4v" path="res://assets/platform/floatingPlatform_floating.plataform.png" id="10_mswub"]
 [ext_resource type="PackedScene" uid="uid://vihbb1x28fmq" path="res://assets/platform/PortalPlatform.glb" id="11_hybxs"]
-[ext_resource type="Texture2D" uid="uid://bdm1vbqcg7kp1" path="res://assets/platform/PortalPlatform_portal.png" id="12_v2gmf"]
+[ext_resource type="Texture2D" uid="uid://csmnpimd7xwce" path="res://assets/platform/PortalPlatform_portal.png" id="12_v2gmf"]
+[ext_resource type="Texture2D" uid="uid://bjsxl40wbacqg" path="res://assets/textures/portal-export.png" id="14_io27d"]
 [ext_resource type="PackedScene" uid="uid://c44qa5bdaxy26" path="res://scene/ouroboros.tscn" id="16_fdqew"]
 [ext_resource type="PackedScene" uid="uid://b5t77p0dtb1pu" path="res://scene/moving_platform.tscn" id="17_smf0o"]
 [ext_resource type="PackedScene" uid="uid://sgikqq2nmr5a" path="res://assets/platform/candlePlatform.glb" id="17_tv8i1"]
-[ext_resource type="Texture2D" uid="uid://bg8rmcdattw2j" path="res://assets/platform/candlePlatform_PixelTextureGrid_96.png" id="18_0vlqb"]
-[ext_resource type="Texture2D" uid="uid://dww8gxm3uufax" path="res://assets/textures/lava.png" id="18_tv8i1"]
+[ext_resource type="Texture2D" uid="uid://cedyo36pxxrvu" path="res://assets/platform/candlePlatform_PixelTextureGrid_96.png" id="18_0vlqb"]
+[ext_resource type="Texture2D" uid="uid://cwlxrldpv1lum" path="res://assets/textures/lava.png" id="18_tv8i1"]
 [ext_resource type="Script" uid="uid://cx6nqukjqoye" path="res://scene/player/spinBar.gd" id="19_0vlqb"]
+[ext_resource type="Texture2D" uid="uid://dr16xkcvuygn5" path="res://assets/textures/summoningCircle.png" id="21_fa8t4"]
 [ext_resource type="Script" uid="uid://cfdch75wjqanh" path="res://scene/lava.gd" id="21_oldxj"]
 [ext_resource type="AudioStream" uid="uid://du3v6bmbyd2h3" path="res://assets/sfx/platformRising.ogg" id="23_4jm02"]
 [ext_resource type="PackedScene" uid="uid://e3oeugwpqtix" path="res://scene/shakeable_camera/shakeable_camera.tscn" id="23_gn2wi"]
@@ -487,13 +489,6 @@ _data = {
 &"RESET": SubResource("Animation_0vlqb"),
 &"moving platforms": SubResource("Animation_gjnwh")
 }
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tv8i1"]
-load_path = "res://.godot/imported/portal.png-03929c3e651451e69650c32dc9a9901a.s3tc.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ssea"]
-atlas = SubResource("CompressedTexture2D_tv8i1")
-region = Rect2(166, 166, 117, 116)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gn2wi"]
 albedo_texture = ExtResource("18_tv8i1")
@@ -3778,6 +3773,10 @@ mesh = SubResource("ArrayMesh_gjnwh")
 
 [node name="Portal" parent="world/Platform/Path1/PortalPlatform" unique_id=2027806640 instance=ExtResource("4_0ha60")]
 
+[node name="Sprite3D" parent="world/Platform/Path1/PortalPlatform/Portal" index="1" unique_id=1878860978]
+texture = ExtResource("14_io27d")
+region_enabled = false
+
 [node name="PixelPortalSingle" parent="world/Platform/Path1/PortalPlatform/Portal" index="2" unique_id=589736465]
 visible = false
 
@@ -3801,7 +3800,7 @@ mesh = SubResource("ArrayMesh_gn2wi")
 
 [node name="ouroboros" parent="world/Platform/Path1" unique_id=857692666 instance=ExtResource("16_fdqew")]
 unique_name_in_owner = true
-transform = Transform3D(0.31227377, 0.9497522, 0.021321405, 0.036483735, 0.010437567, -0.99927974, -0.9492904, 0.31282693, -0.031391174, -28.73492, 9.438217, -11.8933735)
+transform = Transform3D(0.31227377, 0.9497522, 0.021321405, 0.03648373, 0.010437567, -0.99927974, -0.94929034, 0.31282693, -0.031391174, -28.73492, 9.438217, -11.8933735)
 visible = false
 
 [node name="Path2" type="Node3D" parent="world/Platform" unique_id=1396657523]
@@ -3958,7 +3957,7 @@ autoplay = &"moving platforms"
 transform = Transform3D(1, 0, 0, 0, 6.7055225e-08, 1, 0, -1, 6.7055225e-08, 0, 0, 0)
 pixel_size = 0.06
 texture_filter = 0
-texture = SubResource("AtlasTexture_1ssea")
+texture = ExtResource("21_fa8t4")
 
 [node name="Lava" type="MeshInstance3D" parent="world" unique_id=1854640089]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.5, 0)

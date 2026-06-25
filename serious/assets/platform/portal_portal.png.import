@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwlxrldpv1lum"
-path="res://.godot/imported/lava.png-1a84ffc8ddfe4f2427ce25899957c518.ctex"
+uid="uid://c8c4imruodr8j"
+path="res://.godot/imported/portal_portal.png-da3599c9ece3eb3420e251da0fff3563.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/lava.png"
-dest_files=["res://.godot/imported/lava.png-1a84ffc8ddfe4f2427ce25899957c518.ctex"]
+source_file="res://assets/platform/portal_portal.png"
+dest_files=["res://.godot/imported/portal_portal.png-da3599c9ece3eb3420e251da0fff3563.ctex"]
 
 [params]
 

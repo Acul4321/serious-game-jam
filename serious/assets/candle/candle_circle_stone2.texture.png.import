@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwlxrldpv1lum"
-path="res://.godot/imported/lava.png-1a84ffc8ddfe4f2427ce25899957c518.ctex"
+uid="uid://ch3n64gjeudm6"
+path="res://.godot/imported/candle_circle_stone2.texture.png-401610685c3f1e11e63e42fca4e0f70e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/lava.png"
-dest_files=["res://.godot/imported/lava.png-1a84ffc8ddfe4f2427ce25899957c518.ctex"]
+source_file="res://assets/candle/candle_circle_stone2.texture.png"
+dest_files=["res://.godot/imported/candle_circle_stone2.texture.png-401610685c3f1e11e63e42fca4e0f70e.ctex"]
 
 [params]
 

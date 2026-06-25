@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwlxrldpv1lum"
-path="res://.godot/imported/lava.png-1a84ffc8ddfe4f2427ce25899957c518.ctex"
+uid="uid://bnvhmwopuba2s"
+path="res://.godot/imported/circle_runes.png-faeea40d3113f451b818d0ef949625a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/lava.png"
-dest_files=["res://.godot/imported/lava.png-1a84ffc8ddfe4f2427ce25899957c518.ctex"]
+source_file="res://examples/base/sprites/circle_runes.png"
+dest_files=["res://.godot/imported/circle_runes.png-faeea40d3113f451b818d0ef949625a7.ctex"]
 
 [params]
 
