@@ -227,6 +227,9 @@ theme = SubResource("Theme_bdn7b")
 value = 50.0
 show_percentage = false
 
+[node name="BossMusicAudioPlayer" type="AudioStreamPlayer3D" parent="." unique_id=717979599]
+attenuation_model = 3
+
 [editable path="Player"]
 [editable path="Player/model"]
 [editable path="mainPlatform"]

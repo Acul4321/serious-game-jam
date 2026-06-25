@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c72rraat0p50o" path="res://scene/cultNPC/cult_npc.gd" id="1_01isg"]
 [ext_resource type="PackedScene" uid="uid://dvhqybmrwosfr" path="res://assets/cult/cult.glb" id="2_c02vq"]
-[ext_resource type="Texture2D" uid="uid://cg0wkm1he1bpf" path="res://assets/cult/cult_cult.png" id="3_c02vq"]
+[ext_resource type="Texture2D" uid="uid://b2se8fmgw3tc2" path="res://assets/cult/cult_cult.png" id="3_c02vq"]
 [ext_resource type="FontFile" uid="uid://8yts78yo4wtt" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="4_cbukt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1ssea"]

@@ -14,6 +14,7 @@ var step_array := [STEP_1,STEP_2,STEP_3,STEP_4,STEP_5]
 
 @export var needs_to_spin : bool = true
 @export var can_move : bool = true
+var dead : bool = false
 var total_spin = 0
 
 @onready var main: Node3D = $".."
@@ -31,7 +32,9 @@ var movement_velocity: Vector3
 var rotation_direction: float
 var gravity = 0
 
-var spawnVec := Vector3i(0,1,0)
+@onready var spawn_point: Marker3D = %spawnPoint
+
+var spawnVec : Vector3 = Vector3(0,1,0)
 
 var previously_floored = false
 
@@ -51,6 +54,9 @@ var previous_yaw := 0.0
 func _ready() -> void:
 	previous_yaw = rotation.y
 	%deathParticle.emitting = false
+	
+	if(spawn_point):
+		spawnVec = spawn_point.global_position
 
 func _physics_process(delta):
 	
@@ -227,6 +233,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 func death() -> void:
 	if($model.visible == false): 
 		return
+	dead = true
 	print("die")
 	can_move = false
 	$model.visible = false
@@ -245,3 +252,4 @@ func death() -> void:
 	$model.visible = true
 	global_position = spawnVec
 	can_move = true
+	dead = false

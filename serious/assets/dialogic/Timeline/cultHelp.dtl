@@ -1,0 +1,8 @@
+[signal arg="startHelp"]
+[wait time="2.0"]
+"cult member": That News report really went into a Tailspin.
+"cult member": Welcome to the [color=#871400]Cult[/color] Newbie. We need you to collect the [b]candles[/b] scattered across the summoning grounds to finish the Ritual.
+"cult member": The god [shake][color=#871400]snake[/color][/shake] has promised to save us!
+"cult member": Remember, You have a double jump. Must be a side-effect of the [tornado]Spinning[/tornado][color=#FFE700]e[/color][color=#D6C600]p[/color][color=#ADA600]i[/color][color=#848600]d[/color][color=#5B6600]e[/color][color=#848600]m[/color][color=#ADA600]i[/color][color=#D6C600]c[/color]
+"cult member": Just please keep [tornado]Spinning[/tornado]. we've already lost too many members!
+[signal arg="endHelp"]

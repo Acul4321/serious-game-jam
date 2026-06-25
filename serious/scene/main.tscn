@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dww8gxm3uufax" path="res://assets/textures/lava.png" id="18_tv8i1"]
 [ext_resource type="Script" uid="uid://cx6nqukjqoye" path="res://scene/player/spinBar.gd" id="19_0vlqb"]
 [ext_resource type="Script" uid="uid://cfdch75wjqanh" path="res://scene/lava.gd" id="21_oldxj"]
+[ext_resource type="AudioStream" uid="uid://du3v6bmbyd2h3" path="res://assets/sfx/platformRising.ogg" id="23_4jm02"]
 [ext_resource type="PackedScene" uid="uid://e3oeugwpqtix" path="res://scene/shakeable_camera/shakeable_camera.tscn" id="23_gn2wi"]
 [ext_resource type="AudioStream" uid="uid://dyu2rqn2cjapk" path="res://assets/sfx/portalOpen.ogg" id="23_gtqqq"]
 [ext_resource type="AudioStream" uid="uid://b1yqn2cvr6ibd" path="res://assets/sfx/cultMurmers.ogg" id="24_gn2wi"]
@@ -503,6 +504,15 @@ texture_filter = 0
 [sub_resource type="PlaneMesh" id="PlaneMesh_1ssea"]
 material = SubResource("StandardMaterial3D_gn2wi")
 size = Vector2(10000, 10000)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5mh2w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jm02"]
+bg_color = Color(0.8666667, 0.19215687, 0.20392157, 1)
+
+[sub_resource type="Theme" id="Theme_yyook"]
+ProgressBar/styles/background = SubResource("StyleBoxEmpty_5mh2w")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_4jm02")
 
 [sub_resource type="Animation" id="Animation_0d4pv"]
 length = 0.001
@@ -1577,7 +1587,7 @@ tracks/88/keys = {
 
 [sub_resource type="Animation" id="Animation_p8adh"]
 resource_name = "battleing"
-length = 25.0
+length = 16.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2437,7 +2447,7 @@ tracks/71/path = NodePath("../world/Platform/mainPlatform:scale")
 tracks/71/interp = 1
 tracks/71/loop_wrap = true
 tracks/71/keys = {
-"times": PackedFloat32Array(10.08, 11.740001, 18.795),
+"times": PackedFloat32Array(10.08, 10.333333, 10.733334),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(1, 1, 1), Vector3(3.3, 3.3, 3.3), Vector3(1.8181084, 1.8181084, 1.8181084)]
@@ -2449,10 +2459,10 @@ tracks/72/path = NodePath("../world/Platform/mainPlatform:position")
 tracks/72/interp = 1
 tracks/72/loop_wrap = true
 tracks/72/keys = {
-"times": PackedFloat32Array(10.08, 18.795),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(10.08, 10.84266, 14.066667),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 53.51994, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 43.609665, 0), Vector3(0, 53.51994, 0)]
 }
 tracks/73/type = "method"
 tracks/73/imported = false
@@ -2461,14 +2471,11 @@ tracks/73/path = NodePath("..")
 tracks/73/interp = 1
 tracks/73/loop_wrap = true
 tracks/73/keys = {
-"times": PackedFloat32Array(21.833334, 25),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(16),
+"transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"change_to_battle_scene"
-}, {
-"args": [1],
-"method": &"change_state"
 }]
 }
 tracks/74/type = "value"
@@ -2478,6 +2485,37 @@ tracks/74/path = NodePath("../world/Platform/Path1/PortalPlatform/Portal/PixelPo
 tracks/74/interp = 1
 tracks/74/loop_wrap = true
 tracks/74/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/75/type = "audio"
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/path = NodePath("cultAudioPlayerCutscene")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23_4jm02")
+}, {
+"end_offset": 0.0,
+"start_offset": 4.269,
+"stream": ExtResource("23_4jm02")
+}],
+"times": PackedFloat32Array(0, 10)
+}
+tracks/75/use_blend = true
+tracks/76/type = "value"
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/path = NodePath("%ouroboros:visible")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -3450,11 +3488,11 @@ tracks/1/path = NodePath("..")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(3),
+"times": PackedFloat32Array(2.9),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": [1],
-"method": &"change_state"
+"args": [],
+"method": &"let_player_walk_spin"
 }]
 }
 tracks/2/type = "value"
@@ -3507,6 +3545,20 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("..")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1],
+"method": &"change_state"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_oldxj"]
@@ -3608,7 +3660,9 @@ environment = SubResource("Environment_v0l8b")
 
 [node name="Player" parent="." unique_id=509668328 node_paths=PackedStringArray("view") instance=ExtResource("1_itxqv")]
 unique_name_in_owner = true
-transform = Transform3D(-0.35917258, 0, 0.93327105, 0, 1, 0, -0.93327105, 0, -0.35917258, 0, 0.43945903, 0)
+transform = Transform3D(-0.35917258, 0, 0.93327105, 0, 1, 0, -0.93327105, 0, -0.35917258, 0, -0.0047977567, 0)
+needs_to_spin = false
+can_move = false
 view = NodePath("../view")
 
 [node name="CollisionShape3D" parent="Player" index="0" unique_id=338168985]
@@ -3747,7 +3801,7 @@ mesh = SubResource("ArrayMesh_gn2wi")
 
 [node name="ouroboros" parent="world/Platform/Path1" unique_id=857692666 instance=ExtResource("16_fdqew")]
 unique_name_in_owner = true
-transform = Transform3D(0.31227392, 0.9497525, 0.021321405, 0.03648375, 0.01043757, -0.99927974, -0.94929075, 0.31282702, -0.031391174, -28.73492, 9.438217, -11.8933735)
+transform = Transform3D(0.3122738, 0.9497523, 0.021321405, 0.036483735, 0.010437567, -0.99927974, -0.94929045, 0.31282696, -0.031391174, -28.73492, 9.438217, -11.8933735)
 visible = false
 
 [node name="Path2" type="Node3D" parent="world/Platform" unique_id=1396657523]
@@ -3919,6 +3973,8 @@ anchors_preset = 0
 layout_mode = 0
 offset_right = 1150.0
 offset_bottom = 27.0
+theme = SubResource("Theme_yyook")
+show_percentage = false
 script = ExtResource("19_0vlqb")
 
 [node name="Cutscene" type="Node3D" parent="." unique_id=1527082270]
@@ -3948,7 +4004,7 @@ noise = SubResource("FastNoiseLite_gtqqq")
 transform = Transform3D(-0.9567048, 0.12665841, -0.26205644, -0.1057279, 0.6876206, 0.71833116, 0.2711781, 0.71493757, -0.6444586, 19.325146, 4.676549, -13.39739)
 
 [node name="ouroborosCameraArea" parent="Cutscene" unique_id=525153565 instance=ExtResource("23_gn2wi")]
-transform = Transform3D(0.35510692, -0.026101865, 0.9344609, 0, 0.9996101, 0.027921632, -0.9348256, -0.009915168, 0.35496837, -16.15, 11.73, -8.675)
+transform = Transform3D(0.35510692, -0.026101865, 0.93446076, 0, 0.9996101, 0.027921626, -0.9348256, -0.009915168, 0.3549683, -16.15, 11.73, -8.675)
 
 [node name="ouroborosCamera" type="Camera3D" parent="Cutscene/ouroborosCameraArea" unique_id=1422090410]
 transform = Transform3D(0.45008853, -0.21754387, 0.86608016, 0.024933577, 0.9725555, 0.23133096, -0.89263576, -0.08252494, 0.4431602, -22.840473, 1.691164, 18.536198)
@@ -3972,6 +4028,10 @@ stream = ExtResource("24_gn2wi")
 volume_db = -15.0
 autoplay = true
 bus = &"Voice"
+
+[node name="spawnPoint" type="Marker3D" parent="." unique_id=1357959775]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.042510033, 0)
 
 [connection signal="candle_placed" from="world/Candles/CandleCircle" to="." method="_on_candle_circle_candle_placed"]
 [connection signal="candle_placed" from="world/Candles/CandleCircle2" to="." method="_on_candle_circle_candle_placed"]

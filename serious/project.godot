@@ -34,6 +34,8 @@ directories/dch_directory={
 "unit_test_character": "res://dialogic-2.0-alpha-19/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"battle": "res://assets/dialogic/Timeline/battle.dtl",
+"cultHelp": "res://assets/dialogic/Timeline/cultHelp.dtl",
 "cultMembers": "res://assets/dialogic/Timeline/cultMembers.dtl",
 "news": "res://assets/dialogic/Timeline/news.dtl",
 "ouroboros": "res://assets/dialogic/Timeline/ouroboros.dtl"

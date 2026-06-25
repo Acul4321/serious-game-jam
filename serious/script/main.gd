@@ -31,6 +31,9 @@ const END_SCREEN = preload("res://scene/endScreen/endScreen.tscn")
 enum GAMESTATE {NEWS, GAMEPLAY, SPAWNING, TALKING, BATTLEING}
 var state : GAMESTATE = GAMESTATE.NEWS
 
+var in_help : bool = false
+var finished : bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Audio.stop("res://assets/music/menu_song_serpents_promise.ogg")
@@ -52,13 +55,16 @@ func _process(delta: float) -> void:
 	if(state == GAMESTATE.NEWS):
 		news_camera.make_current()
 		%Player.needs_to_spin = false
+		%Player.can_move = false
 	elif(state == GAMESTATE.SPAWNING):
 		shakeable_camera.make_current()
 		%Player.needs_to_spin = false
+		%Player.can_move = false
 		
 	elif(state == GAMESTATE.TALKING):
 		ouroboros_camera.make_current()
 		%Player.needs_to_spin = false
+		%Player.can_move = false
 	elif(state == GAMESTATE.BATTLEING):
 		battle_camera.make_current()
 		%Player.needs_to_spin = false
@@ -66,6 +72,13 @@ func _process(delta: float) -> void:
 	elif(state == GAMESTATE.GAMEPLAY):
 		playerCamera.make_current()
 		%Player.needs_to_spin = true
+		%Player.can_move = true
+		if(in_help && !finished):
+			%Player.needs_to_spin = false
+			%Player.can_move = false
+		if(%Player.dead && !in_help):
+			%Player.needs_to_spin = false
+			%Player.can_move = false
 	#sky colour changing
 	var t := clampf(float(candleTotal) / 5.0, 0.0, 1.0)
 
@@ -107,6 +120,7 @@ func news_ended():
 		cutscene_player.seek(25.0)
 		print("ended")
 		Audio.play("res://assets/music/menu_song_serpents_promise.ogg")
+	Dialogic.start("res://assets/dialogic/Timeline/cultHelp.dtl")
 
 func DialogicSignal(arg: String):
 	if(arg == "serve_signal"):
@@ -119,8 +133,23 @@ func DialogicSignal(arg: String):
 		print("fight")
 		change_state(GAMESTATE.BATTLEING)
 		cutscene_player.play("battleing")
+		
+	elif(arg == "startHelp"):
+		in_help = true
+		%Player.needs_to_spin = false
+		%Player.can_move = false
+		
+	elif(arg == "endHelp"):
+		in_help = false
+		finished = true
+		%Player.needs_to_spin = true
+		%Player.can_move = true
 	else:
 		print("does not match dialogic signal")
 	
 func change_to_battle_scene():
 	get_tree().change_scene_to_packed(BATTLE)
+
+func let_player_walk_spin():
+	%Player.needs_to_spin = true
+	%Player.can_move = true
