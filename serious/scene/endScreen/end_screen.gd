@@ -4,6 +4,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	if(Game.currentRoute == "praise"):
 		%fight.visible = false
 		%praise.visible = true
@@ -21,3 +22,11 @@ func _process(delta: float) -> void:
 func _on_continue_button_pressed() -> void:
 	print(title_screen)
 	get_tree().change_scene_to_packed(title_screen)
+	
+func play_badge_sound():
+	if(Game.currentRoute == "praise"):
+		Audio.play("res://assets/sfx/win.ogg")
+	else:
+		Audio.play("res://assets/sfx/lose.ogg")
+	$praise/VBoxContainer/HBoxContainer/continueButton.disabled = false
+	$fight/VBoxContainer/HBoxContainer/continueButton.disabled = false

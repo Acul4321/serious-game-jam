@@ -21,7 +21,7 @@ func _ready() -> void:
 	progress_bar.value = battle_position
 
 	last_player_total = player.total_spin
-	Dialogic.start("res://assets/dialogic/Timeline/battle.dtl")
+	Dialogic.start("res://assets/dialogic/timeline/battle.dtl")
 	Dialogic.signal_event.connect(DialogicSignal)
 
 func _process(delta: float) -> void:
@@ -48,7 +48,7 @@ func _process(delta: float) -> void:
 
 	progress_bar.value = battle_position
 	if(progress_bar.value >=90 && in_phase_one):
-		Dialogic.start("res://assets/dialogic/Timeline/battle2.dtl")
+		Dialogic.start("res://assets/dialogic/timeline/battle2.dtl")
 		ouroborus_sps = 5
 		battle_position -= 40
 		in_phase_one = false

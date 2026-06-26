@@ -86,7 +86,7 @@ text/autoadvance_enabled=false
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/main_scene="uid://b4gqjwp37bheq"
 

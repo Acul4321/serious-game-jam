@@ -6,29 +6,29 @@
 [ext_resource type="PackedScene" uid="uid://d2lagbgjqx0nb" path="res://scene/portal.tscn" id="4_0ha60"]
 [ext_resource type="PackedScene" uid="uid://cdroww0t04pt4" path="res://scene/candle/candle.tscn" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://htje6gr0y1de" path="res://scene/candle/candle_circle.tscn" id="6_4j5ol"]
-[ext_resource type="PackedScene" uid="uid://dscpqbdu1gmtw" path="res://assets/platform/stone.glb" id="6_tv8i1"]
-[ext_resource type="Texture2D" uid="uid://pio2j6dofwps" path="res://assets/platform/stone_stone1.texture.png" id="7_0vlqb"]
-[ext_resource type="PackedScene" uid="uid://clncx4bv7c7mx" path="res://assets/platform/mainPlatform.glb" id="7_of57s"]
+[ext_resource type="PackedScene" uid="uid://dyaodov6lhbtt" path="res://assets/platform/stone.glb" id="6_tv8i1"]
+[ext_resource type="Texture2D" uid="uid://bkfha4h370o44" path="res://assets/platform/stone_stone1.texture.png" id="7_0vlqb"]
+[ext_resource type="PackedScene" uid="uid://cfcrk1mci5yiv" path="res://assets/platform/mainPlatform.glb" id="7_of57s"]
 [ext_resource type="PackedScene" uid="uid://pb8cvdj1fuu5" path="res://scene/cultNPC/cult_npc.tscn" id="7_p1hux"]
-[ext_resource type="Texture2D" uid="uid://bpmclynfwe8a1" path="res://assets/platform/mainPlatform_main.png" id="8_b5f6u"]
-[ext_resource type="PackedScene" uid="uid://dh71yvl8egggi" path="res://assets/platform/floatingPlatform.glb" id="9_wscrc"]
-[ext_resource type="Texture2D" uid="uid://ngqohjeely4v" path="res://assets/platform/floatingPlatform_floating.plataform.png" id="10_mswub"]
-[ext_resource type="PackedScene" uid="uid://vihbb1x28fmq" path="res://assets/platform/PortalPlatform.glb" id="11_hybxs"]
-[ext_resource type="Texture2D" uid="uid://csmnpimd7xwce" path="res://assets/platform/PortalPlatform_portal.png" id="12_v2gmf"]
-[ext_resource type="Texture2D" uid="uid://ii38gow24ifw" path="res://assets/textures/portal-export.png" id="14_io27d"]
+[ext_resource type="Texture2D" uid="uid://c5kicne65e0a7" path="res://assets/platform/mainPlatform_main.png" id="8_b5f6u"]
+[ext_resource type="PackedScene" uid="uid://c2wkj3p3tkgdb" path="res://assets/platform/floatingPlatform.glb" id="9_wscrc"]
+[ext_resource type="Texture2D" uid="uid://y2071tm7pveg" path="res://assets/platform/floatingPlatform_floating.plataform.png" id="10_mswub"]
+[ext_resource type="PackedScene" uid="uid://d2dd0mofxr3ok" path="res://assets/platform/PortalPlatform.glb" id="11_hybxs"]
+[ext_resource type="Texture2D" uid="uid://s8uidy0toesm" path="res://assets/platform/PortalPlatform_portal.png" id="12_v2gmf"]
+[ext_resource type="Texture2D" uid="uid://dw65dxkinlx5u" path="res://assets/textures/portal-export.png" id="14_io27d"]
 [ext_resource type="PackedScene" uid="uid://c44qa5bdaxy26" path="res://scene/ouroboros.tscn" id="16_fdqew"]
 [ext_resource type="PackedScene" uid="uid://b5t77p0dtb1pu" path="res://scene/moving_platform.tscn" id="17_smf0o"]
-[ext_resource type="PackedScene" uid="uid://sgikqq2nmr5a" path="res://assets/platform/candlePlatform.glb" id="17_tv8i1"]
-[ext_resource type="Texture2D" uid="uid://cedyo36pxxrvu" path="res://assets/platform/candlePlatform_PixelTextureGrid_96.png" id="18_0vlqb"]
-[ext_resource type="Texture2D" uid="uid://cwlxrldpv1lum" path="res://assets/textures/lava.png" id="18_tv8i1"]
+[ext_resource type="PackedScene" uid="uid://ctm5comrx82cf" path="res://assets/platform/candlePlatform.glb" id="17_tv8i1"]
+[ext_resource type="Texture2D" uid="uid://bfm8eophjjtow" path="res://assets/platform/candlePlatform_PixelTextureGrid_96.png" id="18_0vlqb"]
+[ext_resource type="Texture2D" uid="uid://b20x3q7qvlku5" path="res://assets/textures/lava.png" id="18_tv8i1"]
 [ext_resource type="Script" uid="uid://cx6nqukjqoye" path="res://scene/player/spinBar.gd" id="19_0vlqb"]
-[ext_resource type="Texture2D" uid="uid://kypvqgq3x6e4" path="res://assets/textures/summoningCircle.png" id="21_fa8t4"]
+[ext_resource type="Texture2D" uid="uid://duu4e5djunrqt" path="res://assets/textures/summoningCircle.png" id="21_fa8t4"]
 [ext_resource type="Script" uid="uid://cfdch75wjqanh" path="res://scene/lava.gd" id="21_oldxj"]
-[ext_resource type="AudioStream" uid="uid://du3v6bmbyd2h3" path="res://assets/sfx/platformRising.ogg" id="23_4jm02"]
+[ext_resource type="AudioStream" uid="uid://6lpy7brc5haw" path="res://assets/sfx/platformRising.ogg" id="23_4jm02"]
 [ext_resource type="PackedScene" uid="uid://e3oeugwpqtix" path="res://scene/shakeable_camera/shakeable_camera.tscn" id="23_gn2wi"]
-[ext_resource type="AudioStream" uid="uid://dyu2rqn2cjapk" path="res://assets/sfx/portalOpen.ogg" id="23_gtqqq"]
-[ext_resource type="AudioStream" uid="uid://b1yqn2cvr6ibd" path="res://assets/sfx/cultMurmers.ogg" id="24_gn2wi"]
-[ext_resource type="AudioStream" uid="uid://8m2q3ca1a5v" path="res://assets/sfx/ouroboros1.ogg" id="24_oldxj"]
+[ext_resource type="AudioStream" uid="uid://tngvrtcwy7l4" path="res://assets/sfx/portalOpen.ogg" id="23_gtqqq"]
+[ext_resource type="AudioStream" uid="uid://dxh8h8qjw6ndg" path="res://assets/sfx/cultMurmers.ogg" id="24_gn2wi"]
+[ext_resource type="AudioStream" uid="uid://cmp6vx66brjy5" path="res://assets/sfx/ouroboros1.ogg" id="24_oldxj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_of57s"]
 sky_top_color = Color(0.44313726, 0.34509805, 0.84313726, 1)
@@ -3663,7 +3663,7 @@ view = NodePath("../view")
 [node name="CollisionShape3D" parent="Player" index="0" unique_id=338168985]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0.869084, 0)
 
-[node name="Skeleton3D" parent="Player/model/Armature" parent_id_path=PackedInt32Array(509668328, 26906941, 1723714515) index="0" unique_id=1736589460]
+[node name="Skeleton3D" parent="Player/model/Armature" parent_id_path=PackedInt32Array(509668328, 26906941, 37580701) index="0" unique_id=1806543498]
 bones/1/rotation = Quaternion(-3.552712e-15, 1.7763568e-14, -2.019484e-28, 1)
 bones/2/rotation = Quaternion(-3.552712e-15, 0, -2.019484e-28, 1)
 bones/4/rotation = Quaternion(6.4021433e-09, -1.2474155e-07, 0.0246561, 0.999696)
@@ -3754,20 +3754,20 @@ player = NodePath("../../../Player")
 
 [node name="mainPlatform" parent="world/Platform" unique_id=1175340938 instance=ExtResource("7_of57s")]
 
-[node name="main pillar" parent="world/Platform/mainPlatform" index="0" unique_id=325257880]
+[node name="main pillar" parent="world/Platform/mainPlatform" index="0" unique_id=1859797312]
 mesh = SubResource("ArrayMesh_k65ib")
 
 [node name="Path1" type="Node3D" parent="world/Platform" unique_id=822828151]
 
 [node name="floatingPlatform" parent="world/Platform/Path1" unique_id=542104450 instance=ExtResource("9_wscrc")]
 
-[node name="plataform" parent="world/Platform/Path1/floatingPlatform" index="0" unique_id=392119806]
+[node name="plataform" parent="world/Platform/Path1/floatingPlatform" index="0" unique_id=940688998]
 transform = Transform3D(2.2035153, 0, 0, 0, 2.2035153, 0, 0, 0, 2.2035153, -11.190097, -1.8664122, -2.564351)
 mesh = SubResource("ArrayMesh_tv8i1")
 
 [node name="PortalPlatform" parent="world/Platform/Path1" unique_id=1208757462 instance=ExtResource("11_hybxs")]
 
-[node name="portal plataform" parent="world/Platform/Path1/PortalPlatform" index="0" unique_id=1272732624]
+[node name="portal plataform" parent="world/Platform/Path1/PortalPlatform" index="0" unique_id=1507624979]
 transform = Transform3D(5.1299334, 0, 0.09988123, 0, 5.1309056, 0, -0.09988123, 0, 5.1299334, -26.989697, 2.2620993, -12.390548)
 mesh = SubResource("ArrayMesh_gjnwh")
 
@@ -3790,7 +3790,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.00604403, 0.0163201
 
 [node name="stone" parent="world/Platform/Path1/PortalPlatform" unique_id=387448524 instance=ExtResource("6_tv8i1")]
 
-[node name="stone 1_004" parent="world/Platform/Path1/PortalPlatform/stone" index="0" unique_id=526413771]
+[node name="stone 1_004" parent="world/Platform/Path1/PortalPlatform/stone" index="0" unique_id=545026499]
 transform = Transform3D(0.8554574, 0, 0, 0, 0.8554574, 0, 0, 0, 0.8554574, -29.042816, 4.6473074, -8.348562)
 mesh = SubResource("ArrayMesh_gn2wi")
 
@@ -3800,7 +3800,7 @@ mesh = SubResource("ArrayMesh_gn2wi")
 
 [node name="ouroboros" parent="world/Platform/Path1" unique_id=857692666 instance=ExtResource("16_fdqew")]
 unique_name_in_owner = true
-transform = Transform3D(0.3122737, 0.94975215, 0.021321405, 0.036483727, 0.010437566, -0.99927974, -0.9492902, 0.3128269, -0.031391174, -28.73492, 9.438217, -11.8933735)
+transform = Transform3D(0.3122737, 0.94975215, 0.021321405, 0.036483724, 0.010437565, -0.99927974, -0.94929016, 0.3128269, -0.031391174, -28.73492, 9.438217, -11.8933735)
 visible = false
 
 [node name="Path2" type="Node3D" parent="world/Platform" unique_id=1396657523]
@@ -3808,7 +3808,7 @@ visible = false
 [node name="candlePlatform" parent="world/Platform/Path2" unique_id=1313127511 instance=ExtResource("17_tv8i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5)
 
-[node name="pillar" parent="world/Platform/Path2/candlePlatform" index="0" unique_id=466763311]
+[node name="pillar" parent="world/Platform/Path2/candlePlatform" index="0" unique_id=2025611501]
 mesh = SubResource("ArrayMesh_0d4pv")
 
 [node name="pillar2" type="MeshInstance3D" parent="world/Platform/Path2/candlePlatform" unique_id=1704124979]
@@ -3823,7 +3823,7 @@ shape = SubResource("ConcavePolygonShape3D_mvp1f")
 [node name="candlePlatform" parent="world/Platform/Path2/candlePlatform" unique_id=1233921114 instance=ExtResource("17_tv8i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.424286, 1, 9.044226)
 
-[node name="pillar" parent="world/Platform/Path2/candlePlatform/candlePlatform" index="0" unique_id=466763311]
+[node name="pillar" parent="world/Platform/Path2/candlePlatform/candlePlatform" index="0" unique_id=2025611501]
 transform = Transform3D(0.9123335, 0, 0.2359455, 0, 0.94234955, 0, -0.2359455, 0, 0.9123335, 1.752131, 5.634001, -16.92395)
 mesh = SubResource("ArrayMesh_0d4pv")
 
@@ -3853,14 +3853,14 @@ transform = Transform3D(0.9989705, -0.04518335, -0.0040325085, 0, -0.08889434, 0
 [node name="floatingPlatform" parent="world/Platform/Path3" unique_id=523986935 instance=ExtResource("9_wscrc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.613474, 0, -0.9566512)
 
-[node name="plataform" parent="world/Platform/Path3/floatingPlatform" index="0" unique_id=392119806]
+[node name="plataform" parent="world/Platform/Path3/floatingPlatform" index="0" unique_id=940688998]
 transform = Transform3D(2.2035153, 0, 0, 0, 2.2035153, 0, 0, 0, 2.2035153, -11.190097, -1.8664122, -2.564351)
 mesh = SubResource("ArrayMesh_tv8i1")
 
 [node name="floatingPlatform2" parent="world/Platform/Path3" unique_id=694514753 instance=ExtResource("9_wscrc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.172636, 0.8089504, -5.9970474)
 
-[node name="plataform" parent="world/Platform/Path3/floatingPlatform2" index="0" unique_id=392119806]
+[node name="plataform" parent="world/Platform/Path3/floatingPlatform2" index="0" unique_id=940688998]
 transform = Transform3D(1.3867171, 0, 1.712453, 0, 2.2035153, 0, -1.712453, 0, 1.3867171, -11.190097, -1.8664122, -2.564351)
 mesh = SubResource("ArrayMesh_tv8i1")
 
@@ -3876,7 +3876,7 @@ curve = SubResource("Curve3D_smf0o")
 [node name="candlePlatform" parent="world/Platform/Path4" unique_id=1399016716 instance=ExtResource("17_tv8i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.669117, -7.1636276, 38.68316)
 
-[node name="pillar" parent="world/Platform/Path4/candlePlatform" index="0" unique_id=466763311]
+[node name="pillar" parent="world/Platform/Path4/candlePlatform" index="0" unique_id=2025611501]
 transform = Transform3D(-0.94183147, 0, 0.031243762, 0, 0.94234955, 0, -0.031243762, 0, -0.94183147, 1.752131, 5.634001, -16.92395)
 mesh = SubResource("ArrayMesh_0d4pv")
 
@@ -3902,7 +3902,7 @@ transform = Transform3D(-2.980232e-08, 4.371139e-08, -1, 1, -4.371139e-08, -2.98
 [node name="candlePlatform" parent="world/Platform/Path5" unique_id=1993503151 instance=ExtResource("17_tv8i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.229183, -7.1636276, 49.782818)
 
-[node name="pillar" parent="world/Platform/Path5/candlePlatform" index="0" unique_id=466763311]
+[node name="pillar" parent="world/Platform/Path5/candlePlatform" index="0" unique_id=2025611501]
 transform = Transform3D(-0.5904799, 0, 0.7344087, 0, 0.94234955, 0, -0.7344087, 0, -0.5904799, 1.752131, 5.634001, -16.92395)
 mesh = SubResource("ArrayMesh_0d4pv")
 

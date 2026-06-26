@@ -1,15 +1,107 @@
 [gd_scene format=3 uid="uid://cmx338s34p46w"]
 
-[ext_resource type="Texture2D" uid="uid://bcyrxovdvbj07" path="res://scene/endScreen/end.screen.kill.png" id="1_laxix"]
+[ext_resource type="Texture2D" uid="uid://bkph0avgmes7f" path="res://scene/endScreen/end.screen.kill.png" id="1_laxix"]
 [ext_resource type="Script" uid="uid://kol14ugmmdnc" path="res://scene/endScreen/end_screen.gd" id="1_wy136"]
-[ext_resource type="Texture2D" uid="uid://cf7vjsl2funmo" path="res://scene/titleScreen/badge.fight.png" id="2_hhfm4"]
-[ext_resource type="Texture2D" uid="uid://begg7xvp2i0og" path="res://scene/endScreen/end.screen.worship.png" id="2_wy136"]
+[ext_resource type="Texture2D" uid="uid://btu30ewsht22e" path="res://scene/titleScreen/badge.fight.png" id="2_hhfm4"]
+[ext_resource type="Texture2D" uid="uid://bxl816wl3yh8v" path="res://scene/endScreen/end.screen.worship.png" id="2_wy136"]
 [ext_resource type="Theme" uid="uid://r62tg44unh68" path="res://assets/ui/main.tres" id="3_3o6ga"]
-[ext_resource type="FontFile" uid="uid://8yts78yo4wtt" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="4_ntyhi"]
-[ext_resource type="Texture2D" uid="uid://crvt83cijk3wi" path="res://scene/titleScreen/badge.praise.png" id="5_ntyhi"]
+[ext_resource type="FontFile" uid="uid://c8avgjcesj1o0" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="4_ntyhi"]
+[ext_resource type="Texture2D" uid="uid://34mu7nriy2ov" path="res://scene/titleScreen/badge.praise.png" id="5_ntyhi"]
+[ext_resource type="Texture2D" uid="uid://ckilonf26dxub" path="res://assets/dialogic/characters/news.guy.kaboom.png" id="6_3utx8"]
+[ext_resource type="AudioStream" uid="uid://bh3788mb1khfw" path="res://assets/sfx/drumroll.ogg" id="8_5cs5y"]
 
 [sub_resource type="Theme" id="Theme_5cs5y"]
 Label/fonts/font = ExtResource("4_ntyhi")
+
+[sub_resource type="Animation" id="Animation_3utx8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fight/Badge_fight:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1331.409, 88.99)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("praise/praiseBG/Badge_praise:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(31.179647, 42.987644)]
+}
+
+[sub_resource type="Animation" id="Animation_yg87u"]
+resource_name = "badge enter"
+length = 5.1
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_5cs5y")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fight/Badge_fight:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.1),
+"transitions": PackedFloat32Array(12.553319, 0.17075498),
+"update": 0,
+"values": [Vector2(1790.0002, -91), Vector2(1331.409, 88.99)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("praise/praiseBG/Badge_praise:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5.1),
+"transitions": PackedFloat32Array(12.55334, 10.196486),
+"update": 0,
+"values": [Vector2(224.78036, 139.16344), Vector2(31.179647, 42.987644)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(5.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_badge_sound"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_17pwu"]
+_data = {
+&"RESET": SubResource("Animation_3utx8"),
+&"badge enter": SubResource("Animation_yg87u")
+}
 
 [node name="EndScreen" type="Control" unique_id=1660269627]
 layout_mode = 3
@@ -22,6 +114,7 @@ script = ExtResource("1_wy136")
 
 [node name="fight" type="Control" parent="." unique_id=2021350436]
 unique_name_in_owner = true
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -70,7 +163,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="fight/VBoxContainer/HBoxContainer2" unique_id=502148134]
-custom_minimum_size = Vector2(125.085, 0)
+custom_minimum_size = Vector2(60.565, 0)
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="fight/VBoxContainer/HBoxContainer2" unique_id=541719315]
@@ -78,14 +171,18 @@ layout_mode = 2
 theme = ExtResource("3_3o6ga")
 theme_override_fonts/normal_font = ExtResource("4_ntyhi")
 bbcode_enabled = true
-text = "Saviour Route
-You have saved the world form the tyranny of the God Ouroboros"
+text = "[font_size=60]Saviour Route
+[font_size=30]
+You have saved the world form the tyranny of the God [shake][color=#871400]Snake[/color][/shake]
+The would is now in peace where noone will be hurt anymore
+
+R.I.P News Guy"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="fight/VBoxContainer" unique_id=1624535354]
-custom_minimum_size = Vector2(0, 346.445)
+custom_minimum_size = Vector2(0, 211.03)
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="fight/VBoxContainer" unique_id=775136152]
@@ -99,11 +196,17 @@ layout_mode = 2
 custom_minimum_size = Vector2(177.65, 90.165)
 layout_mode = 2
 theme = ExtResource("3_3o6ga")
+disabled = true
 text = "Continue"
+
+[node name="Sprite2D" type="Sprite2D" parent="fight" unique_id=481811624]
+modulate = Color(1, 1, 1, 0.023529412)
+position = Vector2(223, 216)
+scale = Vector2(4.12, 4.12)
+texture = ExtResource("6_3utx8")
 
 [node name="praise" type="Control" parent="." unique_id=973934998]
 unique_name_in_owner = true
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -155,17 +258,23 @@ alignment = 1
 custom_minimum_size = Vector2(125.085, 0)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="praise/VBoxContainer/HBoxContainer2" unique_id=695230708]
+[node name="RichTextLabel2" type="RichTextLabel" parent="praise/VBoxContainer/HBoxContainer2" unique_id=1000388861]
 layout_mode = 2
 theme = ExtResource("3_3o6ga")
+theme_override_fonts/normal_font = ExtResource("4_ntyhi")
 bbcode_enabled = true
-text = "[wave][font_size=78][color=#FF0000]S[/color][color=#FF0600]e[/color][color=#FF0C00]r[/color][color=#FF1200]p[/color][color=#FF1900]e[/color][color=#FF1F00]n[/color][color=#FF2500]t[/color][color=#FF2B00]'[/color][color=#FF3200]s[/color]      [color=#FF6700]P[/color][color=#FF7000]r[/color][color=#FF7900]o[/color][color=#FF8200]m[/color][color=#FF8A00]i[/color][color=#FF9300]s[/color][color=#FF9C00]e[/color]"
+text = "[font_size=60]Worshiper Route
+[font_size=30]
+The World is now Ruled by the God [shake][color=#871400]Snake[/color][/shake]
+Every Human now [wave][tornado]Spins[/tornado][/wave] perpetually.
+
+Almighty God Snake"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="praise/VBoxContainer" unique_id=1221840555]
-custom_minimum_size = Vector2(0, 346.445)
+custom_minimum_size = Vector2(0, 212.73)
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="praise/VBoxContainer" unique_id=807478945]
@@ -179,7 +288,20 @@ layout_mode = 2
 custom_minimum_size = Vector2(177.65, 90.165)
 layout_mode = 2
 theme = ExtResource("3_3o6ga")
+disabled = true
 text = "Continue"
+
+[node name="Sprite2D" type="Sprite2D" parent="praise" unique_id=1356550520]
+modulate = Color(1, 1, 1, 0.023529412)
+position = Vector2(232, 429)
+scale = Vector2(4.12, 4.12)
+texture = ExtResource("6_3utx8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=489960678]
+libraries/ = SubResource("AnimationLibrary_17pwu")
+autoplay = &"badge enter"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=809066875]
 
 [connection signal="pressed" from="fight/VBoxContainer/HBoxContainer/continueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="praise/VBoxContainer/HBoxContainer/continueButton" to="." method="_on_continue_button_pressed"]

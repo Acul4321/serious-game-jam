@@ -97,7 +97,7 @@ func _process(delta: float) -> void:
 func _on_candle_circle_candle_placed() -> void:
 	print("candle placed")
 	candleTotal += 1
-	if candleTotal >= 5:
+	if candleTotal >= 1:
 		print("game end")
 		change_state(GAMESTATE.TALKING)
 		Dialogic.start("res://assets/dialogic/timeline/ouroboros.dtl")
